@@ -15,8 +15,10 @@ void goodbye();
 
 int main()
 {
-  int choice;
-  bool choice_invalid = false;
+  int choice, weight, height, age;
+  bool choice_invalid = false, either_parent;
+  float creatine, bmi, left_leg_length, right_leg_length;
+  short bacon_lbs;
 
   greeting();
 
@@ -30,6 +32,13 @@ int main()
     switch (choice)
     {
       case 1:
+      cout << "You chose Body Mass Index!\n" << endl;
+      cout << "Please input your weight (lbs): ";
+      cin >> weight;
+      cout << "And your height (inches): ";
+      cin >> height;
+      cout << "\nYour Body Mass Index is: " << bodyMassIndex(weight, height) <<
+        "!!" << endl;
       break;
 
       case 2:
@@ -45,6 +54,7 @@ int main()
       break;
 
       default:
+      cout << "Your choice was not valid, please try again." << endl;
       choice_invalid = true;
     }
   } while (choice_invalid);
@@ -53,7 +63,7 @@ int main()
 
 void greeting()
 {
-  cout << "Welcome to the Health-o-Matic machine!!" << endl << endl;
+  cout << "Welcome to the Health-o-Matic machine!!\n" << endl;
   return;
 }
 
@@ -70,10 +80,26 @@ void display_menu()
 
 float bodyMassIndex(int weight, int height)
 {
-
+  return (static_cast<float>(weight)/(height*height))*703;
 }
 
 float creatinineClearance(int age, int weight, float creatine)
 {
-  
+  float cClearance;
+
+  return cClearance;
+}
+
+int coronaryRisk(float bmi, bool either_parent, short bacon_lbs)
+{
+  int coronaryRisk;
+
+  return coronaryRisk;
+}
+
+float totterIndex(float left_leg_length, float right_leg_length)
+{
+  float totterIndex;
+
+  return totterIndex;
 }
