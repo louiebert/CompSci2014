@@ -1,4 +1,4 @@
-//Programmer: Louie Bertoncin   Date: 9/8/2014
+//Programmer: LOUIE BERTONCIN   Date: 9/8/2014
 //File: H2 Dose Calculator      Class: CS 1570, Section D
 
 #include <iostream>
