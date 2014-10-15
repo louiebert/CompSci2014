@@ -34,12 +34,21 @@ void getPixel(Pixel & pxl)
   int blue;
 
   cout << "Please insert the RGB values for your favorite pixel..." << endl;
-  cout << "Red value (0-255): ";
-  cin >> red;
-  cout << "Green value (0-255): ";
-  cin >> green;
-  cout << "Blue value (0-255): ";
-  cin >> blue;
+  do
+  {
+    cout << "Red value (0-255): ";
+    cin >> red;
+  } while (red < 0 || red > 255);
+  do
+  {
+    cout << "Green value (0-255): ";
+    cin >> green;
+  } while (green < 0 || green > 255);
+  do
+  {
+    cout << "Blue value (0-255): ";
+    cin >> blue;
+  } while (blue < 0 || blue > 255);
   pxl.red = static_cast<unsigned char>(red);
   pxl.green = static_cast<unsigned char>(green);
   pxl.blue = static_cast<unsigned char>(blue);
