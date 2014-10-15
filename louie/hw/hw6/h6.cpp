@@ -44,9 +44,7 @@ int main()
       if (did_hear)
       {
         printDiagnosis(diagnose(make_a_proteins(prot1, prot2, prot3, prot4,
-          prot5, patient_prots)), name);
-        cout << "PROTEINS: " << prot1 << ", " << prot2 << ", " << prot3 << ", "
-          << prot4 << ", " << prot5 << endl << endl;
+          prot5, patient_prots)), name, patient_prots);
       }
     }
     else

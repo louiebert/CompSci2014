@@ -85,7 +85,8 @@ bool diagnose(const proteins & prots);
 //   if they are diagnosed with Jejunal Hemorrhage Syndrome or not.
 // Pre: Bool is 1 if they are affected, 0 if not.
 // Post: Prints a friendly diagnosis with the patient's name.
-void printDiagnosis(const bool & isAffected, const string & patient_name);
+void printDiagnosis(const bool & isAffected, const string & patient_name,
+  const proteins & prots);
 
 // The goodbye() function prints a farewell to the console.
 // Pre: None
