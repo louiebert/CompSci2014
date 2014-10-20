@@ -14,6 +14,12 @@ const int PROTEIN3MAX = 10;
 const int PROTEIN4MIN = 10;
 const int PROTEIN4MAX = 50;
 const int PROTEIN5MAX = 10;
+const float PROT2DIAGNOSIS = 14.6;
+const int PROT3DIAGNOSIS = 6;
+const int PROT4DIAGNOSISMIN = 20;
+const int PROT4DIAGNOSISMAX = 40;
+const int PROT5DIAGNOSIS = 2;
+const int PROTCOMBODIAGNOSIS = 75;
 
 struct proteins
 {

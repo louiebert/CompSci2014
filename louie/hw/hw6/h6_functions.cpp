@@ -113,19 +113,21 @@ bool diagnose(const proteins & prots)
 {
   bool results = 0;
 
-  if (prots.protein5 < 2)
+  if (prots.protein5 < PROT5DIAGNOSIS)
   {
-    if (prots.protein4 > 20 && prots.protein4 < 40 && prots.protein3 > 6)
+    if (prots.protein4 > PROT4DIAGNOSISMIN && prots.protein4 <
+      PROT4DIAGNOSISMAX && prots.protein3 > PROT3DIAGNOSIS)
     {
       results = 1;
     }
   }
-  else if (prots.protein1 + prots.protein2 + prots.protein3 < 75)
+  else if (prots.protein1 + prots.protein2 + prots.protein3 <
+    PROTCOMBODIAGNOSIS)
   {
     results = 1;
   }
 
-  results = (prots.protein2 <= 14.6 ? 1 : results);
+  results = (prots.protein2 <= PROT2DIAGNOSIS ? 1 : results);
 
   results = (prots.protein1 == 0 ? 0 : results);
 
