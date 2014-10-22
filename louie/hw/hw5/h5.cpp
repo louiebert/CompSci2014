@@ -5,12 +5,40 @@
 #include <iostream>
 using namespace std;
 
+// This function outputs a greeting to the user.
+// Pre: None
+// Post: A greeting string is printed to the console
 void greeting();
+
+// This function displays a menu for the user to choose from.
+// Pre: None
+// Post: Menu of calculation options appears in the console
 void display_menu();
-float bodyMassIndex(int weight, int height);
-float creatinineClearance(int age, int weight, float creatine);
-int coronaryRisk(float bmi, bool either_parent, short bacon_lbs);
-float totterIndex(float left_leg_length, float right_leg_length);
+
+// This function calculates and returns Body Mass Index.
+// Pre: Height cannot be zero
+// Post: Body Mass Index is returned
+float bodyMassIndex(const int weight, const int height);
+
+// This function calculates and returns Creatinine Clearance.
+// Pre: Age is assumed to be less than 140
+// Post: Returns calculated Creatinine Clearance
+float creatinineClearance(const int age, const int weight,const float creatine);
+
+// This function calculates and returns Coronary Risk.
+// Pre: None
+// Post: Returns calculated Coronary Risk
+int coronaryRisk(const float bmi,const bool either_parent,
+  const short bacon_lbs);
+
+// This function calculates and returns Totter Index.
+// Pre: None
+// Post: Returns calculated Totter Index
+float totterIndex(const float left_leg_length, const float right_leg_length);
+
+// This function prints a farewell to the console
+// Pre: None
+// Post: Prints a message to the console
 void goodbye();
 
 int main()
@@ -108,19 +136,20 @@ void display_menu()
   cout << "4. Totter Index" << endl;
   cout << "5. Quit\n" << endl;
   cout << "Please choose an option from above: ";
+  return;
 }
 
-float bodyMassIndex(int weight, int height)
+float bodyMassIndex(const int weight, const int height)
 {
   return (static_cast<float>(weight)/(height*height))*703;
 }
 
-float creatinineClearance(int age, int weight, float creatine)
+float creatinineClearance(const int age, const int weight, const float creatine)
 {
   return (140-age)*(static_cast<float>(weight)/72)*creatine;
 }
 
-int coronaryRisk(float bmi, bool either_parent, short bacon_lbs)
+int coronaryRisk(const float bmi,const bool either_parent,const short bacon_lbs)
 {
   int score = 0;
 
@@ -131,7 +160,7 @@ int coronaryRisk(float bmi, bool either_parent, short bacon_lbs)
   return score;
 }
 
-float totterIndex(float left_leg_length, float right_leg_length)
+float totterIndex(const float left_leg_length, const float right_leg_length)
 {
   float totter_index;
 
