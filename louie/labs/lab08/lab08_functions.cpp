@@ -68,7 +68,7 @@ void printResults(const int & index, const int & size, const Player players[],
   const int totScores[])
 {
   cout << endl;
-  for(int i = 0; i < NUMPLAYERS; i++)
+  for(int i = 0; i < size; i++)
   {
     Player currentPlayer = players[i];
     cout << currentPlayer.name << ":" << endl;
@@ -110,7 +110,7 @@ bool playAgain()
 
 void goodbye()
 {
-  cout << "\n\nThanks for playing!!!";
+  cout << "\n\nThanks for playing!!!" << endl;
 
   return;
 }
