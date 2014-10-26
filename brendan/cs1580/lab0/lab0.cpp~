@@ -1,0 +1,17 @@
+//--------------------------------------------------------
+//Programmer: Brendan Curran 	Student ID:12394898
+//Lab: #0, "Hello World" 	Filename: lab0.cpp
+//Due Date: 8/27/2014		Class: CS 1580, section lol
+//--------------------------------------------------------
+//Program Description:
+//The program outputs the message "Hello, World" so we can verify we're
+//able to input code, compile the code, run the executable, and submit
+//a copy to print so we can hand it in
+
+#include<iostream>
+using namespace std;
+int main()
+{
+cout<<"Hello, world" <<endl;
+return 0;
+}
