@@ -1,0 +1,56 @@
+Brendan Curran
+Section C
+
+1. Call student one
+Tell this student that class is cancelled.
+Tell student one to relay this message which all students will subsequently
+relay. Each student is to Calculate the time remaining until class after
+they get off of the phone, subtract the time remaining from 15, divide this
+number by two, then take two raised to this power. For example, the first
+student will get off the phone with 13 minutes left until class, which he
+takes out of 15 to get 2, divides by 2 to get one, then takes 2 to the first
+power to get 2. The student will then inform the student x numbers after
+them, where x is the value they just calculated. This will continue until
+they have no students left to call.
+As the teacher you will inform all the powers of 2 with this same message,
+meaning you then call the 2nd, 4th, 8th, 16th, and 32nd, and rest on the
+seventh call and see that your work is good.
+
+2.Observe which way the first street runs.
+You will first turn east or west at the first intersection depending which
+way the first street is running.
+After this you will turn south at the following intersection.
+You will follow this south road and turn on the third street, opposite of
+the direction you first turned on.
+At the next intersection you will turn north.
+The apothecary will be one and a half blocks ahead of you.
+You have reached your destination in 7 blocks.
+
+If you have to make both a right and left turn.
+Observe which way the first street runs.
+Turn east or west on this street whichever way it runs.
+Turn south at the next intersection.
+Turn on the second street in the same direction as your first turn. 
+Stop at the car dealership and trade in for a car that can turn one
+direction all day long without having to go the other way.
+Turn south at the second intersection after your last turn.
+Turn opposite the direction of your first turn at the following
+intersection.
+Follow this road then turn north on the third street.
+Head north for a block and a half and you will reach your destination.
+You travelled 11 blocks and now have a new car.
+
+3. Bob the pirate is going to head into the maze.
+He will follow the maze until he is forced to make a turn.
+At this intersection he will turn whichever way he well pleases because he
+is a pirate and he can do what he wants.
+He will follow this path and continue to turn whichever way he wants.
+If he encounters a dead end or sees he has already explored this part of the
+maze, he will backtrack.
+Once he encounters an intersection, he will turn the way he has not already
+explored.
+He will repeat this same process of exploring and backtracking.
+If backtracks and finds an intersection he has already completely explored,
+he will continue backtracking until he finds something he hasn't explored.
+Bob will continue exploring the maze until he finds the treasure.
+
