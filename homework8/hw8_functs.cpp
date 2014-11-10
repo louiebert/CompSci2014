@@ -193,7 +193,6 @@ void disp_surg()
 
 bool do_again()
 {
-  bool again = false;
   char answer;
 
   cout << "\nWant another prognosis? (y/n) ";
