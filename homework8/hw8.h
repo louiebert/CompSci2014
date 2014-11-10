@@ -13,14 +13,16 @@ using namespace std;
 #ifndef HW8_H
 #define HW8_H
 
+
 //---------------------------Global Vars-------------------------------------//
+
 const int COMPLAINT_LENGTH = 100;        //Number of words in complaint
 const int WORD_LENGTH = 22;             //Number of letters in a word
 const string BODY_PART1 = "head";       //Parts Dr. Eloe can diagnose
 const string BODY_PART2 = "torso";
 const string BODY_PART3 = "hand";
 const string BODY_PART4 = "nose";
-const string BODY_PART4 = "leg";
+const string BODY_PART5 = "leg";
 const string PART_FILE1 = "head.dat";     //Name of files holding prognoses
 const string PART_FILE2 = "torso.dat";
 const string PART_FILE3 = "hand.dat";
@@ -31,21 +33,25 @@ const string SURGERY_FILE = "surgeries.dat";
 const int MAX_TRIES = 5;                //Number of attempts to connect to file
 const int MAX_WORDS = 5;                //Max words displayed from complaint
 const int WORDS_DIVISOR = 2;    //Words in complaint / DIVISOR = # displayed
-const int MAX_SYLLABLES = 4          //Syllables in drug prescribed
-const int PROG_ARR_LEGTH = 30;
+const int MAX_SYLLABLES = 4;          //Syllables in drug prescribed
+const int PROG_ARR_LENGTH = 30;
 const int PRESCRIPT_ARR_LENGTH = 30;
 const int MAX_SYLLABLE_LENGTH = 7;
 const int SURGERY_ARR_LENGTH = 20;
 
 
-
 //--------------------------Function Prototypes------------------------------//
+
+// The greeting() function outputs a greeting to the user.
+// Pre: None
+// Post: A greeting string is printed to the console
+void greeting();
+
 // open_connection() opens and tests a connection to a data file.
 // Pre: Data file must have same name as the value stored in the var holding
 //  the data file name.
 // Post: Connects to specified data file or exits program if unable to connect.
-Template <typename T>
-void open_connection(T & the_stream, const string & filename);
+void open_connection(ifstream & the_stream, const string & filename);
 
 // input_complaint() reads in the user's compaint and stores it in var.
 // Pre: The input stream must be cleared before taking in complaint.
@@ -71,13 +77,15 @@ void disp_words(const char arr[][WORD_LENGTH], const int & num_words);
 // keyword() searches the user's input for keywords and returns the keyword.
 // Pre: Array submitted as a parameter must be null-terminated.
 // Post: Returns name of file corresponding to name of body part found.
-string keyword(const char arr[][WORD_LENGTH], const int & num_words);
+string keyword(char arr[][WORD_LENGTH], const int & num_words);
 
-// disp_prog() displays a message to the screen with the user's prognosis.
+// disp_prog() displays a message to the screen with the user's prognosis and
+//   returns false if there is no legitimate prognosis.
 // Pre: The var holding the filename should match the actual filename.
 //   The filename should be in the same directory as this program.
-// Post: Displays a message to the screen with the user's prognosis.
-void disp_prog(const string & filename);
+// Post: Displays a message to the screen with the user's prognosis and returns
+//   false if there is no legitimate prognosis.
+bool disp_prog(const string & filename);
 
 // random_choice() chooses random number between a given minimum and maximum.
 // Pre: rand() must be seeded.
@@ -102,5 +110,16 @@ void disp_drug(const int & num);
 //   this program.
 // Post: Displays name of surgery to screen.
 void disp_surg();
+
+// do_again() prompts the user if they'd like to run the program again. Returns
+//   the user's response.
+// Pre: None.
+// Post: Returns user's boolean response to restart the program.
+bool do_again();
+
+// The goodbye() function prints a farewell to the console.
+// Pre: None
+// Post: Prints a message to the console
+void goodbye();
 
 #endif
