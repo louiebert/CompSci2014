@@ -38,7 +38,7 @@ Human createHuman(bool & dnaPtrn)
     aHuman.dna[i] = createDNA();
     if (i > 2 && aHuman.dna[i] == DNA4)
       dnaPtrn = (aHuman.dna[i-1] == DNA3 && aHuman.dna[i-2] == DNA2 &&
-        aHuman.dna[i-3] == DNA1 ? true : false);
+        aHuman.dna[i-3] == DNA1 ? true : dnaPtrn);
   }
   aHuman.body_odor = createBO();
   aHuman.wants_brains = doesWantBrains();
