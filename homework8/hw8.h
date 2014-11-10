@@ -8,6 +8,7 @@
 #include <cstdlib>
 #include <iostream>
 #include <fstream>
+#include <cstring>
 using namespace std;
 
 #ifndef HW8_H

@@ -4,11 +4,6 @@
 // user's health complaint, outputs a random prognosis, prescribes and outputs
 // a random drug, and outputs the prescription strength.
 
-#include <ctime>
-#include <cstdlib>
-#include <iostream>
-#include <fstream>
-#include <cstring>
 #include "hw8.h"
 using namespace std;
 
