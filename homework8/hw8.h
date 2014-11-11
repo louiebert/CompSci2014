@@ -17,24 +17,25 @@ using namespace std;
 
 //---------------------------Global Vars-------------------------------------//
 
-const int COMPLAINT_LENGTH = 100;        //Number of words in complaint
-const int WORD_LENGTH = 22;             //Number of letters in a word
-const string BODY_PART1 = "head";       //Parts Dr. Eloe can diagnose
+const int COMPLAINT_LENGTH = 100;
+const int WORD_LENGTH = 22;
+const string BODY_PART1 = "head";
 const string BODY_PART2 = "torso";
 const string BODY_PART3 = "hand";
 const string BODY_PART4 = "nose";
 const string BODY_PART5 = "leg";
-const string PART_FILE1 = "head.dat";     //Name of files holding prognoses
+const string PART_FILE1 = "head.dat";
 const string PART_FILE2 = "torso.dat";
 const string PART_FILE3 = "hand.dat";
 const string PART_FILE4 = "nose.dat";
 const string PART_FILE5 = "leg.dat";
 const string PRESCRIPT_FILE = "scripts.dat";
 const string SURGERY_FILE = "surgeries.dat";
-const int MAX_TRIES = 5;                //Number of attempts to connect to file
-const int MAX_WORDS = 5;                //Max words displayed from complaint
-const int WORDS_DIVISOR = 2;    //Words in complaint / DIVISOR = # displayed
-const int MAX_SYLLABLES = 4;          //Syllables in drug prescribed
+const string DEFAULT_PROG = "Go home. Get some sleep. Take some aspirin. Wimp.";
+const int MAX_TRIES = 5;
+const int MAX_WORDS = 5;
+const int WORDS_DIVISOR = 2;
+const int MAX_SYLLABLES = 4;
 const int PROG_ARR_LENGTH = 30;
 const int PRESCRIPT_ARR_LENGTH = 30;
 const int MAX_SYLLABLE_LENGTH = 7;

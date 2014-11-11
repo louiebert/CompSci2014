@@ -15,15 +15,15 @@ void greeting()
 
 void open_connection(ifstream & the_stream, const string & filename)
 {
-  the_stream.open(filename.c_str());      //Attempt to connect to data file
+  the_stream.open(filename.c_str());
   int counter = 0;
-  while(!the_stream && counter < MAX_TRIES)      //Test connection
+  while(!the_stream && counter < MAX_TRIES)
   {
     the_stream.clear();
     the_stream.open(filename.c_str());
     counter++;
   }
-  if(!the_stream)                          //Exit if unable to connect
+  if(!the_stream)
   {
     cout << "Error: Unable to connect to " << filename << "."
          << "Exiting program." << endl;
@@ -33,6 +33,10 @@ void open_connection(ifstream & the_stream, const string & filename)
 
 void input_complaint(string & input)
 {
+  cout << "We can only take care of injuries to the " << BODY_PART1 << ", " <<
+    BODY_PART2 << ", " << BODY_PART3 << ", " << BODY_PART4 << ", and " <<
+    BODY_PART5 << "." << endl;
+  cout << "Please only have complaints for those body parts." << endl;
   cout << "Enter complaint: ";
   getline(cin, input);
   return;
@@ -64,17 +68,29 @@ int make_array(const char source[], char target[][WORD_LENGTH])
 
 void disp_words(const char arr[][WORD_LENGTH], const int & num_words)
 {
-  int wordsDisp = 0;                            //Number of words to display
+  int wordsDisp = 0;
   if((num_words / WORDS_DIVISOR) > MAX_WORDS)
     wordsDisp = MAX_WORDS;
-  else if(1 == num_words)
+  else if(num_words == 1)
     wordsDisp = 1;
   else
     wordsDisp = num_words / WORDS_DIVISOR;
-  cout << "So,";
+  cout << "\nSo,";
+  int chosen[MAX_WORDS];
+  int chosenNum;
+  bool same = false;
   for(int i = 0; i < wordsDisp; i++)
   {
-    cout << " " << arr[random_choice(0, num_words - 1)];
+    do
+    {
+      same = false;
+      chosenNum = random_choice(0, num_words - 1);
+      for(int j = 0; j < i; j++)
+        same = (chosenNum == chosen[j] ? true : same);
+    }while(same);
+    chosen[i] = chosenNum;
+
+    cout << " " << arr[chosenNum];
   }
   cout << "?" << endl << endl;
   return;
@@ -84,15 +100,15 @@ string keyword(char sentences[][WORD_LENGTH], const int & num_words)
 {
   string filename = "";
   int i = 0;
-  while( i < num_words && filename == "")           //Set var equal to
-  {                                                 // filename corresponding
+  while( i < num_words && filename == "")
+  {
     int j = 0;
     while(sentences[i][j] != '\0')
     {
       sentences[i][j] = tolower(sentences[i][j]);
       j++;
     }
-    if(sentences[i] == BODY_PART1)                // to body part.
+    if(sentences[i] == BODY_PART1)
       filename = PART_FILE1;
     else if(sentences[i] == BODY_PART2)
       filename = PART_FILE2;
@@ -110,16 +126,16 @@ string keyword(char sentences[][WORD_LENGTH], const int & num_words)
 bool disp_prog(const string & filename)
 {
   bool real = true;
-  if(filename != "")            //If user input keyword in complaint
+  if(filename != "")
   {
     char prognosis[PROG_ARR_LENGTH] = {};
     int total_el;
     ifstream fin;
     open_connection(fin, filename);
-    total_el = num_el(fin);      //Tally the elements
+    total_el = num_el(fin);
     fin.close();
     open_connection(fin, filename);
-    for(int i = 0; i < random_choice(1, total_el); i++)      //Select prognosis
+    for(int i = 0; i < random_choice(1, total_el); i++)
     {
       fin.getline(prognosis, PROG_ARR_LENGTH-1);
     }
@@ -129,7 +145,7 @@ bool disp_prog(const string & filename)
 
   else
   {
-    cout << "Go home. Get some sleep. Take some aspirin. Wimp." << endl;
+    cout << DEFAULT_PROG << endl;
     real = false;
   }
   return real;
@@ -158,11 +174,11 @@ void disp_drug(const int & num)
   char prescription[PRESCRIPT_ARR_LENGTH] = {};
   ifstream fin;
   open_connection(fin, PRESCRIPT_FILE);
-  int num_syllables = num_el(fin);               //Counts elements in data file
+  int num_syllables = num_el(fin);
   fin.close();
   open_connection(fin, PRESCRIPT_FILE);
   cout << "Your prescription is to take " << num << " pills per day of 20 mg ";
-  for(int i = 0; i < MAX_SYLLABLES; i++)    //Generates drug name
+  for(int i = 0; i < MAX_SYLLABLES; i++)
   {
     for(int j = 0; j < (random_choice(1, num_syllables)); j++)
       fin >> temp;
@@ -178,7 +194,7 @@ void disp_surg()
   char surgery[SURGERY_ARR_LENGTH];
   ifstream fin;
   open_connection(fin, SURGERY_FILE);
-  int num_surg = num_el(fin);               //Counts elements in data file
+  int num_surg = num_el(fin);
   fin.close();
   open_connection(fin, SURGERY_FILE);
   for(int i = 0; i < num_surg; i++)
