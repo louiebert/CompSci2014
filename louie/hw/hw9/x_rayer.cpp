@@ -7,21 +7,28 @@
 using namespace std;
 
 
-X_rayer()
+X_rayer::X_rayer()
 {
   num_uses = DEF_NUM_USES;
   cost_per_use = DEF_COST_OF_USE;
 }
 
-void charge_patient(Patient & ptnt) const
+void X_rayer::charge_patient(Patient& ptnt) const
 {
   ptnt.pay_out(cost_per_use);
   return;
 }
 
-void apply(Patient & ptnt) const
+void X_rayer::apply(Patient& ptnt) const
 {
-  if(rand()%101 < 10)
-    ptnt.modify_health(ptnt.get_condition()/-2);
+  if(rand()%101 < CHANCE_OF_MUTILATION)
+    ptnt.modify_health(ptnt.get_condition()/-FACTOR_OF_MUTILATION);
   return;
+}
+
+ostream& operator << (ostream& out, const X_rayer& x_ray)
+{
+  out << "X-Rayer(# of uses: " << x_ray.num_uses << ", cost per use: " <<
+    x_ray.cost_per_use << ")";
+  return out;
 }
