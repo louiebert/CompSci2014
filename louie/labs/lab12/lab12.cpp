@@ -4,19 +4,28 @@
 
 #include <iostream>
 #include <fstream>
-#include "lab12.h"
 #include "compound.h"
 
 using namespace std;
 
 int main()
 {
-  Compound blank, first;
+  Compound blank, first, second, third;
   cout << "BLANK: " << blank << endl << endl;
 
-  // cout << "New Compound: ";
-  // cin >> first;
-  // cout << first;
+  cout << "First Compound: ";
+  cin >> first;
+  cin.ignore(500, '\n');
+  cout << "Second Compound: ";
+  cin >> second;
+
+  third = first + second;
+
+  cout << endl << "Compound 1: " << first << endl;
+  cout << "Compound 2: " << second << endl;
+  cout << "\nAddition Result:\n " << third << endl;
+  cout << "\nMultiplication Result:\n " << third*13.4 << endl;
+
 
 
   return 0;

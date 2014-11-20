@@ -27,10 +27,26 @@ class Compound
     // Addition operator for Compound class
     // Pre: None.
     // Post: Appends names, adds all elements together, and adds kg.
-    Compound& operator + (const Compound& other);
+    Compound operator + (const Compound& other);
 
+    // Equals operator for Compound class
+    // Pre: None.
+    // Post: Sets names, elements, and kg of calling object to the reference's.
+    Compound& operator = (const Compound& reference);
+
+    // Multiplication operator for Compound class
+    // Pre: None.
+    // Post: Multiplies the kg of the Compound object by amount.
     friend Compound& operator * (Compound& comp, const float amount);
+
+    // Insertion operator for Compound class
+    // Pre: None.
+    // Post: Prints all values of the Compound object.
     friend ostream& operator << (ostream& out, const Compound& comp);
+
+    // Extraction operator for Compound class
+    // Pre: None.
+    // Post: Takes in all values of the Compound object.
     friend istream& operator >> (istream& in, Compound& comp);
 };
 

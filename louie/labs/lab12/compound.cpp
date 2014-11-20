@@ -8,13 +8,25 @@
 
 using namespace std;
 
-Compound& Compound::operator + (const Compound& other)
+Compound Compound::operator + (const Compound& other)
 {
-  name = name.append("-");
-  name = name.append(other.name);
+  Compound total;
+  total.name = name;
+  total.name.append("-");
+  total.name.append(other.name);
   for(int i = 0; i < ELEMENT_COUNT; i++)
-    elements[i] = elements[i] + other.elements[i];
-  kg = kg + other.kg;
+    total.elements[i] = elements[i] + other.elements[i];
+  total.kg = kg + other.kg;
+
+  return (total);
+}
+
+Compound& Compound::operator = (const Compound& reference)
+{
+  name = reference.name;
+  kg = reference.kg;
+  for(int i = 0; i < ELEMENT_COUNT; i++)
+    elements[i] = reference.elements[i];
 
   return (*this);
 }
@@ -27,18 +39,19 @@ Compound& operator * (Compound& comp, const float amount)
 
 ostream& operator << (ostream& out, const Compound& comp)
 {
-  out << comp.name << " (" << comp.kg << ") ";
-  int tempArray[ELEMENT_COUNT];
+  out << comp.name << " (" << comp.kg << ")";
+  int tempArray[ELEMENT_COUNT] = {0};
   for(int i = 0; i < ELEMENT_COUNT; i++)
   {
     tempArray[comp.elements[i]]++;
   }
-  for(int j = 0; j < ELEMENT_COUNT; j++)
+  bool yesComma = false;
+  for(int j = 1; j < ELEMENT_COUNT; j++)
   {
     if(tempArray[j] != 0)
-      out << j << " " << tempArray[j] << " ";
+      out << (yesComma ? ", " : " ") << j << " " << tempArray[j];
+      yesComma = true;
   }
-  out << comp.kg;
 
   return out;
 }
