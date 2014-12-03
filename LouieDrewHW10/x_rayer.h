@@ -40,6 +40,7 @@ class x_rayer
     m_cost=c;}
     void charge_patient(patient & p)const;
     void apply(patient & p);
+    float getCost(){return m_cost;}
     friend ostream& operator <<(ostream& o,const x_rayer& x);
   private:
     float m_cost;
