@@ -80,10 +80,13 @@ class Patient
     void modify_physical_health(const int condition_dif);
     int get_physical_health() const{return m_physCondition;}
     float getMoney() const{return m_money;}
+<<<<<<< HEAD
     int get_mental_health() const{return m_mentCondition;}
     void modify_mental_health(const int amount);
     void add_to_name(const string name);
     void modify_weight(const int amount);
+=======
+>>>>>>> FETCH_HEAD
     friend ostream& operator <<(ostream& o,const Patient& p);
   private:
     string m_name;

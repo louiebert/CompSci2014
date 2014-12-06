@@ -54,17 +54,21 @@ void Patient::pay_out(const float pay_amount)
 
 void Patient::kill()
 {
-  if(m_physCondition==0)
-    m_is_alive=false;
+  m_is_alive=false;
   return;
 }
 
 void Patient::modify_physical_health(const int condition_dif)
 {
   m_physCondition+=condition_dif;
+<<<<<<< HEAD
   if(m_physCondition<0)
     m_physCondition=0;
   kill();
+=======
+  if(m_physCondition == 0)
+    kill();
+>>>>>>> FETCH_HEAD
   return;
 }
 
