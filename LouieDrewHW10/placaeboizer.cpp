@@ -14,7 +14,7 @@ void Placaeboizer::charge_patient(Patient& patient) const
 void Placaeboizer::apply(Patient& patient)
 {
   patient.modify_mental_health((patient.MAX_MCONDITION -
-    patient.get_mental_health)/2);
+    patient.get_mental_health())/2);
   patient.modify_weight(WEIGHT_MODIFIER);
   m_num_uses++;
 
