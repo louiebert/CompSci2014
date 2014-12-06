@@ -11,25 +11,53 @@
 
 int main()
 {
+  const int NUM_PATIENTS
+  short deadPatients=0;
   srand(time(NULL));
-  cout<<"------------Hospital Simulation------------"<<endl<<endl;
-  patient pat1;
-  patient pat2;
-  patient pat3;
-  hospital_room room;
-  cout<<endl<<"Before being admited, "<<pat1<<endl<<endl;
-  cout<<pat2<<endl<<endl;
-  cout<<pat3<<endl<<endl;
-  cout<<"Room Before Use: "<<room<<endl<<endl;
-  room.admit(pat1);
-  room.admit(pat1);
-  room.admit(pat1);
-  room.admit(pat1);
-  room.admit(pat1);
-  cout<<"After being admited, "<<pat1<<endl<<endl;
-  cout<<pat2<<endl<<endl;
-  cout<<pat3<<endl<<endl;
-  cout<<"Room After Use: "<<room<<endl<<endl;
-  cout<<"------------Conclusion of Simulation-------------"<<endl;
+  Patient patients[NUMPATIENTS]
+  Doctor doctorEloe("Doctor Eloe");
+  hospital_room<x_rayer> xrayRoom;
+  hospital_room<lobotomizer> loboRoom;
+  hospital_room<organ_donor> organRoom;
+  hospital_room<placaeboizer> placaRoom;
+  hospital_room<pharmacy> pharmRoom;
+  hospital_room<liposuctionizer> lipoRoom;
+  greeting();
+  for(int i=0;i<NUMPATIENTS;i++)
+  {
+    cout<<"----------X-RAY ROOM----------"<<endl;
+    xrayRoom.admit(patients[i],doctorEloe);
+    cout<<patients[i]<<endl;
+    if(doctorEloe.get_oz_schraut()==0)
+      cout<<"The doctor puked!"<<endl<<endl;
+    cout<<"----------LOBOTOMY ROOM----------"<<endl;
+    loboRoom.admit(patients[i],doctorEloe);
+    cout<<patients[i]<<endl;
+    if(doctorEloe.get_oz_schraut()==0)
+      cout<<"The doctor puked!"<<endl<<endl;
+    cout<<"----------ORGAN DONOR ROOM----------"<<endl;
+    organRoom.admit(patients[i],doctorEloe);
+    if(doctorEloe.get_oz_schraut()==0)
+      cout<<"The doctor puked!"<<endl<<endl;
+    cout<<"----------PLACAEBOIZER ROOM----------"<<endl;
+    placaRoom.admit(patients[i],doctorEloe);
+    if(doctorEloe.get_oz_schraut()==0)
+      cout<<"The doctor puked!"<<endl<<endl;
+    cout<<"----------PHARMACY----------"<<endl;
+    pharmRoom.admit(patients[i],doctorEloe);
+    if(doctorEloe.get_oz_schraut()==0)
+      cout<<"The doctor puked!"<<endl<<endl;
+    cout<<"----------LIPOSUCTION ROOM----------"<<endl;
+    lipoRoom.admit(patients[i],doctorEloe);
+    if(doctorEloe.get_oz_schraut()==0)
+      cout<<"The doctor puked!"<<endl<<endl;
+    cout<<"The doctor has consumed "<<doctorEloe.get_oz_schraut()<<
+    "ounces of Schraut! and has $"doctorEloe.getMoney()<<endl<<endl;
+    if(patients[i].get_physical_health()==0)
+      deadPatients++;
+  }
+  cout<<"During this simmulation "<<deadPatients<<" patients died, and"<<
+  "the doctor made $"<<doctorEloe.getMoney()<<endl;
+  farewell();
   return 0;
 }

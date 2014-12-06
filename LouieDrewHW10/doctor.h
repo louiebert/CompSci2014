@@ -34,6 +34,10 @@ const int MAX_OZ_SCHRAUT = 25;
 // Pre: None.
 // Post: m_money is increased by the amount provided in the paramater.
 
+// getMoney() returns the m_money
+//Pre: None
+//Post: m_money is returned.
+
 class Doctor
 {
   private:
@@ -46,6 +50,7 @@ class Doctor
     void drink_schraut(const short& amount);
     short get_oz_schraut() const{return m_oz_schraut;}
     void increase_money(const float& amount);
+    float getMoney() const{return m_money;}
 };
 
 #endif
