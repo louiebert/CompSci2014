@@ -36,17 +36,17 @@
 // Post: Format - Pharmacy(Cost Per Use: <m_cost_per_use>, Uses: <m_num_uses>,
 //   Pills Left: <m_num_pills>)
 
-const float COST_PER_USE = 150;
-const int PILL_NUM_MIN = 50;
-const int PILL_NUM_MAX = 100;
-const int PHYSICAL_HEALTH_MODIFIER_A = 10;
-const int MENTAL_HEALTH_MODIFIER_A = -10;
-const int PHYSICAL_HEALTH_MODIFIER_B = 20;
-const int PHYSICAL_HEALTH_MODIFIER_C = 50;
-const int MENTAL_HEALTH_MODIFIER_D = 100;
-const int WEIGHT_MODIFIER_D = 100;
-const int MENTAL_HEALTH_MODIFIER_E = -23;
-const int WEIGHT_MODIFIER_E = 44;
+const float PH_COST_PER_USE = 150;
+const int PH_PILL_NUM_MIN = 50;
+const int PH_PILL_NUM_MAX = 100;
+const int PH_PHYSICAL_HEALTH_MODIFIER_A = 10;
+const int PH_MENTAL_HEALTH_MODIFIER_A = -10;
+const int PH_PHYSICAL_HEALTH_MODIFIER_B = 20;
+const int PH_PHYSICAL_HEALTH_MODIFIER_C = 50;
+const int PH_MENTAL_HEALTH_MODIFIER_D = 100;
+const int PH_WEIGHT_MODIFIER_D = 100;
+const int PH_MENTAL_HEALTH_MODIFIER_E = -23;
+const int PH_WEIGHT_MODIFIER_E = 44;
 
 class Pharmacy
 {

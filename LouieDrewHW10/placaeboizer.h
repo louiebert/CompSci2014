@@ -31,8 +31,8 @@
 // Pre: None.
 // Post:Format- Placaeboizer(Cost Per Use: <m_cost_per_use>, Uses: <m_num_uses>)
 
-const float COST_PER_USE = 500;
-const int WEIGHT_MODIFIER = 50;
+const double PLC_COST_PER_USE = 500;
+const int PLC_WEIGHT_MODIFIER = 50;
 
 class Placaeboizer
 {
@@ -40,7 +40,7 @@ class Placaeboizer
     float m_cost_per_use;
     short m_num_uses;
   public:
-    Placaeboizer():m_num_uses(0),m_cost_per_use(COST_PER_USE){}
+    Placaeboizer():m_num_uses(0),m_cost_per_use(PLC_COST_PER_USE){}
     float get_cost_per_use() const{return m_cost_per_use;}
     void charge_patient(Patient& patient) const;
     void apply(Patient& patient);

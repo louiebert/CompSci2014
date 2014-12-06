@@ -15,11 +15,11 @@ void Lobotomizer::charge_patient(Patient& patient) const
 
 void Lobotomizer::apply(Patient& patient)
 {
-  patient.modify_mental_health(MENTAL_HEALTH_MODIFIER);
-  patient.modify_physical_health(PHYSICAL_HEALTH_MODIFIER);
-  if(rand()%100 < KILL_BRAIN_CHANCE)
+  patient.modify_mental_health(LOB_MENTAL_HEALTH_MODIFIER);
+  patient.modify_physical_health(LOB_PHYSICAL_HEALTH_MODIFIER);
+  if(rand()%100 < LOB_KILL_BRAIN_CHANCE)
     patient.modify_mental_health(-patient.get_mental_health());
-  if(rand()%100 < RENAME_CHANCE)
+  if(rand()%100 < LOB_RENAME_CHANCE)
     patient.add_to_name(get_random_name());
 
   m_num_uses++;
