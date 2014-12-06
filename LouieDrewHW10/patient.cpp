@@ -8,8 +8,8 @@
 #include <fstream>
 #include <cstring>
 #include "patient.h"
-using namespace std;
 
+using namespace std;
 
 Patient::Patient()
 {
