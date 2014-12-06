@@ -8,7 +8,7 @@
 #include <iostream>
 #include "patient.h"
 
-// Default constructor sets m_num_uses to 0 and m_cost_per_use to COST_OF_USE.
+// Default constructor sets m_num_uses to 0 and m_cost_per_use to COST_PER_USE.
 // Pre: None.
 // Post: Sets default values for an Organ_Donor object
 

@@ -13,7 +13,7 @@
 // Pre: None.
 // Post: Returns a random string from the project's data file.
 
-// Default constructor sets m_num_uses to 0 and m_cost_per_use to COST_OF_USE.
+// Default constructor sets m_num_uses to 0 and m_cost_per_use to COST_PER_USE.
 // Pre: None.
 // Post: Sets default values for the new Lobotomizer object.
 
