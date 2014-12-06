@@ -47,9 +47,9 @@ const char name_file[11]="names.dat";
 //Precondition: None
 //Postcondition: The patients status is updated appropriately.
 
-class patient
+class Patient
 {  public:
-    patient();
+    Patient();
     void pay_out(const float pay_amount);
     void modify_health(const int condition_dif);
     int getCondition() const{return m_physCondition;}

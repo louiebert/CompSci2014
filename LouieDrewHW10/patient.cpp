@@ -10,7 +10,7 @@
 using namespace std;
 
 
-patient::patient()
+Patient::Patient()
 {
   short count=0;
   short numNames=0;
@@ -43,27 +43,27 @@ patient::patient()
   in.close();
 }
 
-void patient::pay_out(const float pay_amount)
+void Patient::pay_out(const float pay_amount)
 {
   m_money-=pay_amount;
   return;
 }
 
-void patient::kill()
+void Patient::kill()
 {
   if(m_physCondition==0)
     m_is_alive=false;
   return;
 }
 
-void patient::modify_health(const int condition_dif)
+void Patient::modify_health(const int condition_dif)
 {
   m_physCondition+=condition_dif;
   kill();
   return;
 }
 
-ostream& operator <<(ostream& o,const patient& p)
+ostream& operator <<(ostream& o,const Patient& p)
 {
   o<<p.m_name<<" has $"<<p.m_money<<", a physcial health value of "<<
   p.m_physCondition<<" a mental health value of "<<p.m_mentCondition<<
