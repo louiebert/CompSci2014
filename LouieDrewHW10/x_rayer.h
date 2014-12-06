@@ -29,6 +29,11 @@ const short INIT_NUM_USES=0;
 //Postcondition: num_uses is incremented and the patients health may be
 //               diminished.
 
+//Description: The get_cost_per_use function returns the cost to use the
+//             x_rayer.
+//Precondition: None
+//Postcondition: The cost of the machine is returned.
+
 //Description: This function overrides the insertion operator to output
 //             the cost an number of uses.
 //Preconditon: None

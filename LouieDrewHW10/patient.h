@@ -84,6 +84,7 @@ class Patient
     void add_to_name(const string name);
     void modify_weight(const int amount);
     float getMoney() const{return m_money;}
+
     friend ostream& operator <<(ostream& o,const Patient& p);
   private:
     string m_name;

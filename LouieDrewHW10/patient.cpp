@@ -6,6 +6,7 @@
 #include <cstdlib>
 #include <ctime>
 #include <fstream>
+#include <cstring>
 #include "patient.h"
 using namespace std;
 
@@ -64,6 +65,26 @@ void Patient::modify_physical_health(const int condition_dif)
     m_physCondition=0;
   if(m_physCondition == 0)
     kill();
+  return;
+}
+
+void Patient::modify_mental_health(const int amount)
+{
+  m_mentCondition-=amount;
+  if(m_mentCondition<0)
+    m_mentCondition=0;
+  return;
+}
+
+void Patient::add_to_name(const string name)
+{
+  m_name+=name;
+  return;
+}
+
+void Patient::modify_weight(const int amount)
+{
+  m_weight+=amount;
   return;
 }
 
