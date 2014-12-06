@@ -8,10 +8,16 @@
 #include "patient.h"
 #include "x_rayer.h"
 #include "hospital_room.h"
+#include "doctor.h"
+#include "liposuctionizer.h"
+#include "lobotomizer.h"
+#include "organ_donar.h"
+#include "pharmacy.h"
+#include "placaeboizer.h"
 
 int main()
 {
-  const int NUM_PATIENTS
+  const int NUM_PATIENTS=10;
   short deadPatients=0;
   srand(time(NULL));
   Patient patients[NUMPATIENTS]
