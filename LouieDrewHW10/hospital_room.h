@@ -32,7 +32,7 @@ class hospital_room
 {
   public:
     hospital_room(const float s=INIT_SCHRAUT): m_schrautOz(s){}
-    void admit(patient & p,Doctor & d);
+    void admit(Patient & p,Doctor & d);
     template <class U_machine>
     friend ostream& operator <<(ostream& o,const hospital_room
     <U_machine> & h);
