@@ -19,7 +19,7 @@ void Organ_Donor::apply(Patient& patient)
     PHYSICAL_HEALTH_MOD_MIN) + PHYSICAL_HEALTH_MOD_MIN);
   if(rand()%100 < KILL_CHANCE)
     patient.modify_physical_health(-patient.get_physical_health);
-  patient.modify_weight(-WEIGHT_MODIFIER);
+  patient.modify_weight(WEIGHT_MODIFIER);
 
   m_num_uses++;
 
