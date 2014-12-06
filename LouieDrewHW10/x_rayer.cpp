@@ -8,17 +8,17 @@
 #include "x_rayer.h"
 using namespace std;
 
-void x_rayer::charge_patient(patient & p)const
+void x_rayer::charge_patient(Patient & p)const
 {
   p.pay_out(m_cost);
   return;
 }
-void x_rayer::apply(patient & p)
+void x_rayer::apply(Patient & p)
 {
   const short PERCENT_FAIL=1;
   int randNum = rand()%100;
   if(randNum<PERCENT_FAIL)
-    p.modify_health(-p.getCondition()/2);
+    p.modify_physical_health(-p.get_physical_health()/2);
   m_num_uses++;
   return;
 }

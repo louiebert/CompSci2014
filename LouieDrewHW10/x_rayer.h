@@ -38,9 +38,9 @@ class x_rayer
   public:
     x_rayer(const short n=INIT_NUM_USES,const float c=INIT_COST){m_num_uses=n;
     m_cost=c;}
-    void charge_patient(patient & p)const;
-    void apply(patient & p);
-    float getCost(){return m_cost;}
+    void charge_patient(Patient & p)const;
+    void apply(Patient & p);
+    float get_cost_per_use(){return m_cost;}
     friend ostream& operator <<(ostream& o,const x_rayer& x);
   private:
     float m_cost;

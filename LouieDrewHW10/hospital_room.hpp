@@ -14,13 +14,13 @@ using namespace std;
 const short MAXSCHRAUT=3;
 const short MINSCHRAUT=1;
 template <class T_machine>
-void hospital_room<T_machine>::admit(patient & p,Doctor & d)
+void hospital_room<T_machine>::admit(Patient & p,Doctor & d)
 {
   short oz_schraut;
   short numApps;
   bool drankSchraut=false;
-  if(p.getCondition()!=0 && p.getMoney()>=
-    m_the_machine.getCost())
+  if(p.get_physical_condition()!=0 && p.getMoney()>=
+    m_the_machine.get_cost_per_use())
   {
     m_the_machine.charge_patient(p);
     oz_schraut=rand()%(MAXSCHRAUT-MINSCHRAUT+1)+MINSCHRAUT;
