@@ -42,11 +42,14 @@ string Lobotomizer::get_random_name()
     in.ignore(500, '\n');
     getline(in, aName);
   }
+  in.close();
   pickNum = rand()%(count+1);
+  in.open(NAMES_FILE.c_str());
   for(int i = 0; i <= pickNum; i++)
   {
     getline(in, aName);
   }
+  in.close();
 
   return aName;
 }
