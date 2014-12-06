@@ -2,34 +2,32 @@
 //File: lobotomizer.cpp           Class: CS 1570, Section D
 //Purpose: Body file for lobotomizer class
 
-#include <iostream>
 #include <cstdlib>
-#include <ctime>
 #include <fstream>
 #include "lobotomizer.h"
 
 void Lobotomizer::charge_patient(Patient& patient) const
 {
   patient.pay_out(m_cost_per_use);
+
+  return;
 }
 
 void Lobotomizer::apply(Patient& patient)
 {
   patient.modify_mental_health(MENTAL_HEALTH_MODIFIER);
   patient.modify_physical_health(PHYSICAL_HEALTH_MODIFIER);
-  if(rand()%100 < 3)
-  {
+  if(rand()%100 < KILL_BRAIN_CHANCE)
     patient.modify_mental_health(-patient.get_mental_health);
-  }
-  if(rand()%100 < 10)
-  {
+  if(rand()%100 < RENAME_CHANCE)
     patient.add_to_name(get_random_name());
-  }
+
+  m_num_uses++;
 
   return;
 }
 
-string Lobotomizer::get_random_name()
+string Lobotomizer::get_random_name() const
 {
   ifstream in;
   string aName;
