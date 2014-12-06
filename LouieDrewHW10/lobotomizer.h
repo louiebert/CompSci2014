@@ -13,8 +13,7 @@
 // Pre: None.
 // Post: Returns a random string from the project's data file.
 
-// The default constructor sets m_num_uses to 0 and m_cost_per_use to
-//   COST_OF_USE.
+// Default constructor sets m_num_uses to 0 and m_cost_per_use to COST_PER_USE.
 // Pre: None.
 // Post: Sets default values for the new Lobotomizer object.
 
@@ -38,9 +37,11 @@
 // Pre: None.
 // Post: Format- Lobotomizer(Cost Per Use: <m_cost_per_use>, Uses: <m_num_uses>)
 
-const float COST_OF_USE = 200;
+const float COST_PER_USE = 200;
 const int MENTAL_HEALTH_MODIFIER = 10;
 const int PHYSICAL_HEALTH_MODIFIER = 3;
+const int KILL_BRAIN_CHANCE = 3;
+const int RENAME_CHANCE = 10;
 
 class Lobotomizer
 {
@@ -49,7 +50,7 @@ class Lobotomizer
     short m_num_uses;
     string get_random_name() const;
   public:
-    Lobotomizer():m_num_uses(0),m_cost_per_use(COST_OF_USE){};
+    Lobotomizer():m_num_uses(0),m_cost_per_use(COST_PER_USE){};
     float get_cost_per_use() const{return m_cost_per_use;}
     void charge_patient(Patient& patient) const;
     void apply(Patient& patient);
