@@ -16,9 +16,11 @@ Patient::Patient()
   short numNames=0;
   short randNum;
   ifstream in;
-  m_condition=rand()%(MAX_CONDITION-MIN_CONDITION+1)+MIN_CONDITION;
+  m_physCondition=rand()%(MAX_PCONDITION-MIN_PCONDITION+1)+MIN_PCONDITION;
+  m_mentCondition=rand()%(MAX_MCONDITION-MIN_MCONDITION+1)+MIN_MCONDITION;
+  m_weight=rand()%(MAX_WEIGHT-MIN_WEIGHT+1)+MIN_WEIGHT;
   m_money=rand()%(MAX_MONEY-MIN_MONEY+1)+MIN_MONEY;
-  if(m_condition==0)
+  if(m_physCondition==0)
     m_is_alive=false;
   else
     m_is_alive=true;
@@ -49,21 +51,23 @@ void Patient::pay_out(const float pay_amount)
 
 void Patient::kill()
 {
-  if(m_condition==0)
+  if(m_physCondition==0)
     m_is_alive=false;
   return;
 }
 
 void Patient::modify_health(const int condition_dif)
 {
-  m_condition+=condition_dif;
+  m_physCondition+=condition_dif;
   kill();
   return;
 }
 
 ostream& operator <<(ostream& o,const Patient& p)
 {
-  o<<p.m_name<<" has $"<<p.m_money<<", a health value of "<<p.m_condition
-  <<", and is "<<(p.m_is_alive?"":"not ")<<"alive.";
+  o<<p.m_name<<" has $"<<p.m_money<<", a physcial health value of "<<
+  p.m_physCondition<<" a mental health value of "<<p.m_mentCondition<<
+  " weighs "<<p.m_weight<<" lbs "<<", and is "<<(p.m_is_alive?"":"not ")<<
+  "alive.";
   return o;
 }

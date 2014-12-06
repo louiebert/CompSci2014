@@ -5,6 +5,7 @@
 #ifndef HOSPITAL_ROOM_H
 #define HOSPITAL_ROOM_H
 #include "x_rayer.h"
+#include "doctor.h"
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
@@ -26,14 +27,18 @@ const float INIT_SCHRAUT=10;
 //             to output the state of the x_rayer and ounces of schraut.
 //Precondition: None
 //Postcondition: The insertion operator is defined for hospital_room.
+template <class T_machine>
 class hospital_room
 {
   public:
     hospital_room(const float s=INIT_SCHRAUT): m_schrautOz(s){}
-    void admit(patient & p);
-    friend ostream& operator <<(ostream& o,const hospital_room & h);
+    void admit(patient & p,Doctor & d);
+    template <class U_machine>
+    friend ostream& operator <<(ostream& o,const hospital_room
+    <U_machine> & h);
   private:
-    x_rayer m_the_machine;
+    T_machine m_the_machine;
     float m_schrautOz;
 };
+#include "hospital_room.hpp"
 #endif

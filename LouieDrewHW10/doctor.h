@@ -4,11 +4,14 @@
 
 #ifndef DOCTOR_H
 #define DOCTOR_H
+<<<<<<< Updated upstream
 
 #include <string>
 
 using namespace std;
 
+=======
+>>>>>>> Stashed changes
 const int MAX_OZ_SCHRAUT = 25;
 
 // Constructor sets m_name from parameter, sets m_oz_schraut to 0, and m_money
