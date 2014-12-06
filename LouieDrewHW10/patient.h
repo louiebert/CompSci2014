@@ -8,9 +8,13 @@
 #include <cstdlib>
 using namespace std;
 const short MAX_MONEY=4000;
-const short MAX_CONDITION=100;
-const short MIN_CONDITION=0;
+const short MAX_PCONDITION=100;
+const short MIN_PCONDITION=0;
+const short MAX_MCONDITION=100;
+const short MIN_MCONDITION=0;
 const short MIN_MONEY=0;
+const short MAX_WEIGHT=220;
+const short MIN_WEIGHT=120;
 const char name_file[11]="names.dat";
 
 //Description: The patient makes a patient with a randomly chosen name,
@@ -48,13 +52,16 @@ class patient
     patient();
     void pay_out(const float pay_amount);
     void modify_health(const int condition_dif);
-    int getCondition() const{return m_condition;}
+    int getCondition() const{return m_physCondition;}
+    float getMoney() const{return m_money;}
     friend ostream& operator <<(ostream& o,const patient& p);
   private:
     string m_name;
     float m_money;
     bool m_is_alive;
-    int m_condition;
+    int m_physCondition;
+    int m_mentCondition;
+    short m_weight;
     void kill();
 };
 #endif
