@@ -25,6 +25,7 @@ void hospital_room<T_machine>::admit(Patient & p,Doctor & d)
     m_the_machine.get_cost_per_use())
   {
     m_the_machine.charge_patient(p);
+    d.increase_money(m_the_machine.get_cost_per_use()/2)
     oz_schraut=rand()%(MAXSCHRAUT-MINSCHRAUT+1)+MINSCHRAUT;
     if(oz_schraut>m_schrautOz)
       oz_schraut=m_schrautOz;
@@ -46,6 +47,7 @@ void hospital_room<T_machine>::admit(Patient & p,Doctor & d)
       m_the_machine.apply(p);
     }
   }
+  cout<<"Number of Applications: "<<numApps<<endl;
   return;
 }
 

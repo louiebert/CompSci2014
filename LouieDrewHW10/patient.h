@@ -10,7 +10,6 @@ using namespace std;
 const short MAX_MONEY=4000;
 const short MAX_PCONDITION=100;
 const short MIN_PCONDITION=0;
-const short MAX_MCONDITION=100;
 const short MIN_MCONDITION=0;
 const short MIN_MONEY=0;
 const short MAX_WEIGHT=220;
@@ -57,6 +56,10 @@ const char name_file[11]="names.dat";
 //Precondition: None
 //Postcondition: The passed value is added to the patients weight.
 
+//Description: The get_weight function returns the weight of the patient
+//Precondition: None
+//Postcondition: The weight of the patient is returned.
+
 //Description: The getMoney function returns the amount of money the
 //             patient has.
 //Precondition: None
@@ -76,6 +79,7 @@ const char name_file[11]="names.dat";
 class Patient
 {  public:
     Patient();
+    const short MAX_MCONDITION=100;
     void pay_out(const float pay_amount);
     void modify_physical_health(const int condition_dif);
     int get_physical_health() const{return m_physCondition;}
@@ -83,6 +87,7 @@ class Patient
     int get_mental_health() const{return m_mentCondition;}
     void add_to_name(const string name);
     void modify_weight(const int amount);
+    int get_weight()const {return m_weight;}
     float getMoney() const{return m_money;}
 
     friend ostream& operator <<(ostream& o,const Patient& p);
