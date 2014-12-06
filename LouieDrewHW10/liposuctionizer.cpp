@@ -13,11 +13,11 @@ void Liposuctionizer::charge_patient(Patient& patient) const
 
 void Liposuctionizer::apply(Patient& patient)
 {
-  patient.modify_weight(-patient.get_weight*WEIGHT_PERCENT_MODIFIER);
-  patient.modify_mental_health(MENTAL_HEALTH_MODIFIER);
+  patient.modify_weight(-patient.get_weight()*LIP_WEIGHT_PERCENT_MODIFIER);
+  patient.modify_mental_health(LIP_MENTAL_HEALTH_MODIFIER);
 
   m_num_uses++;
-  if(!m_num_uses%REPEATS_TIL_DEATH)
+  if(!m_num_uses%LIP_REPEATS_TIL_DEATH)
     patient.modify_physical_health(-patient.get_physical_health());
 
   return;

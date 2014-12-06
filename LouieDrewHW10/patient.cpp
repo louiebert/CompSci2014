@@ -88,26 +88,6 @@ void Patient::modify_weight(const int amount)
   return;
 }
 
-void Patient::modify_mental_health(const int amount)
-{
-  m_mentCondition+=amount;
-  if(m_mentCondition<0)
-    m_mentCondition=0;
-  return;
-}
-
-void Patient::add_to_name(const string name)
-{
-  m_name+=name
-  return;
-}
-
-void Patient::modify_weight(const int amount)
-{
-  m_weight+=amount
-  return;
-}
-
 ostream& operator <<(ostream& o,const Patient& p)
 {
   o<<p.m_name<<" has $"<<p.m_money<<", a physcial health value of "<<

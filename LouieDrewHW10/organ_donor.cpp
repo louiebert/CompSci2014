@@ -14,12 +14,12 @@ void Organ_Donor::charge_patient(Patient& patient) const
 
 void Organ_Donor::apply(Patient& patient)
 {
-  patient.modify_mental_health(MENTAL_HEALTH_MODIFIER);
-  patient.modify_physical_health(rand()%(PHYSICAL_HEALTH_MOD_MAX + 1 -
-    PHYSICAL_HEALTH_MOD_MIN) + PHYSICAL_HEALTH_MOD_MIN);
-  if(rand()%100 < KILL_CHANCE)
+  patient.modify_mental_health(OD_MENTAL_HEALTH_MODIFIER);
+  patient.modify_physical_health(rand()%(OD_PHYSICAL_HEALTH_MOD_MAX + 1 -
+    OD_PHYSICAL_HEALTH_MOD_MIN) + OD_PHYSICAL_HEALTH_MOD_MIN);
+  if(rand()%100 < OD_KILL_CHANCE)
     patient.modify_physical_health(-patient.get_physical_health());
-  patient.modify_weight(WEIGHT_MODIFIER);
+  patient.modify_weight(OD_WEIGHT_MODIFIER);
 
   m_num_uses++;
 

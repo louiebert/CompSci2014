@@ -20,12 +20,12 @@ void hospital_room<T_machine>::admit(Patient & p,Doctor & d)
   short numApps;
   bool drankSchraut=false;
   if(p.get_physical_health()!=0 && p.getMoney()>=
-    m_the_machine.getCost())
-  if(p.get_physical_condition()!=0 && p.getMoney()>=
+    m_the_machine.get_cost_per_use())
+  if(p.get_physical_health()!=0 && p.getMoney()>=
     m_the_machine.get_cost_per_use())
   {
     m_the_machine.charge_patient(p);
-    d.increase_money(m_the_machine.get_cost_per_use()/2)
+    d.increase_money(m_the_machine.get_cost_per_use()/2);
     oz_schraut=rand()%(MAXSCHRAUT-MINSCHRAUT+1)+MINSCHRAUT;
     if(oz_schraut>m_schrautOz)
       oz_schraut=m_schrautOz;

@@ -32,12 +32,12 @@
 // Pre: None.
 // Post: Format- Organ Donor(Cost Per Use: <m_cost_per_use>, Uses: <m_num_uses>)
 
-const float COST_PER_USE = 100;
-const int MENTAL_HEALTH_MODIFIER = 10;
-const int PHYSICAL_HEALTH_MOD_MIN = 0;
-const int PHYSICAL_HEALTH_MOD_MAX = 20;
-const int KILL_CHANCE = 10;
-const int WEIGHT_MODIFIER = -10;
+const float OD_COST_PER_USE = 100;
+const int OD_MENTAL_HEALTH_MODIFIER = 10;
+const int OD_PHYSICAL_HEALTH_MOD_MIN = 0;
+const int OD_PHYSICAL_HEALTH_MOD_MAX = 20;
+const int OD_KILL_CHANCE = 10;
+const int OD_WEIGHT_MODIFIER = -10;
 
 class Organ_Donor
 {
@@ -45,7 +45,7 @@ class Organ_Donor
     float m_cost_per_use;
     short m_num_uses;
   public:
-    Organ_Donor():m_num_uses(0),m_cost_per_use(COST_PER_USE){}
+    Organ_Donor():m_num_uses(0),m_cost_per_use(OD_COST_PER_USE){}
     float get_cost_per_use() const{return m_cost_per_use;}
     void charge_patient(Patient& patient) const;
     void apply(Patient& patient);

@@ -11,7 +11,7 @@
 #include "doctor.h"
 #include "liposuctionizer.h"
 #include "lobotomizer.h"
-#include "organ_donar.h"
+#include "organ_donor.h"
 #include "pharmacy.h"
 #include "placaeboizer.h"
 const int NUM_PATIENTS=10;
@@ -20,50 +20,56 @@ int main()
 {
   short deadPatients=0;
   srand(time(NULL));
-  Patient patients[NUMPATIENTS]
+  Patient patients[NUM_PATIENTS];
   Doctor doctorEloe("Doctor Eloe");
-  hospital_room<x_rayer> xrayRoom;
-  hospital_room<lobotomizer> loboRoom;
-  hospital_room<organ_donor> organRoom;
-  hospital_room<placaeboizer> placaRoom;
-  hospital_room<pharmacy> pharmRoom;
-  hospital_room<liposuctionizer> lipoRoom;
+  hospital_room<X_Rayer> xrayRoom;
+  hospital_room<Lobotomizer> loboRoom;
+  hospital_room<Organ_Donor> organRoom;
+  hospital_room<Placaeboizer> placaRoom;
+  hospital_room<Pharmacy> pharmRoom;
+  hospital_room<Liposuctionizer> lipoRoom;
   greeting();
-  for(int i=0;i<NUMPATIENTS;i++)
+  for(int i=0; i < NUM_PATIENTS ; i++)
   {
-    cout<<"----------X-RAY ROOM----------"<<endl;
-    xrayRoom.admit(patients[i],doctorEloe);
-    cout<<patients[i]<<endl;
-    if(doctorEloe.get_oz_schraut()==0)
-      cout<<"The doctor puked!"<<endl<<endl;
-    cout<<"----------LOBOTOMY ROOM----------"<<endl;
-    loboRoom.admit(patients[i],doctorEloe);
-    cout<<patients[i]<<endl;
-    if(doctorEloe.get_oz_schraut()==0)
-      cout<<"The doctor puked!"<<endl<<endl;
-    cout<<"----------ORGAN DONOR ROOM----------"<<endl;
-    organRoom.admit(patients[i],doctorEloe);
-    if(doctorEloe.get_oz_schraut()==0)
-      cout<<"The doctor puked!"<<endl<<endl;
-    cout<<"----------PLACAEBOIZER ROOM----------"<<endl;
-    placaRoom.admit(patients[i],doctorEloe);
-    if(doctorEloe.get_oz_schraut()==0)
-      cout<<"The doctor puked!"<<endl<<endl;
-    cout<<"----------PHARMACY----------"<<endl;
-    pharmRoom.admit(patients[i],doctorEloe);
-    if(doctorEloe.get_oz_schraut()==0)
-      cout<<"The doctor puked!"<<endl<<endl;
-    cout<<"----------LIPOSUCTION ROOM----------"<<endl;
-    lipoRoom.admit(patients[i],doctorEloe);
-    if(doctorEloe.get_oz_schraut()==0)
-      cout<<"The doctor puked!"<<endl<<endl;
-    cout<<"The doctor has consumed "<<doctorEloe.get_oz_schraut()<<
-    "ounces of Schraut! and has $"doctorEloe.getMoney()<<endl<<endl;
-    if(patients[i].get_physical_health()==0)
+    cout << "----------X-RAY ROOM----------" << endl;
+    xrayRoom.admit(patients[i], doctorEloe);
+    cout << patients[i] << endl;
+    if(doctorEloe.get_oz_schraut() == 0)
+      cout << "The doctor puked!" << endl << endl;
+
+    cout << "----------LOBOTOMY ROOM----------" << endl;
+    loboRoom.admit(patients[i], doctorEloe);
+    cout << patients[i] << endl;
+    if(doctorEloe.get_oz_schraut() == 0)
+      cout << "The doctor puked!" << endl << endl;
+
+    cout << "----------ORGAN DONOR ROOM----------" << endl;
+    organRoom.admit(patients[i], doctorEloe);
+    if(doctorEloe.get_oz_schraut() == 0)
+      cout << "The doctor puked!" << endl << endl;
+
+    cout << "----------PLACAEBOIZER ROOM----------" << endl;
+    placaRoom.admit(patients[i], doctorEloe);
+    if(doctorEloe.get_oz_schraut() == 0)
+      cout << "The doctor puked!" << endl << endl;
+
+    cout << "----------PHARMACY----------" << endl;
+    pharmRoom.admit(patients[i], doctorEloe);
+    if(doctorEloe.get_oz_schraut() == 0)
+      cout << "The doctor puked!" << endl << endl;
+
+    cout << "----------LIPOSUCTION ROOM----------" << endl;
+    lipoRoom.admit(patients[i], doctorEloe);
+    if(doctorEloe.get_oz_schraut() == 0)
+      cout << "The doctor puked!" << endl << endl;
+
+    cout<<"The doctor has consumed " << doctorEloe.get_oz_schraut() <<
+      " ounces of Schraut! and has $" << doctorEloe.getMoney() << "\n\n" <<endl;
+    if(patients[i].get_physical_health() == 0)
       deadPatients++;
   }
-  cout<<"During this simmulation "<<deadPatients<<" patients died, and"<<
-  "the doctor made $"<<doctorEloe.getMoney()<<endl;
+  cout << "During this simmulation " << deadPatients << " patients died, and" <<
+    "the doctor made $" << doctorEloe.getMoney() << endl;
   farewell();
   return 0;
 }

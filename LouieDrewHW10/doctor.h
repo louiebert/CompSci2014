@@ -4,7 +4,6 @@
 
 #ifndef DOCTOR_H
 #define DOCTOR_H
-<<<<<<< Updated upstream
 
 #include <string>
 
