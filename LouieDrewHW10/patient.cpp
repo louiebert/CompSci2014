@@ -61,18 +61,22 @@ void Patient::kill()
 void Patient::modify_physical_health(const int condition_dif)
 {
   m_physCondition+=condition_dif;
-  if(m_physCondition<0)
-    m_physCondition=0;
-  if(m_physCondition == 0)
+  if(m_physCondition<MIN_PCONDITION)
+    m_physCondition=MIN_PCONDITION;
+  if(m_physCondition>MAX_PCONDITION)
+    m_physCondition=MAX_PCONDITION;
+  if(m_physCondition == MIN_PCONDITION)
     kill();
   return;
 }
 
 void Patient::modify_mental_health(const int amount)
 {
-  m_mentCondition-=amount;
-  if(m_mentCondition<0)
-    m_mentCondition=0;
+  m_mentCondition+=amount;
+  if(m_mentCondition<MIN_MCONDITION)
+    m_mentCondition=MIN_MCONDITION;
+  if(m_mentCondition>MAX_MCONDITION)
+    m_mentCondition=MAX_MCONDITION;
   return;
 }
 
@@ -91,8 +95,8 @@ void Patient::modify_weight(const int amount)
 ostream& operator <<(ostream& o,const Patient& p)
 {
   o<<p.m_name<<" has $"<<p.m_money<<", a physcial health value of "<<
-  p.m_physCondition<<" a mental health value of "<<p.m_mentCondition<<
-  " weighs "<<p.m_weight<<" lbs "<<", and is "<<(p.m_is_alive?"":"not ")<<
+  p.m_physCondition<<", a mental health value of "<<p.m_mentCondition<<
+  ", weighs "<<p.m_weight<<" lbs"<<", and is "<<(p.m_is_alive?"":"not ")<<
   "alive.";
   return o;
 }

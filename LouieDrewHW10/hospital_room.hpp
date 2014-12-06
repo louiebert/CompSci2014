@@ -16,16 +16,13 @@ const short MINSCHRAUT=1;
 template <class T_machine>
 void hospital_room<T_machine>::admit(Patient & p,Doctor & d)
 {
-  short oz_schraut;
   short numApps;
+  short oz_schraut;
   bool drankSchraut=false;
-  if(p.get_physical_health()!=0 && p.getMoney()>=
-    m_the_machine.get_cost_per_use())
+
   if(p.get_physical_health()!=0 && p.getMoney()>=
     m_the_machine.get_cost_per_use())
   {
-    m_the_machine.charge_patient(p);
-    d.increase_money(m_the_machine.get_cost_per_use()/2);
     oz_schraut=rand()%(MAXSCHRAUT-MINSCHRAUT+1)+MINSCHRAUT;
     if(oz_schraut>m_schrautOz)
       oz_schraut=m_schrautOz;
@@ -46,6 +43,13 @@ void hospital_room<T_machine>::admit(Patient & p,Doctor & d)
     {
       m_the_machine.apply(p);
     }
+  }
+  else
+    numApps=0;
+  if(numApps!=0)
+  {
+    m_the_machine.charge_patient(p);
+    d.increase_money(m_the_machine.get_cost_per_use()/2);
   }
   cout<<"Number of Applications: "<<numApps<<endl;
   return;
