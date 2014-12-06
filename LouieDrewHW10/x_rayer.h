@@ -9,9 +9,6 @@
 #include <cstdlib>
 using namespace std;
 
-const float INIT_COST=550;
-const short INIT_NUM_USES=0;
-
 //Description: The x_rayer constructor makes a default x_rayer with a cost of
 //             $550 and 0 uses.
 //Precondition: None
@@ -38,17 +35,19 @@ const short INIT_NUM_USES=0;
 //             the cost an number of uses.
 //Preconditon: None
 //Postcondition: The insertion operator is overridden.
-class x_rayer
+
+const float XR_COST_PER_USE = 550;
+
+class X_Rayer
 {
-  public:
-    x_rayer(const short n=INIT_NUM_USES,const float c=INIT_COST){m_num_uses=n;
-    m_cost=c;}
-    void charge_patient(Patient & p)const;
-    void apply(Patient & p);
-    float get_cost_per_use(){return m_cost;}
-    friend ostream& operator <<(ostream& o,const x_rayer& x);
   private:
-    float m_cost;
+    float m_cost_per_use;
     short m_num_uses;
+  public:
+    X_Rayer():m_num_uses(0),m_cost_per_use(XR_COST_PER_USE){}
+    void charge_patient(Patient & patient)const;
+    void apply(Patient & patient);
+    float get_cost_per_use(){return m_cost_per_use;}
+    friend ostream& operator << (ostream& out, const X_Rayer& x);
 };
 #endif

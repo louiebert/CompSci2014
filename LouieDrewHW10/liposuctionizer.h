@@ -31,10 +31,10 @@
 // Post: Format -
 //   Liposuctionizer(Cost Per Use: <m_cost_per_use>, Uses: <m_num_uses>)
 
-const int COST_PER_USE = 750;
-const float WEIGHT_PERCENT_MODIFIER = 0.1;
-const int MENTAL_HEALTH_MODIFIER = 20;
-const int REPEATS_TIL_DEATH = 61;
+const float LIP_COST_PER_USE = 750;
+const float LIP_WEIGHT_PERCENT_MODIFIER = 0.1;
+const int LIP_MENTAL_HEALTH_MODIFIER = 20;
+const int LIP_REPEATS_TIL_DEATH = 61;
 
 class Liposuctionizer
 {
@@ -42,7 +42,7 @@ class Liposuctionizer
     float m_cost_per_use;
     short m_num_uses;
   public:
-    Liposuctionizer():m_num_uses(0),m_cost_per_use(COST_PER_USE){}
+    Liposuctionizer():m_num_uses(0),m_cost_per_use(LIP_COST_PER_USE){}
     float get_cost_per_use() const{return m_cost_per_use;}
     void charge_patient(Patient& patient) const;
     void apply(Patient& patient);

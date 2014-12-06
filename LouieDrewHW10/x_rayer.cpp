@@ -8,23 +8,27 @@
 #include "x_rayer.h"
 using namespace std;
 
-void x_rayer::charge_patient(Patient & p)const
+void X_Rayer::charge_patient(Patient & patient)const
 {
-  p.pay_out(m_cost);
+  patient.pay_out(m_cost_per_use);
   return;
 }
-void x_rayer::apply(Patient & p)
+
+void X_Rayer::apply(Patient & patient)
 {
   const short PERCENT_FAIL=1;
   int randNum = rand()%100;
   if(randNum<PERCENT_FAIL)
-    p.modify_physical_health(-p.get_physical_health()/2);
+    patient.modify_physical_health(-patient.get_physical_health()/2);
   m_num_uses++;
+
   return;
 }
 
-ostream& operator <<(ostream& o,const x_rayer& x)
+ostream& operator << (ostream& out, const X_Rayer& x)
 {
-  o<<"Number of Uses: "<<x.m_num_uses<<"  Cost: $"<<x.m_cost;
-  return o;
+  out << "X_Rayer(Cost Per Use: " << x.m_cost_per_use << ", Uses: " <<
+    x.m_num_uses << ")";
+
+  return out;
 }
