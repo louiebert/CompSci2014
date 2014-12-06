@@ -28,7 +28,7 @@
 // Post: Increases patient's mental health, decreases physical, may kill, and
 //   decreases patient's weight.
 
-// // Insertion operator prints a Organ_Donor object
+// Insertion operator prints a Organ_Donor object
 // Pre: None.
 // Post: Format- Organ Donor(Cost Per Use: <m_cost_per_use>, Uses: <m_num_uses>)
 
