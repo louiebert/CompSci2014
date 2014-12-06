@@ -2,6 +2,7 @@
 //File: organ_donor.cpp           Class: CS 1570, Section D
 //Purpose: Body file for organ_donor class
 
+#include <cstdlib>
 #include "organ_donor.h"
 
 void Organ_Donor::charge_patient(Patient& patient) const

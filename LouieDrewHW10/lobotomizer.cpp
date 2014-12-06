@@ -3,7 +3,6 @@
 //Purpose: Body file for lobotomizer class
 
 #include <cstdlib>
-#include <ctime>
 #include <fstream>
 #include "lobotomizer.h"
 
