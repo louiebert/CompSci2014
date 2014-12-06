@@ -18,7 +18,7 @@ const short MIN_WEIGHT=120;
 const char name_file[11]="names.dat";
 
 //Description: The patient makes a patient with a randomly chosen name,
-//             money on hand, and condition.
+//             money on hand, weight, and physical and mental condition.
 //Precondition: None
 //Postcondition: A new patient object is created.
 
@@ -27,40 +27,40 @@ const char name_file[11]="names.dat";
 //Precondition: None
 //Postcondition: The passed amount is subtracted from the patients funds.
 
-//Description: The modify_physical_health function adds the passed
-//amount to the patients physical condition.
+//Description: The modify_physical_health function adds the passed amount
+//to the patients condition.
 //Precondition: None
 //Postcondition: The passed value is added to the patients condition.
 
-//Description: The get_physical_health function returns the patients
-//             condition.
+//Description: The get_phsyical_health function returns the patients
+//condition.
 //Precondition: None
 //Postcondition: The patients condtion is returned.
 
-//Description: The getMoney function returns the amount of money the
-//             patient currently has on hand.
+//Description: The modify_mental_health function adds to the patients mental
+//             health by the passed value.
 //Precondition: None
-//Postcondition: The amount of money the patient has is returned.
+//Postcondition: The patients mental health is changed by the passed value.
 
-//Description: The get_mental_health function returns the patients current
-//             mental health value
-//Precondition: None
+//Description: The get_mental_health function returns the patients mental
+//             health value
+//Preconditon: None
 //Postcondition: The patients mental health value is returned.
 
-//Description: The modify_mental_health function adds the passed amount to
-//             the patients mental health value.
+//Description: The add_to_name function adds the passed string to the end
+//             of the patients name giving them a new name.
 //Precondition: None
-//Postcondition: The patients mental health is adjusted.
+//Postcondition: The passed string is put on the end of the patients name.
 
-//Description: The add_to_name function adds the passed name onto the end
-//             of the patients current name.
+//Description: The modify_weight function adds the passed value to the
+//             patients weight.
 //Precondition: None
-//Postcondition: The passed name is added to the patients name.
+//Postcondition: The passed value is added to the patients weight.
 
-//Description: The modify_weight function adds the passed value to the users
-//             weight.
+//Description: The getMoney function returns the amount of money the
+//             patient has.
 //Precondition: None
-//Postcondition: The patients weight is modified based on passed value.
+//Postcondition: The amount of money on the patient is returned.
 
 //Description: This funciton overrides the insertion operator for patient
 //             and makes it output their name, condition, and livelyhood in
@@ -79,14 +79,12 @@ class Patient
     void pay_out(const float pay_amount);
     void modify_physical_health(const int condition_dif);
     int get_physical_health() const{return m_physCondition;}
-    float getMoney() const{return m_money;}
-<<<<<<< HEAD
-    int get_mental_health() const{return m_mentCondition;}
     void modify_mental_health(const int amount);
+    int get_mental_health() const{return m_mentCondition;}
     void add_to_name(const string name);
     void modify_weight(const int amount);
-=======
->>>>>>> FETCH_HEAD
+    float getMoney() const{return m_money;}
+
     friend ostream& operator <<(ostream& o,const Patient& p);
   private:
     string m_name;

@@ -19,8 +19,13 @@ void hospital_room<T_machine>::admit(Patient & p,Doctor & d)
   short oz_schraut;
   short numApps;
   bool drankSchraut=false;
+<<<<<<< HEAD
   if(p.get_physical_health()!=0 && p.getMoney()>=
     m_the_machine.getCost())
+=======
+  if(p.get_physical_condition()!=0 && p.getMoney()>=
+    m_the_machine.get_cost_per_use())
+>>>>>>> 9b78373eb6a4da54ea690c6d3c6c68a72798ec45
   {
     m_the_machine.charge_patient(p);
     oz_schraut=rand()%(MAXSCHRAUT-MINSCHRAUT+1)+MINSCHRAUT;
