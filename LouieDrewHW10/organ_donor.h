@@ -37,7 +37,7 @@ const int MENTAL_HEALTH_MODIFIER = 10;
 const int PHYSICAL_HEALTH_MOD_MIN = 0;
 const int PHYSICAL_HEALTH_MOD_MAX = 20;
 const int KILL_CHANCE = 10;
-const int WEIGHT_MODIFIER = 10;
+const int WEIGHT_MODIFIER = -10;
 
 class Organ_Donor
 {
