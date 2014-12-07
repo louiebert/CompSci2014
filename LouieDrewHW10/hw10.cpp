@@ -36,31 +36,31 @@ int main()
     xrayRoom.admit(patients[i], doctorEloe);
     cout << patients[i] << endl;
     if(doctorEloe.get_oz_schraut() == 0)
-      cout << "The doctor puked!" << endl << endl;
+      cout << "The doctor puked!" << endl;
 
     cout << "----------LOBOTOMY ROOM----------" << endl;
     loboRoom.admit(patients[i], doctorEloe);
     cout << patients[i] << endl;
     if(doctorEloe.get_oz_schraut() == 0)
-      cout << "The doctor puked!" << endl << endl;
+      cout << "The doctor puked!" << endl;
 
     cout << "----------ORGAN DONOR ROOM----------" << endl;
     organRoom.admit(patients[i], doctorEloe);
     cout<<patients[i]<<endl;
     if(doctorEloe.get_oz_schraut() == 0)
-      cout << "The doctor puked!" << endl << endl;
+      cout << "The doctor puked!" << endl;
 
     cout << "----------PLACAEBOIZER ROOM----------" << endl;
     placaRoom.admit(patients[i], doctorEloe);
     cout<<patients[i]<<endl;
     if(doctorEloe.get_oz_schraut() == 0)
-      cout << "The doctor puked!" << endl << endl;
+      cout << "The doctor puked!" << endl;
 
     cout << "----------PHARMACY----------" << endl;
     pharmRoom.admit(patients[i], doctorEloe);
     cout<<patients[i]<<endl;
     if(doctorEloe.get_oz_schraut() == 0)
-      cout << "The doctor puked!" << endl << endl;
+      cout << "The doctor puked!" << endl;
 
     cout << "----------LIPOSUCTION ROOM----------" << endl;
     lipoRoom.admit(patients[i], doctorEloe);
@@ -68,7 +68,7 @@ int main()
     if(doctorEloe.get_oz_schraut() == 0)
       cout << "The doctor puked!" << endl;
 
-    cout<<"The doctor has " << doctorEloe.get_oz_schraut() <<
+    cout << "\nThe doctor has " << doctorEloe.get_oz_schraut() <<
     " ounces of Schraut! in his stomach and has $" << doctorEloe.getMoney()
     << "." <<"\n\n" <<endl;
     if(patients[i].get_physical_health() == 0)
