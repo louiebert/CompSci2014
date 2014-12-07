@@ -89,14 +89,16 @@ void Patient::add_to_name(const string name)
 void Patient::modify_weight(const int amount)
 {
   m_weight+=amount;
+  if(m_weight < 0)
+    m_weight = 0;
   return;
 }
 
 ostream& operator <<(ostream& o,const Patient& p)
 {
-  o<<p.m_name<<" has $"<<p.m_money<<", a physcial health value of "<<
-  p.m_physCondition<<", a mental health value of "<<p.m_mentCondition<<
-  ", weighs "<<p.m_weight<<" lbs"<<", and is "<<(p.m_is_alive?"":"not ")<<
+  o<<p.m_name<<" has $"<<p.m_money<<", PH: "<<
+  p.m_physCondition<<", MH: "<<p.m_mentCondition<<
+  ", weight: "<<p.m_weight<<" lbs"<<", and is "<<(p.m_is_alive?"":"not ")<<
   "alive.";
   return o;
 }

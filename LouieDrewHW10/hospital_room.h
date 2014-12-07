@@ -10,7 +10,9 @@
 #include <cstdlib>
 #include <ctime>
 using namespace std;
-const float INIT_SCHRAUT=10;
+const float INIT_SCHRAUT=10.0;
+const short MAXSCHRAUT=3;
+const short MINSCHRAUT=1;
 
 //Description: The hospital_room constructor creates a default hospital
 //room with 10oz of schraut and a default machine.
@@ -31,11 +33,11 @@ template <class T_machine>
 class hospital_room
 {
   public:
-    hospital_room(const float s=INIT_SCHRAUT): m_schrautOz(s){}
+    hospital_room(): m_schrautOz(INIT_SCHRAUT){}
     void admit(Patient & p,Doctor & d);
     template <class U_machine>
     friend ostream& operator <<(ostream& o,const hospital_room
-    <U_machine> & h);
+      <U_machine>& h);
   private:
     T_machine m_the_machine;
     float m_schrautOz;

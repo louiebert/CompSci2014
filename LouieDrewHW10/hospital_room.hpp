@@ -11,47 +11,48 @@
 
 using namespace std;
 
-const short MAXSCHRAUT=3;
-const short MINSCHRAUT=1;
 template <class T_machine>
 void hospital_room<T_machine>::admit(Patient & p,Doctor & d)
 {
-  short numApps;
-  short oz_schraut;
-  bool drankSchraut=false;
+  short numApps, numAppsAferDeath = 0;
+  short oz_schraut = rand()%(MAXSCHRAUT-MINSCHRAUT+1)+MINSCHRAUT;
 
-  if(p.get_physical_health()!=0 && p.getMoney()>=
+  if(p.get_physical_health() > 0 && p.getMoney() >=
     m_the_machine.get_cost_per_use())
   {
-    oz_schraut=rand()%(MAXSCHRAUT-MINSCHRAUT+1)+MINSCHRAUT;
-    if(oz_schraut>m_schrautOz)
-      oz_schraut=m_schrautOz;
-    if(oz_schraut>0)
+    if(m_schrautOz - oz_schraut <= 0)
     {
-      d.drink_schraut(oz_schraut);
-      numApps=d.get_oz_schraut()-5;
-      if(numApps<0)
-        numApps=0;
+      oz_schraut = m_schrautOz;
+      m_schrautOz = 0;
     }
     else
+      m_schrautOz -= oz_schraut;
+
+    d.drink_schraut(oz_schraut);
+    numApps = d.get_oz_schraut()-5;
+    if(numApps < 0)
+      numApps = 0;
+    if(oz_schraut)
+      numApps *= 2;
+
+    for(int i = 0; i < numApps; i++)
     {
-      numApps=(d.get_oz_schraut()-5)*2;
-      if(numApps<0)
-        numApps=0;
+      if(p.get_physical_health())
+        m_the_machine.apply(p);
+      else
+        numAppsAferDeath++;
     }
-    for(int i=0;i<numApps;i++)
+
+    numApps -= numAppsAferDeath;
+    if(numApps > 0)
     {
-      m_the_machine.apply(p);
+      m_the_machine.charge_patient(p);
+      d.increase_money(m_the_machine.get_cost_per_use()/2);
     }
   }
   else
-    numApps=0;
-  if(numApps!=0)
-  {
-    m_the_machine.charge_patient(p);
-    d.increase_money(m_the_machine.get_cost_per_use()/2);
-  }
-  cout<<"Number of Applications: "<<numApps<<endl;
+    numApps = 0;
+  cout << "Number of Applications: " << numApps << endl;
   return;
 }
 
