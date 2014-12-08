@@ -22,60 +22,69 @@ int main()
   srand(time(NULL));
   Patient patients[NUM_PATIENTS];
   Doctor doctorEloe("Doctor Eloe");
-  hospital_room<X_Rayer> xrayRoom;
-  hospital_room<Lobotomizer> loboRoom;
-  hospital_room<Organ_Donor> organRoom;
-  hospital_room<Placaeboizer> placaRoom;
-  hospital_room<Pharmacy> pharmRoom;
-  hospital_room<Liposuctionizer> lipoRoom;
+  Hospital_Room<X_Rayer> xrayRoom;
+  Hospital_Room<Lobotomizer> loboRoom;
+  Hospital_Room<Organ_Donor> organRoom;
+  Hospital_Room<Placaeboizer> placaRoom;
+  Hospital_Room<Pharmacy> pharmRoom;
+  Hospital_Room<Liposuctionizer> lipoRoom;
   greeting();
   for(int i=0; i < NUM_PATIENTS ; i++)
   {
-    cout<<"Patient #"<<i+1<<": "<<endl;
-    cout << "----------X-RAY ROOM----------" << endl;
+    cout << "Patient #"<<i+1<<": " << endl;
+    cout << "\t----------X-RAY ROOM----------" << endl;
     xrayRoom.admit(patients[i], doctorEloe);
     cout << patients[i] << endl;
     if(doctorEloe.get_oz_schraut() == 0)
-      cout << "The doctor puked!" << endl << endl;
+      cout << "The doctor puked!" << endl;
 
-    cout << "----------LOBOTOMY ROOM----------" << endl;
+    cout << "\t----------LOBOTOMY ROOM----------" << endl;
     loboRoom.admit(patients[i], doctorEloe);
     cout << patients[i] << endl;
     if(doctorEloe.get_oz_schraut() == 0)
-      cout << "The doctor puked!" << endl << endl;
+      cout << "The doctor puked!" << endl;
 
-    cout << "----------ORGAN DONOR ROOM----------" << endl;
+    cout << "\t----------ORGAN DONOR ROOM----------" << endl;
     organRoom.admit(patients[i], doctorEloe);
-    cout<<patients[i]<<endl;
-    if(doctorEloe.get_oz_schraut() == 0)
-      cout << "The doctor puked!" << endl << endl;
-
-    cout << "----------PLACAEBOIZER ROOM----------" << endl;
-    placaRoom.admit(patients[i], doctorEloe);
-    cout<<patients[i]<<endl;
-    if(doctorEloe.get_oz_schraut() == 0)
-      cout << "The doctor puked!" << endl << endl;
-
-    cout << "----------PHARMACY----------" << endl;
-    pharmRoom.admit(patients[i], doctorEloe);
-    cout<<patients[i]<<endl;
-    if(doctorEloe.get_oz_schraut() == 0)
-      cout << "The doctor puked!" << endl << endl;
-
-    cout << "----------LIPOSUCTION ROOM----------" << endl;
-    lipoRoom.admit(patients[i], doctorEloe);
-    cout<<patients[i]<<endl;
+    cout << patients[i] << endl;
     if(doctorEloe.get_oz_schraut() == 0)
       cout << "The doctor puked!" << endl;
 
-    cout<<"The doctor has " << doctorEloe.get_oz_schraut() <<
+    cout << "\t----------PLACAEBOIZER ROOM----------" << endl;
+    placaRoom.admit(patients[i], doctorEloe);
+    cout << patients[i] << endl;
+    if(doctorEloe.get_oz_schraut() == 0)
+      cout << "The doctor puked!" << endl;
+
+    cout << "\t----------PHARMACY----------" << endl;
+    pharmRoom.admit(patients[i], doctorEloe);
+    cout << patients[i] << endl;
+    if(doctorEloe.get_oz_schraut() == 0)
+      cout << "The doctor puked!" << endl;
+
+    cout << "\t----------LIPOSUCTION ROOM----------" << endl;
+    lipoRoom.admit(patients[i], doctorEloe);
+    cout << patients[i] << endl;
+    if(doctorEloe.get_oz_schraut() == 0)
+      cout << "The doctor puked!" << endl;
+
+    cout << "\nThe doctor has " << doctorEloe.get_oz_schraut() <<
     " ounces of Schraut! in his stomach and has $" << doctorEloe.getMoney()
-    << "." <<"\n\n" <<endl;
+    << "." <<"\n\n" << endl;
     if(patients[i].get_physical_health() == 0)
       deadPatients++;
   }
-  cout << "During this simmulation " << deadPatients << " patients died, and" <<
+
+  cout << "\t\t###########################\n" << endl;
+
+  cout << "During this simulation " << deadPatients << " patients died, and" <<
     " the doctor made $" << doctorEloe.getMoney() << "." << endl;
+
+  cout << "Final room report:" << endl << xrayRoom << endl << loboRoom << endl
+    << organRoom << endl << placaRoom << endl << pharmRoom << endl << lipoRoom
+    << endl << endl;
+
   farewell();
+
   return 0;
 }

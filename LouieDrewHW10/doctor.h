@@ -9,7 +9,7 @@
 
 using namespace std;
 
-const int MAX_OZ_SCHRAUT = 25;
+const short MAX_OZ_SCHRAUT = 25;
 
 // Constructor sets m_name from parameter, sets m_oz_schraut to 0, and m_money
 //   to 0.
@@ -34,8 +34,8 @@ const int MAX_OZ_SCHRAUT = 25;
 // Post: m_money is increased by the amount provided in the paramater.
 
 // getMoney() returns the m_money
-//Pre: None
-//Post: m_money is returned.
+// Pre: None
+// Post: m_money is returned.
 
 class Doctor
 {
