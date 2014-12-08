@@ -1,6 +1,6 @@
 //Programmer: LOUIE BERTONCIN, DREW BUELTER     Date: 11/30/2014
 //File: hospital_room.cpp                       Class: CS 1570, Section D
-//Purpose: Body file for hospital_room class
+//Purpose: Body file for Hospital_Room class
 
 #include <iostream>
 #include <cstdlib>
@@ -12,7 +12,7 @@
 using namespace std;
 
 template <class T_machine>
-void hospital_room<T_machine>::admit(Patient & p,Doctor & d)
+void Hospital_Room<T_machine>::admit(Patient& p, Doctor& dr)
 {
   short numApps, numAppsAferDeath = 0;
   short oz_schraut = rand()%(MAXSCHRAUT-MINSCHRAUT+1)+MINSCHRAUT;
@@ -28,8 +28,8 @@ void hospital_room<T_machine>::admit(Patient & p,Doctor & d)
     else
       m_schrautOz -= oz_schraut;
 
-    d.drink_schraut(oz_schraut);
-    numApps = d.get_oz_schraut()-5;
+    dr.drink_schraut(oz_schraut);
+    numApps = dr.get_oz_schraut()-5;
     if(numApps < 0)
       numApps = 0;
     if(oz_schraut)
@@ -47,7 +47,7 @@ void hospital_room<T_machine>::admit(Patient & p,Doctor & d)
     if(numApps > 0)
     {
       m_the_machine.charge_patient(p);
-      d.increase_money(m_the_machine.get_cost_per_use()/2);
+      dr.increase_money(m_the_machine.get_cost_per_use()/2);
     }
   }
   else
@@ -57,8 +57,9 @@ void hospital_room<T_machine>::admit(Patient & p,Doctor & d)
 }
 
 template <class U_machine>
-ostream& operator <<(ostream& o,const hospital_room <U_machine> & h)
+ostream& operator <<(ostream& out,const Hospital_Room <U_machine> & hr)
 {
-  o<<h.m_the_machine<<"    Ounces of Schraut!: "<<h.m_schrautOz;
-  return o;
+  out << hr.m_the_machine << "\n\tRemaining ounces of Schraut!: " <<
+    hr.m_schrautOz;
+  return out;
 }
