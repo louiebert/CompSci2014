@@ -23,7 +23,7 @@ void Placaeboizer::apply(Patient& patient)
 
 ostream& operator << (ostream& out, const Placaeboizer& placae)
 {
-  out << "Placaeboizer:(Cost Per Use: " << placae.m_cost_per_use << ", Uses: "
+  out << "Placaeboizer(Cost Per Use: " << placae.m_cost_per_use << ", Uses: "
     << placae.m_num_uses << ")";
 
   return out;

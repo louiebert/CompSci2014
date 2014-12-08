@@ -25,7 +25,7 @@ void Liposuctionizer::apply(Patient& patient)
 
 ostream& operator << (ostream& out, const Liposuctionizer& lipo)
 {
-  out << "Liposuctionizer:(Cost Per Use: " << lipo.m_cost_per_use << ", Uses: "
+  out << "Liposuctionizer(Cost Per Use: " << lipo.m_cost_per_use << ", Uses: "
     << lipo.m_num_uses << ")";
 
   return out;

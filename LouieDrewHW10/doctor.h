@@ -34,8 +34,8 @@ const short MAX_OZ_SCHRAUT = 25;
 // Post: m_money is increased by the amount provided in the paramater.
 
 // getMoney() returns the m_money
-//Pre: None
-//Post: m_money is returned.
+// Pre: None
+// Post: m_money is returned.
 
 class Doctor
 {
