@@ -28,7 +28,7 @@ void Organ_Donor::apply(Patient& patient)
 
 ostream& operator << (ostream& out, const Organ_Donor& donor)
 {
-  out << "Organ Donor:(Cost Per Use: " << donor.m_cost_per_use << ", Uses: " <<
+  out << "Organ Donor(Cost Per Use: " << donor.m_cost_per_use << ", Uses: " <<
     donor.m_num_uses << ")";
 
   return out;

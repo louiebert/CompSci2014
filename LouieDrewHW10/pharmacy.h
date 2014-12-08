@@ -50,16 +50,16 @@ const int PH_WEIGHT_MODIFIER_E = 44;
 
 class Pharmacy
 {
-private:
-  float m_cost_per_use;
-  short m_num_uses;
-  short m_num_pills;
-public:
-  Pharmacy();
-  float get_cost_per_use() const{return m_cost_per_use;}
-  void charge_patient(Patient& patient) const;
-  void apply(Patient& patient);
-  friend ostream& operator << (ostream& out, const Pharmacy& pharm);
+  private:
+    float m_cost_per_use;
+    short m_num_uses;
+    short m_num_pills;
+  public:
+    Pharmacy();
+    float get_cost_per_use() const{return m_cost_per_use;}
+    void charge_patient(Patient& patient) const;
+    void apply(Patient& patient);
+    friend ostream& operator << (ostream& out, const Pharmacy& pharm);
 };
 
 #endif

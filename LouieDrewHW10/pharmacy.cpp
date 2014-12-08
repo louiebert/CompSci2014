@@ -59,7 +59,7 @@ void Pharmacy::apply(Patient& patient)
 
 ostream& operator << (ostream& out, const Pharmacy& pharm)
 {
-  out << "Pharmacy:(Cost Per Use: " << pharm.m_cost_per_use << ", Uses: " <<
+  out << "Pharmacy(Cost Per Use: " << pharm.m_cost_per_use << ", Uses: " <<
     pharm.m_num_uses << ", Pills Left: " << pharm.m_num_pills << ")";
 
   return out;
