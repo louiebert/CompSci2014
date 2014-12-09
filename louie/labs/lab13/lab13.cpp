@@ -2,6 +2,8 @@
 //File: lab13.cpp                 Class: CS 1580, Section D
 //Purpose: Main file for Lab13
 
+#include <cstdlib>
+#include <ctime>
 #include <iostream>
 #include "lab13.hpp"
 #include "farm.h"
@@ -10,6 +12,7 @@ using namespace std;
 
 int main()
 {
+  srand(time(NULL));
   int numHorses, numCats;
 
   Farm<Horse> horseFarm;
@@ -34,9 +37,11 @@ int main()
 
   cout << "\n\nHorse Farm:" << endl;
   horseFarm.printAnimals();
+  horseFarm.action();
 
   cout << "\nCat Farm:" << endl;
   catFarm.printAnimals();
+  catFarm.action();
 
 
   return 0;
