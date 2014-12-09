@@ -6,13 +6,7 @@
 // a Lobotomizer within the program that simulates a patient and a doctor
 // visiting hospital rooms.
 
-#include "Lobotomizer.h"
-#include "hw10.h"
-#include <string>
-#include <ctime>
-#include <cstdlib>
-#include <iostream>
-#include <fstream>
+#include "lobotomizer.h"
 
 using namespace std;
 

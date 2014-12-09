@@ -8,12 +8,8 @@
 #ifndef PLACAEBOIZER_H
 #define PLACAEBOIZER_H
 
-#include <string>
-#include <ctime>
-#include <cstdlib>
 #include <iostream>
-#include <fstream>
-#include "patient.h"
+#include "hw10.h"
 using namespace std;
 
 //----------------------------Global Constants-------------------------------//

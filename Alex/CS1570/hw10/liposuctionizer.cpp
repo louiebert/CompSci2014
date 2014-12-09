@@ -6,11 +6,6 @@
 // Liposuctionizer machine for use in the program that simulates a doctor
 // and patient entering a room and using the machine in a hospital room
 #include "liposuctionizer.h"
-#include <string>
-#include <ctime>
-#include <cstdlib>
-#include <iostream>
-#include <fstream>
 using namespace std;
 
 bool Liposuctionizer::charge_patient(Patient &p) const

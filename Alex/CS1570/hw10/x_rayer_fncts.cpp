@@ -7,11 +7,6 @@
 // entering a room and using the machine in a hospital room
 
 #include "x_rayer.h"
-#include <string>
-#include <ctime>
-#include <cstdlib>
-#include <iostream>
-#include <fstream>
 
 using namespace std;
 

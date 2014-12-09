@@ -5,12 +5,8 @@
 // Purpose: The implementation for the simulation of the usage of a
 // Placaeboizer machine for use in the program that simulates a doctor and
 // patient entering a room and using the machine in a hospital room
+
 #include "placaeboizer.h"
-#include <string>
-#include <ctime>
-#include <cstdlib>
-#include <iostream>
-#include <fstream>
 
 using namespace std;
 

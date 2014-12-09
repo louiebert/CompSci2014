@@ -7,12 +7,6 @@
 // and a doctor visiting hospital rooms.
 
 #include "pharmacy.h"
-#include "hw10.h"
-#include <string>
-#include <ctime>
-#include <cstdlib>
-#include <iostream>
-#include <fstream>
 
 using namespace std;
 
