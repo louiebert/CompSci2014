@@ -28,3 +28,14 @@ void Farm<T_animal>::printAnimals()
 
   return;
 }
+
+template<class T_animal>
+void Farm<T_animal>::action()
+{
+  for(int i = 0; i < m_herdSize; i++)
+  {
+    cout << m_myHerd[i].m_name << m_myHerd[i].act() << endl;
+  }
+
+  return;
+}
