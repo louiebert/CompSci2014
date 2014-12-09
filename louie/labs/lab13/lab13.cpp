@@ -16,8 +16,11 @@ int main()
   int numHorses, numCats;
 
   Farm<Horse> horseFarm;
-  cout << "How many horses would you like to have? ";
-  cin >> numHorses;
+  do
+  {
+    cout << "How many horses would you like to have? ";
+    cin >> numHorses;
+  }while(numHorses > 50 || numHorses < 0);
   for(int i = 0; i < numHorses; i++)
   {
     Horse newHorse;
@@ -26,8 +29,11 @@ int main()
   }
 
   Farm<Cat> catFarm;
-  cout << "How many cats would you like to have? ";
-  cin >> numCats;
+  do
+  {
+    cout << "How many cats would you like to have? ";
+    cin >> numCats;
+  }while(numCats > 50 || numCats < 0);
   for(int i = 0; i < numCats; i++)
   {
     Cat newCat;
