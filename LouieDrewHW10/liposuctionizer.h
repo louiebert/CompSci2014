@@ -42,7 +42,7 @@ class Liposuctionizer
     float m_cost_per_use;
     short m_num_uses;
   public:
-    Liposuctionizer():m_num_uses(0),m_cost_per_use(LIP_COST_PER_USE){}
+    Liposuctionizer();
     float get_cost_per_use() const{return m_cost_per_use;}
     void charge_patient(Patient& patient) const;
     void apply(Patient& patient);

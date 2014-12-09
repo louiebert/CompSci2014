@@ -6,6 +6,12 @@
 #include <fstream>
 #include "lobotomizer.h"
 
+Lobotomizer::Lobotomizer()
+{
+  m_num_uses = 0;
+  m_cost_per_use = LOB_COST_PER_USE;
+}
+
 void Lobotomizer::charge_patient(Patient& patient) const
 {
   patient.pay_out(m_cost_per_use);

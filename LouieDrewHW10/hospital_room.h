@@ -24,7 +24,6 @@ using namespace std;
 // Pre: None.
 // Post: Outputs a Hospital_Room object.
 
-const float INIT_SCHRAUT=10.0;
 const short MAXSCHRAUT=3;
 const short MINSCHRAUT=1;
 
@@ -35,7 +34,7 @@ class Hospital_Room
     T_machine m_the_machine;
     float m_schrautOz;
   public:
-    Hospital_Room(): m_schrautOz(INIT_SCHRAUT){}
+    Hospital_Room(): m_schrautOz(10.0){}
     void admit(Patient & p,Doctor & dr);
     template <class U_machine>
     friend ostream& operator <<(ostream& out,const Hospital_Room

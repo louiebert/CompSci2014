@@ -4,6 +4,12 @@
 
 #include "placaeboizer.h"
 
+Placaeboizer::Placaeboizer()
+{
+  m_num_uses = 0;
+  m_cost_per_use = PLC_COST_PER_USE;
+}
+
 void Placaeboizer::charge_patient(Patient& patient) const
 {
   patient.pay_out(m_cost_per_use);
