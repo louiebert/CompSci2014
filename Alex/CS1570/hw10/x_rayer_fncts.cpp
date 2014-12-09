@@ -7,10 +7,15 @@
 // entering a room and using the machine in a hospital room
 
 #include "x_rayer.h"
+#include <string>
+#include <ctime>
+#include <cstdlib>
+#include <iostream>
+#include <fstream>
 
 using namespace std;
 
-bool X_Rayer::charge_patient(Patient &p) const
+bool X_Rayer::charge_patient(Patient& p) const
 {
   bool got_charged = false;
   if(p.getMoney() >= m_cost_per_use)
@@ -21,7 +26,7 @@ bool X_Rayer::charge_patient(Patient &p) const
   return got_charged;
 }
 
-void X_Rayer::apply(Patient &p)
+void X_Rayer::apply(Patient& p)
 {
   if ((rand() % 100) <= CHANCE_XRAY_AFFECTS)
     p.modify_health(p.getCondition()/2);

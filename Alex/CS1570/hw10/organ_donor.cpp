@@ -7,12 +7,18 @@
 // visiting hospital rooms.
 
 #include "organ_donor.h"
+#include "hw10.h"
+#include <string>
+#include <ctime>
+#include <cstdlib>
+#include <iostream>
+#include <fstream>
 
 using namespace std;
 
 bool Organ_donor::charge_patient(Patient & p) const
 {
-  return p.pay_out(OD_COST_PER_USE);       //Returns true if patient able to pay
+  return p.pay_out(OD_COST_PER_USE);      //Returns true if patient able to pay
 }
 
 void Organ_donor::apply(Patient & p)

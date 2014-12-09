@@ -6,8 +6,8 @@
 // hospital rooms.
 
 #include "hw10.h"
-#include "doctor.h"
 #include "patient.h"
+#include "doctor.h"
 #include "hospital.h"
 #include "lobotomizer.h"
 #include "organ_donor.h"
@@ -43,7 +43,6 @@ int main()
   cout << pharm_room;
   cout << placae_room;
   cout << lipo_room;
-
   for(int i = 0; i < NUM_PATIENTS; i++)
   {
     cout << patients[i];

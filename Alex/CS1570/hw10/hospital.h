@@ -37,10 +37,10 @@ class Hospital
 {
   public:
     Hospital();
-    bool admit(Patient &p, Doctor &d);
+    bool admit(Patient& p, Doctor& d);
 
     template <typename u>
-    friend ostream& operator << (ostream& o, const Hospital<u> &h);
+    friend ostream& operator << (ostream& o, const Hospital<u>& h);
 
   private:
     T_machine m_the_machine;   // template machine

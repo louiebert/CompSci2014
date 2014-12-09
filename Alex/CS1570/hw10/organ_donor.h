@@ -9,9 +9,12 @@
 #ifndef ORGAN_DONOR_H
 #define ORGAN_DONOR_H
 
+#include <string>
+#include <ctime>
 #include <cstdlib>
 #include <iostream>
-#include "hw10.h"
+#include <fstream>
+#include "patient.h"
 
 using namespace std;
 

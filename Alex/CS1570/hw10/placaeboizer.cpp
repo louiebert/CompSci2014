@@ -5,12 +5,16 @@
 // Purpose: The implementation for the simulation of the usage of a
 // Placaeboizer machine for use in the program that simulates a doctor and
 // patient entering a room and using the machine in a hospital room
-
 #include "placaeboizer.h"
+#include <string>
+#include <ctime>
+#include <cstdlib>
+#include <iostream>
+#include <fstream>
 
 using namespace std;
 
-bool Placaeboizer::charge_patient(Patient &p) const
+bool Placaeboizer::charge_patient(Patient& p) const
 {
   bool got_charged = false;
   if(p.getMoney() >= m_cost_per_use)
@@ -21,7 +25,7 @@ bool Placaeboizer::charge_patient(Patient &p) const
   return got_charged;
 }
 
-void Placaeboizer::apply(Patient &p)
+void Placaeboizer::apply(Patient& p)
 {
   //This if-else statement prevents the mental health value from exceeding 100
   if(p.getMental() <= PLACAE_MENTAL_MAX)
@@ -34,7 +38,7 @@ void Placaeboizer::apply(Patient &p)
   return;
 }
 
-ostream& operator << (ostream &o, const Placaeboizer &p)
+ostream& operator << (ostream& o, const Placaeboizer& p)
 {
   o << "Placaeboizer cost per use: $" << p.m_cost_per_use
        << ", Num uses: " << p.m_num_uses;

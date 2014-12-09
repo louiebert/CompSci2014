@@ -8,8 +8,12 @@
 #ifndef PLACAEBOIZER_H
 #define PLACAEBOIZER_H
 
+#include <string>
+#include <ctime>
+#include <cstdlib>
 #include <iostream>
-#include "hw10.h"
+#include <fstream>
+#include "patient.h"
 using namespace std;
 
 //----------------------------Global Constants-------------------------------//
@@ -45,10 +49,10 @@ class Placaeboizer
 {
   public:
     Placaeboizer() : m_cost_per_use(PLACAE_CHARGE_AMOUNT) , m_num_uses(0) {}
-    bool charge_patient(Patient &p) const;
-    void apply(Patient &p);
+    bool charge_patient(Patient& p) const;
+    void apply(Patient& p);
     float getCost() const { return m_cost_per_use; }
-    friend ostream& operator << (ostream &o, const Placaeboizer &p);
+    friend ostream& operator << (ostream& o, const Placaeboizer& p);
 
   private:
     float m_cost_per_use;     //The cost of the machine

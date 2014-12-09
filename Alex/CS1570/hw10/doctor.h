@@ -9,11 +9,8 @@
 #ifndef DOCTOR_H
 #define DOCTOR_H
 
-#include <string>
-#include <ctime>
 #include <cstdlib>
 #include <iostream>
-#include <fstream>
 using namespace std;
 
 //----------------------------Global constants-------------------------------//

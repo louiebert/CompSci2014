@@ -7,12 +7,18 @@
 // and a doctor visiting hospital rooms.
 
 #include "pharmacy.h"
+#include "hw10.h"
+#include <string>
+#include <ctime>
+#include <cstdlib>
+#include <iostream>
+#include <fstream>
 
 using namespace std;
 
 bool Pharmacy::charge_patient(Patient & p) const
 {
-  return p.pay_out(PHARM_COST_PER_USE);    //Returns true if Patient able to pay
+  return p.pay_out(PHARM_COST_PER_USE);       //Returns true if Patient able to pay
 }
 
 void Pharmacy::apply(Patient & p)

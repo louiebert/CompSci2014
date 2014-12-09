@@ -9,6 +9,7 @@
 #define PATIENT_H
 
 #include <string>
+#include <ctime>
 #include <cstdlib>
 #include <iostream>
 #include <fstream>

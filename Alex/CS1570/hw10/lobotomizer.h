@@ -9,10 +9,12 @@
 #ifndef LOBOTOMIZER_H
 #define LOBOTOMIZER_H
 
+#include <string>
 #include <ctime>
 #include <cstdlib>
 #include <iostream>
-#include "hw10.h"
+#include <fstream>
+#include "patient.h"
 
 using namespace std;
 
@@ -56,11 +58,10 @@ const short NAME_ALTER_CHANCE = 10;           //Percent chance of altering name
 class Lobotomizer
 {
   public:
-    Lobotomizer(): m_cost_per_use(LOB_COST_PER_USE), m_num_uses(LOB_INIT_USES)
-                   {};
+    Lobotomizer(): m_cost_per_use(LOB_COST_PER_USE), m_num_uses(LOB_INIT_USES) {};
     bool charge_patient(Patient & p) const;
     void apply(Patient & p);
-    float getCost() const {return m_cost_per_use;}
+    float getCost() const {return m_cost_per_use;} 
     friend ostream & operator << (ostream & o, const Lobotomizer & l);
   private:
     float m_cost_per_use;

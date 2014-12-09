@@ -7,12 +7,6 @@
 // visiting hospital rooms.bool puke()
 
 #include "doctor.h"
-#include "hw10.h"
-#include <string>
-#include <ctime>
-#include <cstdlib>
-#include <iostream>
-#include <fstream>
 
 using namespace std;
 

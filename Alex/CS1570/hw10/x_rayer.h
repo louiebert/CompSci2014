@@ -8,9 +8,12 @@
 #ifndef XRAYER_H
 #define XRAYER_H
 
+#include <string>
+#include <ctime>
 #include <cstdlib>
 #include <iostream>
-#include "hw10.h"
+#include <fstream>
+#include "patient.h"
 using namespace std;
 
 //----------------------------Global Constants-------------------------------//
@@ -48,8 +51,8 @@ class X_Rayer
   public:
     X_Rayer() : m_cost_per_use(CHARGE_PER_USE),
                 m_num_uses(0) {}
-    bool charge_patient(Patient &p) const;
-    void apply(Patient &p);
+    bool charge_patient(Patient& p) const;
+    void apply(Patient& p);
     float getCost() const { return m_cost_per_use; }
     friend ostream& operator << (ostream& o,
                                  const X_Rayer& x);

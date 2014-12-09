@@ -11,7 +11,7 @@ Hospital<T>::Hospital()
 }
 
 template <class T_machine>
-bool Hospital<T_machine>::admit(Patient &p, Doctor &d)
+bool Hospital<T_machine>::admit(Patient& p, Doctor& d)
 {
   bool admitted = false;
 //---------Admits patient if he/she has enough money and is alive------------//
@@ -46,7 +46,7 @@ bool Hospital<T_machine>::admit(Patient &p, Doctor &d)
 }
 
 template <typename T>
-ostream& operator << (ostream& o, const Hospital<T> &h)
+ostream& operator << (ostream& o, const Hospital<T>& h)
 {
   o << "Machine:  " << h.m_the_machine;
   o << "Ounces of Schraut!: " << h.m_schraut;

@@ -13,7 +13,7 @@
 #include <cstdlib>
 #include <iostream>
 #include <fstream>
-#include "hw10.h"
+#include "patient.h"
 using namespace std;
 
 //----------------------------Global Constants-------------------------------//
@@ -49,10 +49,10 @@ class Liposuctionizer
 {
   public:
     Liposuctionizer() : m_cost_per_use(LIPO_CHARGE_AMOUNT) , m_num_uses(0) {}
-    bool charge_patient(Patient &p) const;
-    void apply(Patient &p);
-    float getCost() const { return m_cost_per_use; }
-    friend ostream& operator << (ostream &o, const Liposuctionizer &L);
+    bool charge_patient(Patient& p) const;
+    void apply(Patient& p);
+    float getCost() const { return m_cost_per_use; } 
+    friend ostream& operator << (ostream& o, const Liposuctionizer& L);
 
   private:
     float m_cost_per_use;    // A float to charge patients

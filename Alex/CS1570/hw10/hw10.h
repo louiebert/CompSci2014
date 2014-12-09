@@ -21,9 +21,9 @@
 using namespace std;
 
 //-------------------------------Global Constants----------------------------//
-const short MAX_TESTS = 5;                //Number of tests to connect to data file
-const short NUM_PATIENTS = 10;            //Size of patient array
-const short NUM_ROOMS = 6;                //Size of hospital_room array
+const short MAX_TESTS = 5;            //Number of tests to connect to data file
+const short NUM_PATIENTS = 10;        //Size of patient array
+const short NUM_ROOMS = 6;            //Size of hospital_room array
 //------------------------------Function Prototypes--------------------------//
 
 // connect_to_file() opens and tests a connection to a data file. If no

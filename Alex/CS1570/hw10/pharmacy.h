@@ -10,8 +10,11 @@
 #define PHARMACY_H
 
 #include "hw10.h"
+#include <string>
+#include <ctime>
 #include <cstdlib>
 #include <iostream>
+#include <fstream>
 
 using namespace std;
 
