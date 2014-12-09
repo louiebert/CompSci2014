@@ -26,6 +26,7 @@ using namespace std;
 
 const short MAXSCHRAUT=3;
 const short MINSCHRAUT=1;
+const float INIT_SCHRAUT = 10.0;
 
 template <class T_machine>
 class Hospital_Room
@@ -34,7 +35,7 @@ class Hospital_Room
     T_machine m_the_machine;
     float m_schrautOz;
   public:
-    Hospital_Room(): m_schrautOz(10.0){}
+    Hospital_Room(): m_schrautOz(INIT_SCHRAUT){}
     void admit(Patient & p,Doctor & dr);
     template <class U_machine>
     friend ostream& operator <<(ostream& out,const Hospital_Room
