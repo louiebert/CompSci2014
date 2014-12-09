@@ -5,6 +5,8 @@
 #include "lab13.h"
 #include "farm.h"
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
 
 using namespace std;
 
@@ -14,6 +16,8 @@ int main()
   string inName;
   horse tempHorse;
   cat tempCat;
+  
+  srand(time(NULL));
   
   farm<horse> horseFarm;
   farm<cat> catFarm;
@@ -48,6 +52,10 @@ int main()
   horseFarm.printAnimals();
   cout << endl << "you have "<< catFarm.getHerdsize() << " cats" << endl;
   catFarm.printAnimals();
+  cout << endl << "This is what your horses are doing: " << endl;
+  horseFarm.action();
+  cout << endl << "This is what your cats are doing: " << endl;
+  catFarm.action();
   cout << endl << "goodbye";
   return 0;
 }

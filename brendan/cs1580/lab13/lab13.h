@@ -15,6 +15,7 @@ struct horse
   string m_name;
 	char m_gender;
   friend ostream& operator<<(ostream& stream, horse& value);
+  void act();
 };
 
 struct cat
@@ -22,6 +23,7 @@ struct cat
     string m_name;
     char m_gender;
     friend ostream& operator<<(ostream& stream, horse& value);
+    void act();
 };
 
 #include "lab13.hpp"

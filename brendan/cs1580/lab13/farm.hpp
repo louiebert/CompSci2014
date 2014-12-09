@@ -22,3 +22,12 @@ void farm<T_animal>::printAnimals()
     cout << my_herd[i] << endl;
   }
 }
+
+template <class T_animal>
+void farm<T_animal>::action()
+{
+  for (int i =0; i<m_herdSize; i++)
+  {
+    my_herd[i].act();
+  }
+}

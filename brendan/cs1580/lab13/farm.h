@@ -20,6 +20,7 @@ class farm
     void addAnimal(T_animal anim);
     void printAnimals();
     int getHerdsize() const {return m_herdSize;}
+    void action();
   private:
     T_animal my_herd[MAX];
     int m_herdSize;
