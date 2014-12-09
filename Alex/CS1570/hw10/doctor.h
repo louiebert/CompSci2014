@@ -52,6 +52,7 @@ class Doctor
     bool puke();
     bool consume_schraut(float & amt_schraut);
     float getSchraut() const {return m_schraut;} 
+    void modifyMoney(float m) {m_money += m; return; }
     friend ostream & operator <<(ostream & o, const Doctor & d);
 
   private:

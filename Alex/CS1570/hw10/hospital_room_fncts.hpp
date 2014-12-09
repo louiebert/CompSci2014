@@ -18,7 +18,7 @@ bool Hospital<T_machine>::admit(Patient &p, Doctor &d)
   if(m_the_machine.charge_patient(p) && p.getCondition() > DEAD)
   {
     int num_apps = 0;
-    d.m_money += m_doctor_payout;
+    d.modifyMoney(m_doctor_payout);
 
 //------Determines number of applications if doctor consumed Schraut---------//
     if(d.consume_schraut(m_schraut))
