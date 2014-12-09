@@ -5,6 +5,8 @@
 #ifndef HOSPITALROOM_H
 #define HOSPITALROOM_H
 #include "xray.h"
+#include "lobotomizer.h"
+#include "organDonor.h"
 #include "patient.h"
 #include <iostream>
 #include "doctor.h"

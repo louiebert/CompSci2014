@@ -7,6 +7,7 @@
 
 using namespace std;
 #include <string>
+#include <iostream>
 
 class doctor
 {
@@ -16,10 +17,11 @@ class doctor
     float m_money;
   public:
     doctor(string name): m_name(name), m_money(0), m_schrautConsumed(0){}
-    void puke () {m_schrautConsumed = 0;}
+    void puke () {m_schrautConsumed = 0; cout << "Doctor " << m_name << " has puked" << endl;}
     void addMoney (int charged) {m_money+=(charged/2);}
     void consumeSchraut (int amount);
     short getSchrautConsumed() {return m_schrautConsumed;} 
+     friend ostream& operator << (ostream& stream, doctor& doc);
 };
 
 #endif

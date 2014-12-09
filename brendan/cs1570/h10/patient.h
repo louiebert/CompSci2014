@@ -19,7 +19,7 @@ class patient
     int m_condition; //0-100, 100 perfect, 0 = dead
     int m_mentalCondition;
     int m_weight;
-    char m_name[30];
+    char m_name[50];
   public:
     //Description: default constructor
     //Pre: none
@@ -38,9 +38,25 @@ class patient
     //Post: amonut to change is added to patients existing condition value_comp
     void modifyHealth(const int amount);
     
-    //get function for condition
-    int getCondition() const;
+    void modifyMHealth(const int amount);
     
+    void modifyWeight (const int amount);
+    
+    //get function for condition
+    int getHealth() {return m_condition;}
+    
+    int getMHealth() {return m_mentalCondition;}
+    
+    bool getAlive() {return m_isAlive;}
+    
+    float getMoney() {return m_money;}
+    
+    string getName() {return m_name;}
+    
+    int getWeight() {return m_weight;}
+    
+    void forgetName();
+        
     //Description: checks if patient is alive 
     //Pre: none
     //Post: if patients condition is 0 or lower, m_isAlive becomes false

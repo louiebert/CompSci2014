@@ -7,16 +7,18 @@
 
 #include "patient.h"
 #include <iostream>
+#include <string>
 using namespace std;
 
 const int XRAY_DANGER_PERCENT = 10;
 const int DEFAULT_COST = 550;
-
+const string XNAME = "xRayer";
 class xRayer
 {
   private:
     float m_costPerUse;
     short m_numUses;
+    string m_name;
   public:
     
     //Description: default constructor
@@ -34,6 +36,12 @@ class xRayer
     //Pre: patient passed by reference
     //Post: patient's money is docked m_costPerUse
     void chargePatient(patient &pat);
+    
+    int getCost() {return m_costPerUse;}
+    
+    int getNumUses() {return m_numUses;}
+    
+    string getName() {return m_name;}
     
     //Description: defines insertion operator
     //output is : number of machine uses: (m_numUses)

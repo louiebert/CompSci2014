@@ -12,12 +12,13 @@ using namespace std;
 xRayer::xRayer()
 {
   m_numUses =0;
+  m_name = XNAME;
   m_costPerUse=DEFAULT_COST;
 }
 
 void xRayer::apply(patient & pat)
 {
-  int halfCond = pat.getCondition()/2;
+  int halfCond = pat.getHealth()/2;
   m_numUses++;
   
   if (rand()%100 <XRAY_DANGER_PERCENT)
@@ -28,8 +29,9 @@ void xRayer::chargePatient(patient &pat)
 {
   pat.payOut(m_costPerUse);
 }
+
 ostream& operator << (ostream& stream, xRayer& machine)
 {
-  stream << "Number of machine uses: " << machine.m_numUses;
+  stream << "XRay machine number of uses: " << machine.m_numUses;
   return stream;
 }

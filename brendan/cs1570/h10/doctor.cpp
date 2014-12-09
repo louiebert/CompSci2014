@@ -4,12 +4,21 @@
 
 
 #include "doctor.h"
+#include <iostream>
 
-
+using namespace std;
 
 void doctor::consumeSchraut(int amount)
 {
   m_schrautConsumed +=amount;
   if (m_schrautConsumed >=25)
     (*this).puke();
+}
+
+ostream& operator << (ostream& stream, doctor &doc)
+{
+  stream << "Doctor " << doc.m_name << " has consumed ";
+  stream << doc.m_schrautConsumed << " ounces of schraut " << " and has $";
+  stream << doc.m_money;
+  return stream;
 }

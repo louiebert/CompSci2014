@@ -52,7 +52,25 @@ void patient::payOut (const int amount)
 void patient::modifyHealth (const int amount)
 {
   m_condition += amount;
+  if (m_condition > 100)
+    m_condition = 100;
   kill();
+  return;
+}
+
+void patient::modifyMHealth (const int amount)
+{
+  m_mentalCondition += amount;
+  if (m_mentalCondition > 100)
+    m_mentalCondition = 100;
+  return;
+}
+
+void patient::modifyWeight (const int amount)
+{
+  m_weight += amount;
+  if (m_weight < 1)
+    m_weight = 1;
   return;
 }
 
@@ -63,15 +81,36 @@ void patient::kill()
   return;
 }
 
-int patient::getCondition() const
+void patient::forgetName()
 {
-  return (m_condition);
+  int numNames, selection;
+  string read;
+  ifstream in;
+  string hyphen = "_";
+  
+  strcat(m_name, hyphen.c_str());
+  
+  in.open("names.txt");
+ 
+  in >> numNames;
+  selection = rand()%numNames;
+  
+  for (int i =0; i< numNames; i++)
+  {
+    in >> read;
+    if (i == selection)
+      strcat (m_name, read.c_str());
+  }
+  in.close(); 
+  return;
 }
+
 ostream& operator << (ostream& stream, patient& pat)
 {
-  stream << "Patient name : " << pat.m_name << endl;
-  stream << "Condition: " << pat.m_condition << endl;
-  stream << "Status: " << (pat.m_isAlive ? "alive" : "dead") << endl;
-  stream << "Money: $" << pat.m_money;
+  stream << pat.m_name << " weighs " << pat.m_weight << " pounds w/ MH= ";
+  stream << pat.m_mentalCondition << " and PH= " << pat.m_condition;
+  stream << " and has $" << pat.m_money; 
+  if (!pat.getAlive())
+    stream << endl << pat.m_name << " is DEAD";
   return stream;
 }
