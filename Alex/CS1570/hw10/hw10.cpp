@@ -58,7 +58,7 @@ int main()
     cout << "\n----------Patient #" << i + 1 << " is attempting to enter"
          << "the x-ray room. ------------" << endl;
 
-    if(xr_room.admit<X_Rayer>(patients[i], dr))
+    if(xr_room.admit(patients[i], dr))
     {
       cout << patients[i];
       cout << endl;
@@ -80,7 +80,7 @@ int main()
     cout << "\n----------Patient #" << i + 1 << " is attempting to enter"
          << "the lobotomizer room. ------------" << endl;
 
-    if(lob_room.admit<Lobotomizer>(patients[i], dr))
+    if(lob_room.admit(patients[i], dr))
     {
       cout << patients[i];
       cout << endl;
@@ -102,7 +102,7 @@ int main()
     cout << "\n----------Patient #" << i + 1 << " is attempting to enter"
          << "the organ donor room. ------------" << endl;
 
-    if(od_room.admit<Organ_donor>(patients[i], dr))
+    if(od_room.admit(patients[i], dr))
     {
       cout << patients[i];
       cout << endl;
@@ -124,7 +124,7 @@ int main()
     cout << "\n----------Patient #" << i + 1 << " is attempting to enter"
          << "the pharmacy. ------------" << endl;
 
-    if(pharm_room.admit<Pharmacy>(patients[i], dr))
+    if(pharm_room.admit(patients[i], dr))
     {
       cout << patients[i];
       cout << endl;
@@ -146,7 +146,7 @@ int main()
     cout << "\n----------Patient #" << i + 1 << " is attempting to enter"
          << "the placaeboizer room. ------------" << endl;
 
-    if(placae_room.admit<Placaeboizer>(patients[i], dr))
+    if(placae_room.admit(patients[i], dr))
     {
       cout << patients[i];
       cout << endl;
@@ -168,7 +168,7 @@ int main()
     cout << "\n----------Patient #" << i + 1 << " is attempting to enter"
          << "the liposuctionizer room. ------------" << endl;
 
-    if(lipo_room.admit<Liposuctionizer>(patients[i], dr))
+    if(lipo_room.admit(patients[i], dr))
     {
       cout << patients[i];
       //Still needs to display how many times machine was applied on patient

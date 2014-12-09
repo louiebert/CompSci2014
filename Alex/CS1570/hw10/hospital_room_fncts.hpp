@@ -19,7 +19,7 @@ bool Hospital<T_machine>::admit(Patient &p, Doctor &d)
   {
     int num_apps = 0;
     d.modifyMoney(m_doctor_payout);
-
+    admitted = true;
 //------Determines number of applications if doctor consumed Schraut---------//
     if(d.consume_schraut(m_schraut))
     {
@@ -42,7 +42,7 @@ bool Hospital<T_machine>::admit(Patient &p, Doctor &d)
     }
 
   }
-  return;
+  return admitted;
 }
 
 template <typename T>
