@@ -1,6 +1,6 @@
 // Programmer: Brendan Curran             Date: 10/7/2014
 // File: liposuctioner.cpp 		            Class: CS 1570 Sec C
-// Description: 
+// Description: contains function definitions for liposuctioner class
 
 #include <iostream>
 #include <cstdlib>

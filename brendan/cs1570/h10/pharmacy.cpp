@@ -1,6 +1,6 @@
 // Programmer: Brendan Curran             Date: 10/7/2014
 // File: pharmacy.cpp 		              Class: CS 1570 Sec C
-// Description: 
+// Description: contains function definitions for the pharmacy class
 
 #include <iostream>
 #include <cstdlib>
@@ -24,6 +24,7 @@ void pharmacy::chargePatient(patient &pat)
 
 void pharmacy::apply(patient& pat)
 {
+  //25% chance of getting each pill, (uniform distribution)
   int temp = rand()%4;
   if (m_numPills > 0)
   {
@@ -48,7 +49,7 @@ void pharmacy::apply(patient& pat)
     }
     m_numPills--;
   }
-  else
+  else //patient eats cotton ball, lol
   {
     pat.modifyMHealth(-23);
     pat.modifyWeight(44);

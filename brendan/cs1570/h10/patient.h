@@ -17,8 +17,8 @@ class patient
     float m_money;
     bool m_isAlive;
     int m_condition; //0-100, 100 perfect, 0 = dead
-    int m_mentalCondition;
-    int m_weight;
+    int m_mentalCondition; //0-100 100 is best, 0 is vegetable
+    int m_weight; //in pounds
     char m_name[50];
   public:
     //Description: default constructor
@@ -38,23 +38,36 @@ class patient
     //Post: amonut to change is added to patients existing condition value_comp
     void modifyHealth(const int amount);
     
+    //Description: changes the patients mental health
+    //Pre: integer amount to change health, positive or negative_sign
+    //Post: amount is added to the patients exisiting mental health condition
     void modifyMHealth(const int amount);
     
+    //Description: changes the patients weight
+    //Pre: integer amount to change weight, + or -
+    //Post: amount is added to the patients weight
     void modifyWeight (const int amount);
     
     //get function for condition
     int getHealth() {return m_condition;}
     
+    //Accessor function for mental health
     int getMHealth() {return m_mentalCondition;}
     
+    //Accessor function for patients alive status, true is alive
     bool getAlive() {return m_isAlive;}
     
+    //Accessor function for the patient's money
     float getMoney() {return m_money;}
     
+    //Accessor function for the patient's name
     string getName() {return m_name;}
     
+    //Accessor function for the patients weight
     int getWeight() {return m_weight;}
     
+    //Description: Patient forget's their name, but to signify a new name
+    //is concatenated onto their old one with a hyphen in between
     void forgetName();
         
     //Description: checks if patient is alive 

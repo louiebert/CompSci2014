@@ -37,10 +37,13 @@ class xRayer
     //Post: patient's money is docked m_costPerUse
     void chargePatient(patient &pat);
     
+    //Accessor function for the cost per use of the machine
     int getCost() {return m_costPerUse;}
     
+    //Accessor function for the number of times the machine has been used
     int getNumUses() {return m_numUses;}
     
+    //Acessor function for the name of the machine
     string getName() {return m_name;}
     
     //Description: defines insertion operator

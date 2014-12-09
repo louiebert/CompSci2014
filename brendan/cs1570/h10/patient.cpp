@@ -1,6 +1,6 @@
 // Programmer: Brendan Curran             Date: 11/19/2014
 // File: xray.cpp        		              Class: CS 1570 Sec C
-// Description: 
+// Description: contains function definitions for the patient class
 
 #include "patient.h"
 #include "xray.h"

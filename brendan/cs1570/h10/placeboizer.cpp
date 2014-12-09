@@ -1,6 +1,6 @@
 // Programmer: Brendan Curran             Date: 10/7/2014
 // File: placeboizer.cpp 		              Class: CS 1570 Sec C
-// Description: 
+// Description: contains the placeboizer function definitions
 
 #include <iostream>
 #include <cstdlib>

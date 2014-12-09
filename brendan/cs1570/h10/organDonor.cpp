@@ -1,6 +1,6 @@
 // Programmer: Brendan Curran             Date: 10/7/2014
 // File: organDonor.cpp 		              Class: CS 1570 Sec C
-// Description: 
+// Description: contains the organ donor class definitions
 
 #include <iostream>
 #include <cstdlib>

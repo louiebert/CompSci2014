@@ -1,6 +1,6 @@
 // Programmer: Brendan Curran             Date: 10/7/2014
-// File: lobotomizer.cpp  		              Class: CS 1570 Sec C
-// Description: 
+// File: lobotomizer.cpp  		            Class: CS 1570 Sec C
+// Description: contains the definitions for the lobotomizer class
 
 #include <iostream>
 #include <cstdlib>
@@ -30,6 +30,7 @@ void lobotomizer::apply(patient& pat)
   if (randNum < 10)
     pat.modifyMHealth(-pat.getMHealth());
   
+  randNum = rand()%100;
   if (randNum <3)
   {
     pat.forgetName();

@@ -1,6 +1,6 @@
 // Programmer: Brendan Curran             Date: 10/7/2014
 // File: doctor.cpp     		              Class: CS 1570 Sec C
-// Description: 
+// Description: function definitions for doctor class
 
 
 #include "doctor.h"
@@ -11,7 +11,7 @@ using namespace std;
 void doctor::consumeSchraut(int amount)
 {
   m_schrautConsumed +=amount;
-  if (m_schrautConsumed >=25)
+  if (m_schrautConsumed >=SCHRAUTTOLERANCE)
     (*this).puke();
 }
 

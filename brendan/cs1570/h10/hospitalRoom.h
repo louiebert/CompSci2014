@@ -1,6 +1,7 @@
 // Programmer: Brendan Curran             Date: 11/19/2014
-// File: hospitalRoom.h      		              Class: CS 1570 Sec C
-// Description: 
+// File: hospitalRoom.h      		          Class: CS 1570 Sec C
+// Description: Contains the templated hospital class, to be used
+// with machine classes
 
 #ifndef HOSPITALROOM_H
 #define HOSPITALROOM_H
