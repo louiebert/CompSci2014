@@ -50,7 +50,7 @@ class Lobotomizer
     short m_num_uses;
     string get_random_name() const;
   public:
-    Lobotomizer():m_num_uses(0),m_cost_per_use(LOB_COST_PER_USE){};
+    Lobotomizer();
     float get_cost_per_use() const{return m_cost_per_use;}
     void charge_patient(Patient& patient) const;
     void apply(Patient& patient);

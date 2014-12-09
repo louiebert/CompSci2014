@@ -45,7 +45,7 @@ class Organ_Donor
     float m_cost_per_use;
     short m_num_uses;
   public:
-    Organ_Donor():m_num_uses(0),m_cost_per_use(OD_COST_PER_USE){}
+    Organ_Donor();
     float get_cost_per_use() const{return m_cost_per_use;}
     void charge_patient(Patient& patient) const;
     void apply(Patient& patient);

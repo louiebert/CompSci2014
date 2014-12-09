@@ -8,6 +8,12 @@
 #include "x_rayer.h"
 using namespace std;
 
+X_Rayer::X_Rayer()
+{
+  m_num_uses = 0;
+  m_cost_per_use = XR_COST_PER_USE;
+}
+
 void X_Rayer::charge_patient(Patient & patient)const
 {
   patient.pay_out(m_cost_per_use);

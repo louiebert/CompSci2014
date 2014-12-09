@@ -4,6 +4,12 @@
 
 #include "liposuctionizer.h"
 
+Liposuctionizer::Liposuctionizer()
+{
+  m_num_uses = 0;
+  m_cost_per_use = LIP_COST_PER_USE;
+}
+
 void Liposuctionizer::charge_patient(Patient& patient) const
 {
   patient.pay_out(m_cost_per_use);

@@ -39,7 +39,7 @@ class X_Rayer
     float m_cost_per_use;
     short m_num_uses;
   public:
-    X_Rayer():m_num_uses(0),m_cost_per_use(XR_COST_PER_USE){}
+    X_Rayer();
     float get_cost_per_use(){return m_cost_per_use;}
     void charge_patient(Patient & patient)const;
     void apply(Patient & patient);

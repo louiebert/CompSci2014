@@ -7,7 +7,7 @@
 Pharmacy::Pharmacy()
 {
   m_num_uses = 0;
-  m_cost_per_use = 150;
+  m_cost_per_use = PH_COST_PER_USE;
   m_num_pills = rand()%(PH_PILL_NUM_MAX+1-PH_PILL_NUM_MIN) + PH_PILL_NUM_MIN;
 }
 
