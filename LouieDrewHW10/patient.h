@@ -6,6 +6,7 @@
 #define PATIENT_H
 #include <iostream>
 #include <cstdlib>
+#include "hw10.h"
 
 //Description: The patient makes a patient with a randomly chosen name,
 //             money on hand, weight, and physical and mental condition.

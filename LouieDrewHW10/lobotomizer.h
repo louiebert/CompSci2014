@@ -6,8 +6,7 @@
 #define LOBOTOMIZER_H
 
 #include <iostream>
-#include "Patient.h"
-#include "hw10.h"
+#include "patient.h"
 
 // get_random_name() returns a random name from the project's data file.
 // Pre: None.

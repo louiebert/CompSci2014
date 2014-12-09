@@ -5,6 +5,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include "hw10.h"
 #include "patient.h"
 #include "x_rayer.h"
 #include "hospital_room.h"
