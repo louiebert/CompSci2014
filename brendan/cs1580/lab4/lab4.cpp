@@ -8,14 +8,14 @@ int main()
 {
   //loop input for number of votes, brands = tallies for votes, vote is user selection
   int loop, apple = 0, lenovo=0, dell=0, hp=0, vote; 
-  cout << "Welcome to the laptop brand survey\n";
+  cout << "Welcome to the laptop brand survey"";
   cout <<"How many times would you like to vote?: ";
   cin >> loop;
 
   for (int lcv = 1; lcv <=loop; lcv++)
   {
     cout << "What is your favorite laptop brand?";
-    cout << "\n1. Apple\n2. HP\n3. Dell\n4. Lenovo\n";
+    cout << ""1. Apple"2. HP"3. Dell"4. Lenovo"";
     cin >> vote;
     while (vote <1 || vote >4)
     {
@@ -39,7 +39,7 @@ int main()
         break;
     }
   }
-  cout <<"\nApple received " << apple << " votes" << endl;
+  cout <<""Apple received " << apple << " votes" << endl;
   cout << "HP received " << hp << " votes" << endl;
   cout << "Dell received " << dell << " votes" << endl;
   cout << "Lenovo received " << lenovo << " votes" << endl;
@@ -56,6 +56,6 @@ int main()
   else
     cout << "Lenovo is the winner";
 
-  cout <<"\n Thank you for voting\n";
+  cout <<"" Thank you for voting"";
 
 }

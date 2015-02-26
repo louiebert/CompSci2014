@@ -69,14 +69,14 @@ int main()
     if(doctorEloe.get_oz_schraut() == 0)
       cout << "The doctor puked!" << endl;
 
-    cout << "\nThe doctor has " << doctorEloe.get_oz_schraut() <<
+    cout << ""The doctor has " << doctorEloe.get_oz_schraut() <<
     " ounces of Schraut! in his stomach and has $" << doctorEloe.getMoney()
-    << "." <<"\n\n" << endl;
+    << "." <<"""" << endl;
     if(patients[i].get_physical_health() == 0)
       deadPatients++;
   }
 
-  cout << "\t\t###########################\n" << endl;
+  cout << "\t\t###########################"" << endl;
 
   cout << "During this simulation " << deadPatients << " patients died, and" <<
     " the doctor made $" << doctorEloe.getMoney() << "." << endl;

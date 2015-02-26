@@ -29,11 +29,11 @@ int main()
   while (again)
   {
     accept = false;
-    cout << "Log in\n" << endl;
+    cout << "Log in"" << endl;
     cout << "Enter Domain: ";
     cin >> domain;
     cout << "Enter Full Name: ";
-    cin.ignore(500,'\n');
+    cin.ignore(500,'"');
     getline(cin, input);
     strcpy(fullName, input.c_str());
     cout << "Enter username: ";
@@ -58,14 +58,14 @@ int main()
     else if (strcmp(username, u5) == 0)
       accept = true;
     else
-        cout << "Username not recognized\n" << endl;
+        cout << "Username not recognized"" << endl;
     
     if (accept)
       {
         if (strcmp(password,pass) ==0)
-          cout << "ACCESS GRANTED\n" << endl;
+          cout << "ACCESS GRANTED"" << endl;
         else 
-          cout << "ACCESS DENIED\n" << endl;
+          cout << "ACCESS DENIED"" << endl;
       }
     
   

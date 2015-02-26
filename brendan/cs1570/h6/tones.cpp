@@ -90,7 +90,7 @@ void tone3(patient & data)
 
 void greet()
 {
-  cout << "Hello doctor, welcome to your JHS testing session\n" << endl;
+  cout << "Hello doctor, welcome to your JHS testing session"" << endl;
 }
 
 string getName()

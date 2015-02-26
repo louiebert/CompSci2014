@@ -40,7 +40,7 @@ int main()
 	int h, k, r, x, y, check;
   
   srand(time(NULL));
-  cout <<"Welcome to the circle tester\n" << endl;
+  cout <<"Welcome to the circle tester"" << endl;
   readCircle(h, k, r);
   for (int count = 0; count <10; count++)
   {

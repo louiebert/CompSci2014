@@ -30,7 +30,7 @@ int main()
   cout.precision(2);
 
   cout << "\tHospital Simulator 3000" << endl;
-  cout << "\nInitial status:" << endl;
+  cout << ""Initial status:" << endl;
 
   cout << "Hospital room:" << endl;                //Display object data members
   cout << h_room;
@@ -45,7 +45,7 @@ int main()
     i++;
   }
 
-  cout << "\nFinal status:" << endl;
+  cout << ""Final status:" << endl;
 
   cout << "Hospital room:" << endl;                //Display data members
   cout << h_room;

@@ -42,7 +42,7 @@ int main()
   cout.setf(ios::showpoint);
   cout.precision(2);
 
-  cout << "\n\n\t\t\tWelcome to INSTY-MEDS!";
+  cout << """\t\t\tWelcome to INSTY-MEDS!";
   do
   {
     valid_input = true;                    //Resets valid_input in case user
@@ -50,7 +50,7 @@ int main()
     number_of_pills = 0;                //Resets pill number in case user now
                                         // chooses Option 5.
 
-    cout << "\n\t\tMedication\tPrice" << endl             //Display menu
+    cout << ""\t\tMedication\tPrice" << endl             //Display menu
          << "\t\t1. Naprosyn\t$10.00" << endl
          << "\t\t2. Krystexxa\t$3.50" << endl
          << "\t\t3. Schraut!\t$4.00" << endl

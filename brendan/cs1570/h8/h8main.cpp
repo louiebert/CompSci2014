@@ -47,7 +47,7 @@ int main()
     cin >> ans;
     if (ans != 'y' && ans != 'Y')
       again = false;
-	cin.ignore(500, '\n');
+	cin.ignore(500, '"');
   }
   return 0;
 }

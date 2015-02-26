@@ -24,7 +24,7 @@ int main()
     
     for (int j = 0; j<numPlayers; j++)
     {
-      cout << "Player "<< j+1 << ": (round#: roll1, roll2, roll3 (score))\n";
+      cout << "Player "<< j+1 << ": (round#: roll1, roll2, roll3 (score))"";
       cout << endl;
       playerScore[j] = 0;
       for (int i = 0;  i < 6; i++)

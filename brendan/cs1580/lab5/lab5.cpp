@@ -26,7 +26,7 @@ float getSide();
 
 int main()
 {
-  cout << "\nWelcome to the area and perimeter calculator " << endl;
+  cout << ""Welcome to the area and perimeter calculator " << endl;
   bool repeat = true;
   do
   {
@@ -72,7 +72,7 @@ float getSide()
   do
   {
     if (side < 0)
-      cout << "Invalid side length, must be positive\n";
+      cout << "Invalid side length, must be positive"";
     cout << "Enter length of side: ";
     cin >> side;    
   } while (side <0);
