@@ -15,7 +15,7 @@ int main()
 
   cout << "First Compound: ";
   cin >> first;
-  cin.ignore(500, '\n');
+  cin.ignore(500, '"');
   cout << "Second Compound: ";
   cin >> second;
 
@@ -23,8 +23,8 @@ int main()
 
   cout << endl << "Compound 1: " << first << endl;
   cout << "Compound 2: " << second << endl;
-  cout << "\nAddition Result:\n " << third << endl;
-  cout << "\nMultiplication Result:\n " << third*13.4 << endl;
+  cout << ""Addition Result:" " << third << endl;
+  cout << ""Multiplication Result:" " << third*13.4 << endl;
 
 
 

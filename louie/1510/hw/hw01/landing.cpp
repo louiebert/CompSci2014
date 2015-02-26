@@ -16,7 +16,7 @@ int main()
 {
   int numOfMaps, rows, columns;
 
-  // cout << "The Planet Express crew is landing a ship and needs your help!\n"
+  // cout << "The Planet Express crew is landing a ship and needs your help!""
   //   << endl;
   // cout << "Please enter how many grids are on the landscape: ";
   cin >> numOfMaps;
@@ -42,7 +42,7 @@ int main()
     {
       grids[i][j] = new int[rows];
       // cout << "Now enter how many flowers are in each spot in row " << j + 1 <<
-      // "!\n\t(There are " << columns << " spots in this row): ";
+      // "!"\t(There are " << columns << " spots in this row): ";
       for (int k = 0; k < columns; ++k)
       {
         cin >> grids[i][j][k];

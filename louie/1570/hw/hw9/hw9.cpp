@@ -32,7 +32,7 @@ int main()
     myHospital.admit(patient1);
   }
 
-  cout << "PATIENT 1 after being admitted " << ADMIT_COUNT << " times: \n\t"
+  cout << "PATIENT 1 after being admitted " << ADMIT_COUNT << " times: "\t"
     << patient1 << endl;
 
   farewell();

@@ -11,7 +11,7 @@ using namespace std;
 
 void greeting()
 {
-  cout << "\nLog into the server\n\n" << endl;
+  cout << ""Log into the server""" << endl;
 
   return;
 }
@@ -27,7 +27,7 @@ void get_domain_name(char domain[])
 
 void get_name(char name[])
 {
-  cin.ignore(500, '\n');
+  cin.ignore(500, '"');
   cout << "Your name: ";
   cin.getline(name, NAME_LENGTH+1);
 

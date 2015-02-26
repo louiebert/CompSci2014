@@ -8,14 +8,14 @@ using namespace std;
 
 void greeting()
 {
-  cout << "Welcome to the hospital tour!\n\n" << endl;
+  cout << "Welcome to the hospital tour!""" << endl;
 
   return;
 }
 
 void farewell()
 {
-  cout << "\nGlad we could give you a tour today! Toodaloo!!" << endl;
+  cout << ""Glad we could give you a tour today! Toodaloo!!" << endl;
 
   return;
 }

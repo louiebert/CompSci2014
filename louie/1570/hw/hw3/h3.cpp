@@ -48,7 +48,7 @@ int main()
     (ppl_switch ? person_name = patient1_name : person_name = patient2_name);
     do
     {
-      cout << "\n\nNow specify " << person_name << "'s injury!" << endl << endl;
+      cout << """Now specify " << person_name << "'s injury!" << endl << endl;
       cout << "1. Head and Neck" << endl;
       cout << "2. Torso" << endl;
       cout << "3. Extremity" << endl;
@@ -129,7 +129,7 @@ gastrophilology (super-hyper lobe contusional inflamation)" << endl;
       }
       else
       {
-        cout << "\nThe patient must have a Broken Neck" << endl;
+        cout << ""The patient must have a Broken Neck" << endl;
         (ppl_switch ? patient1_score = BROKEN_NECK :
           patient2_score = BROKEN_NECK);
       }
@@ -292,16 +292,16 @@ Implantation" << endl;
 
   if (patient1_score == patient2_score)
   {
-    cout << "\nThe doctor should see " << (patient1_name < patient2_name ?
+    cout << ""The doctor should see " << (patient1_name < patient2_name ?
       patient1_name : patient2_name) << " first" << endl;
   }
   else if (patient1_score > patient2_score)
   {
-    cout << "\nThe doctor should see " << patient1_name << " first" << endl;
+    cout << ""The doctor should see " << patient1_name << " first" << endl;
   }
   else
   {
-    cout << "\nThe doctor should see " << patient2_name << " first" << endl;
+    cout << ""The doctor should see " << patient2_name << " first" << endl;
   }
 
   return 0;

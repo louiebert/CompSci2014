@@ -52,11 +52,11 @@ int Patient::num_in_file(const string& filename) const
   ifstream in;
   in.open(filename.c_str());
 
-  getline(in, val, '\n');
+  getline(in, val, '"');
   while(!in.eof())
   {
     num_of_elements++;
-    getline(in, val, '\n');
+    getline(in, val, '"');
   }
   in.close();
 
@@ -73,7 +73,7 @@ const
 
   for(int i = 0; i < loop_count; i++)
   {
-    getline(in, val, '\n');
+    getline(in, val, '"');
   }
   in.close();
 

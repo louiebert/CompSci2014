@@ -14,7 +14,7 @@ int main(){
   static short dec = 20; // Dr. Eloe's Constant
   static short ts = 250; // Tablet strength
 
-  cout << "Welcome to the Dose Calculator!!\n" << endl;
+  cout << "Welcome to the Dose Calculator!!"" << endl;
   cout << "What is your age: ";
   cin >> age;
   cout << "What is your weight in kilograms: ";
@@ -28,7 +28,7 @@ int main(){
 
   dosage = ((static_cast<float>(age)/iq)*((wt/freq)+1)*((static_cast<float>(ts)/1000)+gen)+dec+0.5)/1;
 
-  cout << "\nDr. Eloe says:" << endl;
+  cout << ""Dr. Eloe says:" << endl;
   cout << "For the values input:" << endl;
   cout << "     Age: " << age << endl;
   cout << "     Weight: " << wt << endl;
@@ -36,7 +36,7 @@ int main(){
   cout << "     Gender: " << (gen == 1 ? "Male" : "Female") << endl;
   cout << "     Frequency: " << freq << endl;
   cout << "     Tablet strength of 250 mg" << endl;
-  cout << "The recommended dosage is " << dosage << " tablets.\n" << endl;
+  cout << "The recommended dosage is " << dosage << " tablets."" << endl;
 
   return 0;
 }

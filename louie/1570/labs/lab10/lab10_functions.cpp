@@ -10,7 +10,7 @@ using namespace std;
 
 void greeting()
 {
-  cout << "\n\nWelcome to the decryption program.\n\n" << endl;
+  cout << """Welcome to the decryption program.""" << endl;
 
   return;
 }
@@ -77,7 +77,7 @@ void decrypt(ifstream & input, ofstream & output, const int & shift)
 
 void goodbye()
 {
-  cout << "\n\nYay! Decryption complete!\n\n" << endl;
+  cout << """Yay! Decryption complete!""" << endl;
 
   return;
 }

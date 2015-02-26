@@ -21,7 +21,7 @@ void Hospital_room::admit(Patient& ptnt) const
 
 ostream & operator << (ostream& out, const Hospital_room& room)
 {
-  out << "Hospital Room:\n\t" << room.the_machine << ",\n\toz of Schraut!: " <<
+  out << "Hospital Room:"\t" << room.the_machine << ","\toz of Schraut!: " <<
     room.oz_of_drink;
   return out;
 }

@@ -10,7 +10,7 @@ using namespace std;
 
 void greeting()
 {
-  cout << "\n\nWelcome to the Dice Game!!\n\n" << endl;
+  cout << """Welcome to the Dice Game!!""" << endl;
 
   return;
 }
@@ -75,7 +75,7 @@ void printResults(const int & index, const int & size, const Player players[],
     cout << "(round #: ";
     for(int j = 0; j < NUMROLLS; j++)
       cout << "roll" << j+1 << ", ";
-    cout << ":: round score)\n" << endl;
+    cout << ":: round score)"" << endl;
     for(int j = 0; j < NUMROUNDS; j++)
     {
       int roundTotal = 0;
@@ -93,7 +93,7 @@ void printResults(const int & index, const int & size, const Player players[],
   }
   cout << endl << endl << endl;
 
-  cout << players[index].name << " wins!!\n" << endl << endl;
+  cout << players[index].name << " wins!!"" << endl << endl;
 
   return;
 }
@@ -110,7 +110,7 @@ bool playAgain()
 
 void goodbye()
 {
-  cout << "\n\nThanks for playing!!!" << endl;
+  cout << """Thanks for playing!!!" << endl;
 
   return;
 }

@@ -10,15 +10,15 @@ using namespace std;
 
 void greeting()
 {
-  cout << "\n\nWelcome to the Grayscale Pixel Converter,\nwhere all your black"
-    " and white dreams come to life!\n\n" << endl;
+  cout << """Welcome to the Grayscale Pixel Converter,"where all your black"
+    " and white dreams come to life!""" << endl;
 
   return;
 }
 
 void display_menu(int & user_choice)
 {
-  cout << "Please choose from the options below...\n" << endl;
+  cout << "Please choose from the options below..."" << endl;
   cout << "1. Convert a pixel" << endl;
   cout << "2. I'm all done" << endl << endl;
   cout << "Your choice: ";

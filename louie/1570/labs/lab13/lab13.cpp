@@ -41,11 +41,11 @@ int main()
     catFarm.addAnimal(newCat);
   }
 
-  cout << "\n\nHorse Farm:" << endl;
+  cout << """Horse Farm:" << endl;
   horseFarm.printAnimals();
   horseFarm.action();
 
-  cout << "\nCat Farm:" << endl;
+  cout << ""Cat Farm:" << endl;
   catFarm.printAnimals();
   catFarm.action();
 

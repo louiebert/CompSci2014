@@ -20,7 +20,7 @@ int main()
   short numBrand4 = 0;
 
   cout << "\tWelcome to a generic voting machine!" << endl;
-  cout << "=====================================================\n" << endl;
+  cout << "====================================================="" << endl;
   cout << "Please input how many votes you'd like to count: ";
   cin >> loops;
 
@@ -31,7 +31,7 @@ int main()
       choice_invalid = false;
 
       cout << "\tPlease choose your favorite computer brand" << endl;
-      cout << "\t\t----------\n" << endl;
+      cout << "\t\t----------"" << endl;
       cout << "1. " << BRAND1 << endl;
       cout << "2. " << BRAND2 << endl;
       cout << "3. " << BRAND3 << endl;
@@ -69,8 +69,8 @@ int main()
     } while (choice_invalid);
   }
 
-  cout << "\nAnd the results are in!!" << endl;
-  cout << "++++++++++++++++++++++++++\n" << endl;
+  cout << ""And the results are in!!" << endl;
+  cout << "++++++++++++++++++++++++++"" << endl;
   cout << BRAND1 << " has " << numBrand1 << " votes" << endl;
   cout << BRAND2 << " has " << numBrand2 << " votes" << endl;
   cout << BRAND3 << " has " << numBrand3 << " votes" << endl;
@@ -95,7 +95,7 @@ int main()
     cout << BRAND4 << " is the winner!" << endl;
   }
 
-  cout << "\nThanks for voting!!" << endl;
+  cout << ""Thanks for voting!!" << endl;
 
   return 0;
 }

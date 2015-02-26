@@ -11,13 +11,13 @@ using namespace std;
 
 void greeting()
 {
-  cout << "Welcome to the Jejunal Hemorrhage Syndrome diagnoser!!\n\n" << endl;
+  cout << "Welcome to the Jejunal Hemorrhage Syndrome diagnoser!!" << endl;
   return;
 }
 
 void display_menu(int & user_choice)
 {
-  cout << "Please choose from the options below...\n" << endl;
+  cout << "Please choose from the options below..." << endl;
   cout << "1. Diagnose a patient" << endl;
   cout << "2. I'm all done" << endl << endl;
   cout << "Your choice: ";
@@ -137,7 +137,7 @@ bool diagnose(const proteins & prots)
 void printDiagnosis(const bool & isAffected, const string & patient_name,
   const proteins & prots)
 {
-  cout << "\nPatient " << patient_name << " has the following proteins:" <<endl;
+  cout << "Patient " << patient_name << " has the following proteins:" <<endl;
   cout << "Protein 1: " << prots.protein1 << endl;
   cout << "Protein 2: " << prots.protein2 << endl;
   cout << "Protein 3: " << prots.protein3 << endl;
@@ -145,14 +145,14 @@ void printDiagnosis(const bool & isAffected, const string & patient_name,
   cout << "Protein 5: " << prots.protein5 << endl;
   if (isAffected)
   {
-    cout << "\n...And they are diagnosed with Jejunal Hemorrhage Syndrome.\n"
+    cout << ""...And they are diagnosed with Jejunal Hemorrhage Syndrome.""
     "Hope they have fun with the rest of their life!!" << endl << endl;
   }
   else
   {
-    cout << "\n...And they are NOT diagnosed with Jejunal Hemorrhage Syndrome."
-      "\nThink of yourself as much more fortunate than some of the other"
-      " patients!\nFeel free to make fun of them."<< endl
+    cout << "...And they are NOT diagnosed with Jejunal Hemorrhage Syndrome."
+      "Think of yourself as much more fortunate than some of the other"
+      " patients! Feel free to make fun of them."<< endl
       << endl;
   }
 

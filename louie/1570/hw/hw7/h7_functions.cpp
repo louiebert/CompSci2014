@@ -10,7 +10,7 @@ using namespace std;
 
 void greeting()
 {
-  cout << "Welcome to the zombie crowd tester program!!\n\n" << endl;
+  cout << "Welcome to the zombie crowd tester program!!""" << endl;
 
   return;
 }
@@ -100,7 +100,7 @@ void calculateSubjects(const int & numBrains, const int & numSmell,
   const int & numWalk, const int & numExternal, const int & numDNA,
   const int & numBoth, const int & total)
 {
-  cout << "\nOut of all " << total << " subjects tested: " << endl;
+  cout << ""Out of all " << total << " subjects tested: " << endl;
   cout << "\t" << (static_cast<float>(numBrains)/total)*100 << "% want to eat "
     "brains." << endl;
   cout << "\t" << (static_cast<float>(numSmell)/total)*100 << "% have a smell "
@@ -130,8 +130,8 @@ bool testAgain()
 
 void goodbye()
 {
-  cout << "\nGlad we got to enjoy each other's company today!\n"
-    "Hope to see you again soon!!\n" << endl;
+  cout << ""Glad we got to enjoy each other's company today!""
+    "Hope to see you again soon!!"" << endl;
 
   return;
 }

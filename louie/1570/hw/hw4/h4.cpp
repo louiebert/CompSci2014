@@ -49,7 +49,7 @@ int main()
   cout.setf(ios::showpoint);
   cout.precision(2);
 
-  cout << "\nWelcome to the wonderful Insty-Meds vending machine!! \n" << endl;
+  cout << ""Welcome to the wonderful Insty-Meds vending machine!! "" << endl;
   cout << "========================================================" << endl;
 
   do
@@ -59,7 +59,7 @@ int main()
       chose_incorrectly = false;
 
       cout << "\t\tPrescription Options" << endl;
-      cout << "\t\t    ------------\n" << endl;
+      cout << "\t\t    ------------"" << endl;
       cout << "1. Naprosyn (pain relief)                                     $"
         << NAPROSYN << endl;
       cout << "2. Krystexxa (relief from grout)                              $"
@@ -80,7 +80,7 @@ int main()
       {
         case 1:
           cout << "You chose Naprosyn which is packaged with " <<
-            NUMNAPROSYN << " units per container \n" << endl;
+            NUMNAPROSYN << " units per container "" << endl;
           do
           {
             cout << "Naprosyn costs $" << NAPROSYN << endl;
@@ -92,7 +92,7 @@ int main()
             }
             else
             {
-              cout << "You did not pay with enough money\n" << endl;
+              cout << "You did not pay with enough money"" << endl;
               incorrect_payment = true;
             }
           } while (incorrect_payment);
@@ -109,7 +109,7 @@ int main()
           //   compiler round it.
           numPennies = change + 0.5;
 
-          cout << "\nIf this were a real vending machine, you'd now receive"
+          cout << ""If this were a real vending machine, you'd now receive"
             << endl;
           if (numQuarters)
             cout << numQuarters << " quarter(s)," << endl;
@@ -119,13 +119,13 @@ int main()
             cout << numNickels << " nickel(s)," << endl;
           if (numPennies)
             cout << numPennies << " penn(y/ies)," << endl;
-          cout << "and " << NUMNAPROSYN << " units of Naprosyn. \n" << endl;
-          cout << "Thanks for your purchase!\n\n" <<endl;
+          cout << "and " << NUMNAPROSYN << " units of Naprosyn. "" << endl;
+          cout << "Thanks for your purchase!""" <<endl;
         break;
 
         case 2:
           cout << "You chose Krystexxa which is packaged with " <<
-              NUMKRYSTEXXA << " units per container \n" << endl;
+              NUMKRYSTEXXA << " units per container "" << endl;
           do
           {
             cout << "Krystexxa costs $" << KRYSTEXXA << endl;
@@ -137,7 +137,7 @@ int main()
             }
             else
             {
-              cout << "You did not pay with enough money\n" << endl;
+              cout << "You did not pay with enough money"" << endl;
               incorrect_payment = true;
             }
           } while (incorrect_payment);
@@ -154,7 +154,7 @@ int main()
           //   compiler round it.
           numPennies = change + 0.5;
 
-          cout << "\nIf this were a real vending machine, you'd now receive"
+          cout << ""If this were a real vending machine, you'd now receive"
             << endl;
           if (numQuarters)
             cout << numQuarters << " quarter(s)," << endl;
@@ -164,13 +164,13 @@ int main()
             cout << numNickels << " nickel(s)," << endl;
           if (numPennies)
             cout << numPennies << " penn(y/ies)," << endl;
-          cout << "and " << NUMKRYSTEXXA << " units of Krystexxa. \n" << endl;
-          cout << "Thanks for your purchase!\n\n" <<endl;
+          cout << "and " << NUMKRYSTEXXA << " units of Krystexxa. "" << endl;
+          cout << "Thanks for your purchase!""" <<endl;
         break;
 
         case 3:
           cout << "You chose Schraut! which is packaged with " <<
-              NUMSCHRAUT << " units per container \n" << endl;
+              NUMSCHRAUT << " units per container "" << endl;
           do
           {
             cout << "Schraut! costs $" << SCHRAUT << endl;
@@ -182,7 +182,7 @@ int main()
             }
             else
             {
-              cout << "You did not pay with enough money\n" << endl;
+              cout << "You did not pay with enough money"" << endl;
               incorrect_payment = true;
             }
           } while (incorrect_payment);
@@ -199,7 +199,7 @@ int main()
           //   compiler round it.
           numPennies = change + 0.5;
 
-          cout << "\nIf this were a real vending machine, you'd now receive"
+          cout << ""If this were a real vending machine, you'd now receive"
             << endl;
           if (numQuarters)
             cout << numQuarters << " quarter(s)," << endl;
@@ -209,13 +209,13 @@ int main()
             cout << numNickels << " nickel(s)," << endl;
           if (numPennies)
             cout << numPennies << " penn(y/ies)," << endl;
-          cout << "and " << NUMSCHRAUT << " units of Schraut!. \n" << endl;
-          cout << "Thanks for your purchase!\n\n" <<endl;
+          cout << "and " << NUMSCHRAUT << " units of Schraut!. "" << endl;
+          cout << "Thanks for your purchase!""" <<endl;
         break;
 
         case 4:
           cout << "You chose Xeljanz which is packaged with " <<
-              NUMXELJANZ << " units per container \n" << endl;
+              NUMXELJANZ << " units per container "" << endl;
           do
           {
             cout << "Xeljanz costs $" << XELJANZ << endl;
@@ -227,7 +227,7 @@ int main()
             }
             else
             {
-              cout << "You did not pay with enough money\n" << endl;
+              cout << "You did not pay with enough money"" << endl;
               incorrect_payment = true;
             }
           } while (incorrect_payment);
@@ -244,7 +244,7 @@ int main()
           //   compiler round it.
           numPennies = change + 0.5;
 
-          cout << "\nIf this were a real vending machine, you'd now receive"
+          cout << ""If this were a real vending machine, you'd now receive"
             << endl;
           if (numQuarters)
             cout << numQuarters << " quarter(s)," << endl;
@@ -254,15 +254,15 @@ int main()
             cout << numNickels << " nickel(s)," << endl;
           if (numPennies)
             cout << numPennies << " penn(y/ies)," << endl;
-          cout << NUMXELJANZ << " units of Xeljanz,\n" <<
-            NUMQNASL_DIPROPIONATE << " units of Qnasl Dipropionate,\nand " <<
+          cout << NUMXELJANZ << " units of Xeljanz,"" <<
+            NUMQNASL_DIPROPIONATE << " units of Qnasl Dipropionate,"and " <<
             NUMGOLYTELY << " unit of GoLytely." << endl;
-          cout << "Thanks for your purchase!\n\n" <<endl;
+          cout << "Thanks for your purchase!""" <<endl;
         break;
 
         case 5:
           cout << "You chose Qnasl Dipropionate which is packaged with " <<
-              NUMQNASL_DIPROPIONATE << " units per container \n" << endl;
+              NUMQNASL_DIPROPIONATE << " units per container "" << endl;
           do
           {
             cout << "Qnasl Dipropionate costs $" << QNASL_DIPROPIONATE << endl;
@@ -274,7 +274,7 @@ int main()
             }
             else
             {
-              cout << "You did not pay with enough money\n" << endl;
+              cout << "You did not pay with enough money"" << endl;
               incorrect_payment = true;
             }
           } while (incorrect_payment);
@@ -291,7 +291,7 @@ int main()
           //   compiler round it.
           numPennies = change + 0.5;
 
-          cout << "\nIf this were a real vending machine, you'd now receive"
+          cout << ""If this were a real vending machine, you'd now receive"
             << endl;
           if (numQuarters)
             cout << numQuarters << " quarter(s)," << endl;
@@ -302,14 +302,14 @@ int main()
           if (numPennies)
             cout << numPennies << " penn(y/ies)," << endl;
           cout << NUMQNASL_DIPROPIONATE <<
-            " units of Qnasl Dipropionate,\nand " <<
+            " units of Qnasl Dipropionate,"and " <<
             NUMGOLYTELY << " unit of GoLytely." << endl;
-          cout << "Thanks for your purchase!\n\n" <<endl;
+          cout << "Thanks for your purchase!""" <<endl;
         break;
 
         case 6:
           cout << "You chose GoLytely which is packaged with " <<
-              NUMGOLYTELY << " units per container \n" << endl;
+              NUMGOLYTELY << " units per container "" << endl;
           do
           {
             cout << "GoLytely costs $" << GOLYTELY << endl;
@@ -321,7 +321,7 @@ int main()
             }
             else
             {
-              cout << "You did not pay with enough money\n" << endl;
+              cout << "You did not pay with enough money"" << endl;
               incorrect_payment = true;
             }
           } while (incorrect_payment);
@@ -338,7 +338,7 @@ int main()
           //   compiler round it.
           numPennies = change + 0.5;
 
-          cout << "\nIf this were a real vending machine, you'd now receive"
+          cout << ""If this were a real vending machine, you'd now receive"
             << endl;
           if (numQuarters)
             cout << numQuarters << " quarter(s)," << endl;
@@ -348,8 +348,8 @@ int main()
             cout << numNickels << " nickel(s)," << endl;
           if (numPennies)
             cout << numPennies << " penn(y/ies)," << endl;
-          cout << "and " << NUMGOLYTELY << " unit of GoLytely. \n" << endl;
-          cout << "Thanks for your purchase!\n\n" <<endl;
+          cout << "and " << NUMGOLYTELY << " unit of GoLytely. "" << endl;
+          cout << "Thanks for your purchase!""" <<endl;
         break;
 
         case 7:
@@ -357,7 +357,7 @@ int main()
         break;
 
         default:
-          cout << "\nYou are a poor English reader. Please choose between 1-7\n"
+          cout << ""You are a poor English reader. Please choose between 1-7""
             << endl;
           chose_incorrectly = true;
       }

@@ -10,7 +10,7 @@ short height;
 short weight;
 float bmi;
 
-cout << "You are using the BMI Calculator!\n\n" << endl;
+cout << "You are using the BMI Calculator!""" << endl;
 cout << "Please input your height and mass." << endl;
 cout << "Height (in inches): ";
 cin >> height;
@@ -26,7 +26,7 @@ cin >> bmi;
 
 weight = (static_cast<float>(bmi)*height*height)/conFactor
 
-cout << "The required weight needed for a BMI of " << bmi << " is " << weight << " pounds.\n" << endl;
+cout << "The required weight needed for a BMI of " << bmi << " is " << weight << " pounds."" << endl;
 
 return 0;
 }

@@ -61,29 +61,29 @@ int main()
       switch (choice)
       {
         case 1:
-          cout << "You chose Body Mass Index!\n" << endl;
+          cout << "You chose Body Mass Index!"" << endl;
           cout << "Please input your weight (lbs): ";
           cin >> weight;
           cout << "And your height (inches): ";
           cin >> height;
-          cout << "\nYour Body Mass Index is: " <<
-            bodyMassIndex(weight, height) << "!!\n" << endl;
+          cout << ""Your Body Mass Index is: " <<
+            bodyMassIndex(weight, height) << "!!"" << endl;
         break;
 
         case 2:
-          cout << "You chose Creatinine Clearance\n" << endl;
+          cout << "You chose Creatinine Clearance"" << endl;
           cout << "Please input your age (yrs): ";
           cin >> age;
           cout << "And your weight (kg): ";
           cin >> weight;
           cout << "And your serum creatine value: ";
           cin >> creatine;
-          cout << "\nYour Creatinine Clearance is: " <<
-            creatinineClearance(age, weight, creatine) << "!!\n" << endl;
+          cout << ""Your Creatinine Clearance is: " <<
+            creatinineClearance(age, weight, creatine) << "!!"" << endl;
         break;
 
         case 3:
-          cout << "You chose Coronary Risk\n" << endl;
+          cout << "You chose Coronary Risk"" << endl;
           cout << "Please input your BMI: ";
           cin >> bmi;
           cout << "Did either of your parents have heart disease?" << endl;
@@ -91,18 +91,18 @@ int main()
           cin >> either_parent;
           cout << "And the number of pounds of bacon you ate this morning: ";
           cin >> bacon_lbs;
-          cout << "\nYour Coronary Risk is: " <<
-            coronaryRisk(bmi, either_parent, bacon_lbs) << "!!\n" << endl;
+          cout << ""Your Coronary Risk is: " <<
+            coronaryRisk(bmi, either_parent, bacon_lbs) << "!!"" << endl;
         break;
 
         case 4:
-          cout << "You chose Totter Index!\n" << endl;
+          cout << "You chose Totter Index!"" << endl;
           cout << "Please input your left leg length (inches): ";
           cin >> left_leg_length;
           cout << "Please input your right leg length (inches): ";
           cin >> right_leg_length;
-          cout << "\nYour Totter Index is: " <<
-            totterIndex(left_leg_length, right_leg_length) << "!!\n" << endl;
+          cout << ""Your Totter Index is: " <<
+            totterIndex(left_leg_length, right_leg_length) << "!!"" << endl;
         break;
 
         case 5:
@@ -123,18 +123,18 @@ int main()
 
 void greeting()
 {
-  cout << "Welcome to the Health-o-Matic machine!!\n" << endl;
+  cout << "Welcome to the Health-o-Matic machine!!"" << endl;
   return;
 }
 
 void display_menu()
 {
-  cout << "Here are all the wonders you have at your fingertips!\n" << endl;
+  cout << "Here are all the wonders you have at your fingertips!"" << endl;
   cout << "1. Body Mass Index" << endl;
   cout << "2. Creatinine Clearance" << endl;
   cout << "3. Coronary Risk" << endl;
   cout << "4. Totter Index" << endl;
-  cout << "5. Quit\n" << endl;
+  cout << "5. Quit"" << endl;
   cout << "Please choose an option from above: ";
   return;
 }

@@ -9,7 +9,7 @@ using namespace std;
 
 void greeting()
 {
-  cout << "\nHey there! Let's make a speed record for a superficial company!"
+  cout << ""Hey there! Let's make a speed record for a superficial company!"
     << endl << endl;
 
   return;
@@ -60,7 +60,7 @@ void more_speeds(Speed_recorder & spd_rcrd)
   int numEntries, spdEntry;
   do
   {
-    cout << "\nHow many speed entries would you like to add on? ";
+    cout << ""How many speed entries would you like to add on? ";
     cin >> numEntries;
     cout << endl;
   } while(numEntries <= 0);
@@ -77,7 +77,7 @@ void more_speeds(Speed_recorder & spd_rcrd)
 bool again()
 {
   char answer;
-  cout << "\nWould you like to make another speed record? (y/n) ";
+  cout << ""Would you like to make another speed record? (y/n) ";
   cin >> answer;
 
   return tolower(answer) == 'y';
@@ -85,7 +85,7 @@ bool again()
 
 void goodbye()
 {
-  cout << "\nIt was a pleasure making fraudulent speed records with you. Have a"
+  cout << ""It was a pleasure making fraudulent speed records with you. Have a"
     " nice day!" << endl << endl;
 
   return;

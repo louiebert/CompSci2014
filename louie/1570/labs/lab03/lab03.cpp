@@ -10,16 +10,16 @@ int main()
   short num_typed;
   bool active = true;
 
-  cout << "Welcome to a simple Loops and Conditionals Program!!\n\n";
+  cout << "Welcome to a simple Loops and Conditionals Program!!""";
 
   do
   {
     do
     {
-    cout << "Please choose a path from the following list:\n\n";
-    cout << "a. Check if a number is divisible by 5!!\n";
-    cout << "b. Discover a mystery message from the command prompt!\n";
-    cout << "c. Exit this terribly intriguing program.\n\n";
+    cout << "Please choose a path from the following list:""";
+    cout << "a. Check if a number is divisible by 5!!"";
+    cout << "b. Discover a mystery message from the command prompt!"";
+    cout << "c. Exit this terribly intriguing program.""";
     cout << "Select the letter of the path you'd like to take: ";
     cin >> menu_letter;
     if (menu_letter == "A")
@@ -32,21 +32,21 @@ int main()
 
     if (menu_letter == "a")
     {
-      cout << "\nWahoo!! You now can check if a number can be evenly divided \
-by five!!\n\n";
+      cout << ""Wahoo!! You now can check if a number can be evenly divided \
+by five!!""";
       cout << "Now you must enter the number you are curious about: ";
       cin >> num_typed;
       cout << "Your number \"" << num_typed << "\" " << (num_typed % 5 ?
-        "is not" : "is") << " divisible by five!!\n\n";
+        "is not" : "is") << " divisible by five!!""";
     }
     else if (menu_letter == "b")
     {
-      cout << "\nThe secret message is as follows...\n\n";
-      cout << "\"Eat at Lucky House and your dreams will come true.\"\n\n";
+      cout << ""The secret message is as follows...""";
+      cout << "\"Eat at Lucky House and your dreams will come true.\"""";
     }
     else
     {
-      cout << "\nHope you had as much fun with this program as I did! Bye!!\n";
+      cout << ""Hope you had as much fun with this program as I did! Bye!!"";
       active = false;
     }
 

@@ -58,24 +58,24 @@ int main()
       {
         // Calculates the area
         case 1:
-        cout << "\nYou chose to calculate area!\n" << endl;
+        cout << ""You chose to calculate area!"" << endl;
         cout << "Please define the first side: ";
         length = get_side();
         cout << "And the second side: ";
         width = get_side();
-        cout << "\nAnd the area of your rectangle is: " <<
-          calculate_area(length, width) << "!!\n\n" << endl;
+        cout << ""And the area of your rectangle is: " <<
+          calculate_area(length, width) << "!!""" << endl;
         break;
 
         // Calculates the perimeter
         case 2:
-        cout << "\nYou chose to calculate perimeter!\n" << endl;
+        cout << ""You chose to calculate perimeter!"" << endl;
         cout << "Please define the first side: ";
         length = get_side();
         cout << "And the second side: ";
         width = get_side();
-        cout << "\nAnd the perimeter of your rectangle is: " <<
-          calculate_perimeter(length, width) << "!!\n\n" << endl;
+        cout << ""And the perimeter of your rectangle is: " <<
+          calculate_perimeter(length, width) << "!!""" << endl;
         break;
 
         // Quits the program (jumping out of the larger do-while loop)
@@ -85,7 +85,7 @@ int main()
 
         // Informs the user of invalid input and requests again
         default:
-        cout << "\nYou did not choose from the options provided. Try again.\n"
+        cout << ""You did not choose from the options provided. Try again.""
           << endl;
         invalid_choice = true;
       }
@@ -97,17 +97,17 @@ int main()
 
 void greeting()
 {
-  cout << "Welcome to the rectangle calculator!!\n" << endl;
+  cout << "Welcome to the rectangle calculator!!"" << endl;
   return;
 }
 
 void display_menu()
 {
   cout << "Rectangle calculating options" << endl;
-  cout << "=============================\n" << endl;
+  cout << "============================="" << endl;
   cout << "1. Area" << endl;
   cout << "2. Perimeter" << endl;
-  cout << "3. Nevermind, I'm done\n" << endl;
+  cout << "3. Nevermind, I'm done"" << endl;
   cout << "Please choose a number from above: ";
 }
 
@@ -132,7 +132,7 @@ float calculate_perimeter(float length, float width)
 
 void salutation()
 {
-  cout << "\nThanks for calculating rectangles! It was a real pleasure!\n"
+  cout << ""Thanks for calculating rectangles! It was a real pleasure!""
     << endl;
   return;
 }
