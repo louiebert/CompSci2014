@@ -10,27 +10,27 @@ int main()
   int fivetest;
   bool loopcontrol =true;
   
-  cout << "\nHello user\n";
+  cout << ""Hello user"";
   do
   {
-    cout << "\nWhat would you like to do\na. divisible by 5 test\nb. output secret messege\nc. Exit\n";
+    cout << ""What would you like to do"a. divisible by 5 test"b. output secret messege"c. Exit"";
 	cin >> choice;
 	
 	if (choice == 'a')
 	{
-	  cout << "\nEnter an integer: ";
+	  cout << ""Enter an integer: ";
 	  cin >> fivetest;
 	  if (fivetest%5 == 0)
-	    cout << fivetest << " is divisible by 5\n";
+	    cout << fivetest << " is divisible by 5"";
 	  else 
-	    cout << fivetest << " is not divisible by 5\n";
+	    cout << fivetest << " is not divisible by 5"";
 	}
 	else if (choice == 'b')
-	  cout << "\nPotato is life\n";
+	  cout << ""Potato is life"";
 	else if (choice == 'c')
 	  loopcontrol = false;
   }
   while (loopcontrol == true);
-  cout << "goodbye\n";
+  cout << "goodbye"";
   return 0;
 }

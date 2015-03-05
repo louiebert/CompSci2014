@@ -93,7 +93,7 @@ int main()
 
 void displayMenu()
 {
-  cout << "\n\n\t\t\tMenu";
+  cout << """\t\t\tMenu";
        << "1. Find and display area";
        << "2. Find and display perimeter";
        << "3. Cancel and exit" << endl;
@@ -106,7 +106,7 @@ void displayMenu()
 void area(const float width, const float length)
 {
   float area = width * length;
-  cout << "\n\nArea: " << area << endl;
+  cout << """Area: " << area << endl;
 }
 
 
@@ -115,7 +115,7 @@ void area(const float width, const float length)
 void area(const float width, const float length)
 {
   float perimeter = (2 * width) + (2 * length);
-  cout << "\n\nPerimeter: " << area << endl;
+  cout << """Perimeter: " << area << endl;
 }
 
 
@@ -123,7 +123,7 @@ void area(const float width, const float length)
 
 float getside(const float side)
 {
-  cout << "\n\nPlease enter a value: ";
+  cout << """Please enter a value: ";
   cin >> side;
   return side;
 }

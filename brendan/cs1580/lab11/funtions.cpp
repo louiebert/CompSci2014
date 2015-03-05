@@ -28,7 +28,7 @@ void enterSpeeds (speedRecorder & company)
 
 void displayInfo(const speedRecorder & company)
 {
-  cout << "\nCompany id: " << company.getId() << endl;
+  cout << ""Company id: " << company.getId() << endl;
   cout << "Total entries: " << company.getTotalEntries() << endl;
   cout << "Average speed: " << company.getAverageSpeed() << endl;
   return;

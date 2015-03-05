@@ -17,16 +17,16 @@ int main()
   while (quit)
   {
     dfault = 0; //for working with default case, (invalid option)
-    cout << "\nWelcome to your drug vending machine \n";
-    cout << "     INSTA_DRUGS\n     -----------\n";
-    cout << "1. Naprosyn				$10.00		(pain relief)\n";
-    cout << "2. Krystexxa				$3.50		(gout relief)\n";
-    cout << "3. Schraut!				$4.00		(diarrhea relief)\n";
-    cout << "4. Xeljanz				$6.75		(Hippopot... relief)\n";
+    cout << ""Welcome to your drug vending machine "";
+    cout << "     INSTA_DRUGS"     -----------"";
+    cout << "1. Naprosyn				$10.00		(pain relief)"";
+    cout << "2. Krystexxa				$3.50		(gout relief)"";
+    cout << "3. Schraut!				$4.00		(diarrhea relief)"";
+    cout << "4. Xeljanz				$6.75		(Hippopot... relief)"";
     cout << "5. Qnasl Dipropionate			$12.25";
-    cout <<"    (treatment of nasal q tips)\n";
-    cout << "6. GoLytely				$14.33		(gluttony treatment)\n";
-    cout << "7. Quit\n";
+    cout <<"    (treatment of nasal q tips)"";
+    cout << "6. GoLytely				$14.33		(gluttony treatment)"";
+    cout << "7. Quit"";
     cout << "Please make a selection: ";
     cin >> choice;
     switch (choice)
@@ -66,7 +66,7 @@ int main()
          quit = false;
          break;
       default:
-        cout <<"\nHerp derp I can't do that\n";
+        cout <<""Herp derp I can't do that"";
         dfault = 1;
         break;
     }
@@ -79,7 +79,7 @@ int main()
         cin >> money;
       }
       change = money - cost;
-      cout << "\nYour change is: $" << change;
+      cout << ""Your change is: $" << change;
 	  
       if (pills < 11)
         bottle = 10;
@@ -90,13 +90,13 @@ int main()
       else
         bottle = 100;
 	  
-      cout << "\nYou will recieve " << pills << " pills, please have a " 
+      cout << ""You will recieve " << pills << " pills, please have a " 
       << bottle << " count bottle ready" << endl;
-      cout << "\nDispensing now";
-      cout << "\nThank you for your purchase\n";
+      cout << ""Dispensing now";
+      cout << ""Thank you for your purchase"";
 	  }
   }
-  cout << "goodbye\n";
+  cout << "goodbye"";
   return 0;
   
 

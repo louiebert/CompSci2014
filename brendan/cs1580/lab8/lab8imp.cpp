@@ -30,7 +30,7 @@ int calculatePoints(const diceRoll d, const int round)
 void printRound(const diceRoll d, const int score, const int round)
 {
   cout << round << ": " << d.m_roll1 << ", " << d.m_roll2 << ", ";
-  cout << d.m_roll3 << "(" << score << ")\n" << endl;
+  cout << d.m_roll3 << "(" << score << ")"" << endl;
 }
 
 void gameResult(const int PlayerScore[numPlayers])

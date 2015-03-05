@@ -43,7 +43,7 @@ string Lobotomizer::get_random_name() const
   while(!in.eof())
   {
     count++;
-    in.ignore(500, '\n');
+    in.ignore(500, '"');
     getline(in, aName);
   }
   in.close();

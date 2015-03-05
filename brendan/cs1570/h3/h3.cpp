@@ -60,7 +60,7 @@ int main()
   
   
   
-  cout << "Hello Dr. Eloe\n";
+  cout << "Hello Dr. Eloe"";
   
   //main program loop
   while (patientnum !=3) 
@@ -69,26 +69,26 @@ int main()
 	  poutput = "2nd";
     cout << "What is your " << poutput << " patient's name?: ";
 	(patientnum == 1 ? cin>> name1 : cin>> name2);
-	cout << "\nWhere is " << (patientnum == 1 ? name1: name2) << "'s injury?\n";
-	cout << "1. Head & Neck\n2. Torso\n3. Extremity\n4. Not Listed\nyour choice: ";
+	cout << ""Where is " << (patientnum == 1 ? name1: name2) << "'s injury?"";
+	cout << "1. Head & Neck"2. Torso"3. Extremity"4. Not Listed"your choice: ";
 	cin >> choice;
-	cout << "\n";
+	cout << """;
 	
 	switch (choice)
     {
     //head	
 	case 1: cout << "In what region is "<< (patientnum == 1 ? name1: name2) << "'s injury";
-	        cout << "\n1. Head\n2. Neck\n3. Face\nyour choice: ";
+	        cout << ""1. Head"2. Neck"3. Face"your choice: ";
 	        cin >> choice;
 			
 			switch (choice)
 			{
 			//head
-			case 1:cout << "\nWhat injury does " << (patientnum == 1 ? name1: name2) << " have?\n"; 
-			       cout << "1. "<< earlobe <<" (super-hyper lobe contusional inflamation)\n";
-				   cout << "2. " <<cerebral <<"\n3. " <<ego <<"(d in cs 1570)\nyour choice: ";
+			case 1:cout << ""What injury does " << (patientnum == 1 ? name1: name2) << " have?""; 
+			       cout << "1. "<< earlobe <<" (super-hyper lobe contusional inflamation)"";
+				   cout << "2. " <<cerebral <<""3. " <<ego <<"(d in cs 1570)"your choice: ";
 				   cin >> choice;
-				   cout << "\n";
+				   cout << """;
 				   
 				   switch (choice)
 				   {
@@ -105,15 +105,15 @@ int main()
 				   break;
 				   
 			//Neck	   
-		    case 2: cout << (patientnum == 1 ? name1: name2) << " must have a broken neck\n";
+		    case 2: cout << (patientnum == 1 ? name1: name2) << " must have a broken neck"";
 			        (patientnum == 1 ? p1score : p2score ) = brneckscore;
 					(patientnum == 1 ? p1injury : p2injury ) = brneck;
 					break;
 			//face
-			case 3: cout <<	"\nWhat injury does " << (patientnum == 1 ? name1: name2) << " have?\n"; 
-                    cout << "1. Permanent smiley face\n2. Deformed plastic surgery (melting)\nyour choice: ";
+			case 3: cout <<	""What injury does " << (patientnum == 1 ? name1: name2) << " have?""; 
+                    cout << "1. Permanent smiley face"2. Deformed plastic surgery (melting)"your choice: ";
 					cin >> choice;
-					cout << "\n";
+					cout << """;
 					(patientnum == 1 ? p1score : p2score ) = (choice ==1 ? smileyscore:psurgeryscore);
 					(patientnum == 1 ? p1injury : p2injury ) = (choice ==1 ? smiley: psurgery);
 					break;
@@ -121,30 +121,30 @@ int main()
 			break;
 	//torso		
 	case 2:cout << "In what region is "<< (patientnum == 1 ? name1: name2) << "'s injury";
-	       cout << "\n1. back\n2. abdomen\n3. chest\nyour choice: ";
+	       cout << ""1. back"2. abdomen"3. chest"your choice: ";
 		   cin >> choice;
-		   cout << "\n"; 
-		   cout <<"\nWhat injury does " << (patientnum == 1 ? name1: name2) << " have?\n";
+		   cout << """; 
+		   cout <<""What injury does " << (patientnum == 1 ? name1: name2) << " have?"";
 		   switch (choice)
 		   {
 		   //back
-		   case 1:cout << "1. " << diskr << "\n2. " << bbq << "\nyour choice: ";
+		   case 1:cout << "1. " << diskr << ""2. " << bbq << ""your choice: ";
 		          cin >> choice;
-				  cout << "\n";
+				  cout << """;
 				  (patientnum == 1 ? p1score : p2score ) = (choice ==1 ? diskrscore: bbqscore);
 				  (patientnum == 1 ? p1injury : p2injury ) = (choice ==1 ? diskr: bbq);
 				  break;		   
            //abdomen
-		   case 2:cout << "1. " << intestine << "\n2. " << alcohol << "\nyour choice: ";
+		   case 2:cout << "1. " << intestine << ""2. " << alcohol << ""your choice: ";
 		          cin >> choice;
-				  cout << "\n";
+				  cout << """;
 				  (patientnum == 1 ? p1score : p2score ) = (choice ==1 ? intestinescore: alcoholscore);
 				  (patientnum == 1 ? p1injury : p2injury ) = (choice ==1 ? intestine: alcohol);
 				  break;
            //chest
-		   case 3:cout << "1. " << flail << "\n2. " << alien << "\nyour choice: ";
+		   case 3:cout << "1. " << flail << ""2. " << alien << ""your choice: ";
 		          cin >> choice;
-                  cout << "\n";
+                  cout << """;
 				  (patientnum == 1 ? p1score : p2score ) = (choice ==1 ? flailscore:alienscore);
 				  (patientnum == 1 ? p1injury : p2injury ) = (choice ==1 ? flail: alien);
                   break;			 
@@ -153,17 +153,17 @@ int main()
 	       break;
 	//extremity	   
 	case 3:cout << "In what region is "<< (patientnum == 1 ? name1: name2) << "'s injury";
-	       cout << "\n1. leg\n2. arm\nyour choice: ";
+	       cout << ""1. leg"2. arm"your choice: ";
 		   cin >> choice;
-		   cout << "\nWhat injury does "  << (patientnum == 1 ? name1: name2) << " have?\n";
+		   cout << ""What injury does "  << (patientnum == 1 ? name1: name2) << " have?"";
 		   switch (choice)
 		   {
-		     case 1: cout << "1. " << toe << "\n2. "<< femur << "\nyour choice: ";
+		     case 1: cout << "1. " << toe << ""2. "<< femur << ""your choice: ";
 			         cin >> choice;
 			         (patientnum == 1 ? p1score : p2score ) = (choice ==1 ? toescore:femurscore);
 			         (patientnum == 1 ? p1injury : p2injury ) = (choice ==1 ? toe: femur);
 			          break;
-			 case 2:cout << "1. " << radius << "\n2. " << finger << "\nyour choice: ";
+			 case 2:cout << "1. " << radius << ""2. " << finger << ""your choice: ";
 			        cin >> choice;
 				 	(patientnum == 1 ? p1score : p2score ) = (choice ==1 ? radiusscore:fingerscore);
 			        (patientnum == 1 ? p1injury : p2injury ) = (choice ==1 ? radius: finger);
@@ -180,16 +180,16 @@ int main()
 	patientnum++;
 	
   }
-  cout << "\n";
+  cout << """;
   
   if(p1score <0 && p2score >=0)
   {
-    cout << name1 << " needs to find a new hospital we dont deal with that here\n";
+    cout << name1 << " needs to find a new hospital we dont deal with that here"";
 	cout << name2 << " will be treated immediately for "<< p2injury << ", severity rating " << p2score << endl;
   }
   else if (p2score <0 && p1score >=0)
   {
-    cout << name2 << " needs to find a new hospital we dont deal with that here\n";
+    cout << name2 << " needs to find a new hospital we dont deal with that here"";
 	cout << name1 << " will be treated immediately for "<< p1injury << ", severity rating " << p1score << endl;
   }
   else if (p1score>p2score || (p1score==p2score && name1<=name2))

@@ -26,7 +26,7 @@ int main()
     displayInfo(companyA);
     while (moreSpeed)
     {
-      cout << "\n Would you like to enter more speeds (y/n) :";
+      cout << "" Would you like to enter more speeds (y/n) :";
       cin >> ans;
       if (ans == 'y')
       {
@@ -36,7 +36,7 @@ int main()
       else 
         moreSpeed =false;
     }
-    cout << "\nWould you like to enter for a new company?(y/n): ";
+    cout << ""Would you like to enter for a new company?(y/n): ";
     cin >> ans;
     if (ans != 'y')
       again = false;

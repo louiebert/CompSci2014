@@ -184,5 +184,5 @@ void output(const char sComplaint[], const char diagnosis[], \
   cout << "Your prescription is to take " << numPills 
     << " pills a day of 20 mg." << drug << endl;
   cout <<"I would also recommend that you undergo a " << surgery << endl;
-  cout <<"Nexttttttt!!???\n" << endl;
+  cout <<"Nexttttttt!!???"" << endl;
 }

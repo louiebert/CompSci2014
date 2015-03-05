@@ -66,7 +66,7 @@ int main()
         cout << "Please enter integer weight in pounds: ";
         cin >> weight;
         bmi = bodyMassIndex(height, weight);
-        cout << "\nBMI = " << bmi << endl;
+        cout << ""BMI = " << bmi << endl;
         break;
       
       case 2:
@@ -77,7 +77,7 @@ int main()
         cout << "Please input serum creatine value: ";
         cin >> serum;
         creatinine = creatinineClearance(weight, age, serum);
-        cout << "\nCC = " << creatinine << endl;
+        cout << ""CC = " << creatinine << endl;
         break;       
       
       case 3:
@@ -92,7 +92,7 @@ int main()
         cout << "Please input how much bacon you ate this morining(lbs): ";
         cin >> bacon;
         CR = coronaryRisk(bmi, CRhistory, bacon);
-        cout << "\nCR = " << CR << endl;
+        cout << ""CR = " << CR << endl;
         break;
         
       case 4:
@@ -101,7 +101,7 @@ int main()
         cout << "Please input length of right leg: ";
         cin >> Rleg;
         TI = totterIndex(Lleg, Rleg);
-        cout << "\nTI = " << TI << endl;
+        cout << ""TI = " << TI << endl;
         break;
         
       case 5:
@@ -118,7 +118,7 @@ int main()
 
 void greeting()
 {
-  cout << "Welcome to Dr. Eloe's Health-o-matic Calculator program\n";
+  cout << "Welcome to Dr. Eloe's Health-o-matic Calculator program"";
   cout << "                     of calculation" << endl;
 }
 

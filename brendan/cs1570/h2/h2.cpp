@@ -20,7 +20,7 @@ int main()
   char fff; //will be used to output f if female
   char eee; //will be used to output e, if male will get multiplied to 0 so it doesnt output
   
-  cout << "Welcome to Dr. Eloe's prescription program\n";
+  cout << "Welcome to Dr. Eloe's prescription program"";
   cout << "Enter age: ";
   cin >> age;
   cout << "enter weight: ";
@@ -40,15 +40,15 @@ int main()
   eee= asciie; //wasn't informed of ternary statements before I wrote all this crap
   
   dose  = ((static_cast<float>(age)/iq)*((weight/freq)+1)*((static_cast<float>(ts)/1000)+gender)+eloenum)+.5;
-  cout << "\nDr. Eloe: \nFor the values input:";
-  cout << "\n    Age = " << age;
-  cout << "\n    Weight = " << weight;
-  cout << "\n    IQ = " << iq;
-  cout << "\n    Gender = " << fff << eee << "male";
-  cout << "\n    Frequency = " << freq;
-  cout << "\n    Tablet strength of " << ts << " mg";
-  cout << "\nThe recommended dosage is " << dose << " tablets";
-  cout << "\n\nThank you and please come again\n";
+  cout << ""Dr. Eloe: "For the values input:";
+  cout << ""    Age = " << age;
+  cout << ""    Weight = " << weight;
+  cout << ""    IQ = " << iq;
+  cout << ""    Gender = " << fff << eee << "male";
+  cout << ""    Frequency = " << freq;
+  cout << ""    Tablet strength of " << ts << " mg";
+  cout << ""The recommended dosage is " << dose << " tablets";
+  cout << """Thank you and please come again"";
   return 0;
   
 }

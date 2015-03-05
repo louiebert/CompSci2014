@@ -21,7 +21,7 @@ int main()
   {
     patientA.m_name = getName();
   
-    cout << "Testing will now commence\n" << endl; ;
+    cout << "Testing will now commence"" << endl; ;
     tone1(patientA);
     tone2(patientA);
     tone3(patientA);
@@ -29,13 +29,13 @@ int main()
   
     showResult(patientA);
     
-    cout << "\nWould you like to do more testing? (y/n): ";
+    cout << ""Would you like to do more testing? (y/n): ";
     cin >> input;
     if (input != 'y')
       loop = false;
   }
   cout << "Please thank your patient for allowing us to shove a roach down";
-  cout << "\ntheir throat, and ask them to come again" << endl;
-  cout << "goodbye\n" << endl;
+  cout << ""their throat, and ask them to come again" << endl;
+  cout << "goodbye"" << endl;
   return 0;
 }

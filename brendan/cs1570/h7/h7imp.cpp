@@ -96,7 +96,7 @@ void results (const person p[], const int numstudy)
   bothPercent = 100*static_cast<float>(bothCount)/numstudy;
   
   //outputting results
-  cout <<"Out of a total of 5000 people tested:\n" << endl;
+  cout <<"Out of a total of 5000 people tested:"" << endl;
   cout << brainPercent << "% want to eat brains. " << endl;
   cout << odorPercent << "% have a slightly ripe or rotting smell "<< endl;
   cout << gaitPercent << "% do not walk normally " << endl;
@@ -104,5 +104,5 @@ void results (const person p[], const int numstudy)
   cout << qualPercent << "% qualify as zombies only by their gait, smell, ";
   cout << "and what they want to eat" << endl;
   cout << bothPercent << "% qualify as zombies by the dna test and how ";
-  cout << "they walk, smell, and what they want to eat\n"<< endl;  
+  cout << "they walk, smell, and what they want to eat""<< endl;  
 }

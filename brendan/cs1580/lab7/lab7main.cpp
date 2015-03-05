@@ -13,7 +13,7 @@ int main()
   unsigned char gray;
   bool loop = true;
   char choice;
-  cout <<"Welcome to the pixel grayscale converter\n" << endl;
+  cout <<"Welcome to the pixel grayscale converter"" << endl;
  
  while (loop)
   {

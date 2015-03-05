@@ -59,7 +59,7 @@ void Hospital_Room<T_machine>::admit(Patient& p, Doctor& dr)
 template <class U_machine>
 ostream& operator <<(ostream& out,const Hospital_Room <U_machine> & hr)
 {
-  out << hr.m_the_machine << "\n\tRemaining ounces of Schraut!: " <<
+  out << hr.m_the_machine << ""\tRemaining ounces of Schraut!: " <<
     hr.m_schrautOz;
   return out;
 }
