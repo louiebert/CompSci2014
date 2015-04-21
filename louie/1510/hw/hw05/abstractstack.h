@@ -74,6 +74,8 @@ public:
   // Postconditions: the stack is now empty
   virtual void clear() = 0;
 
+	virtual ~AbstractStack() { clear(); }
+
 };
 
 #endif

@@ -37,7 +37,6 @@ class DataStack: public AbstractStack<T>
     void push(const T& x);
     void pop();
 
-    ~DataStack() { clear(); }
     void clear();
 
     void add();
