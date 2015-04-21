@@ -21,7 +21,7 @@ int main()
   char complaintStr[100][22];
 
   cout << "Enter complaint: ";
-  getline(cin, complaints, '"');
+  getline(cin, complaints, '\n');
 
   // complaintStr becomes a 2D array of chars
   make_array(complaints.c_str(), complaintStr);

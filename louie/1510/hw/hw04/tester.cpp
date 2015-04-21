@@ -198,7 +198,7 @@ void test04() {
   D.insert_front(222);
   cout << "A = " << A << endl;
   cout << "D = " << D << endl;
-  
+
 
   // TEST : Append
   cout << endl << "TEST : Append B into A" << endl;
