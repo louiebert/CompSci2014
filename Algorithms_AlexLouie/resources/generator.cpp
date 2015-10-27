@@ -120,7 +120,7 @@ string getFileName(char type, int range1, int range2) {
     filename.append(to_string(range2));
     filename.append(")_");
   }
-  filename.append(to_string(time(0)));
+  filename.append(to_string(time(0))); // Epoch timestamp
   filename.append(".txt");
   return filename;
 }
@@ -129,8 +129,6 @@ string setLengthString(int length) {
   string output = "";
   for (int j = 0; j < length; ++j) {
     char ltr = 'a' + rand()%26; // Makes a random character
-    if (rand()%2)
-      ltr = toupper(ltr); // Randomizes capitalization
     output += ltr ;
   }
   return output;
@@ -141,8 +139,6 @@ string randLengthString(int range1, int range2) {
   string output = "";
   for (int j = 0; j < randLength; ++j) {
     char ltr = 'a' + rand()%26; // Makes a random character
-    if (rand()%2)
-      ltr = toupper(ltr); // Randomizes capitalization
     output += ltr;
   }
   return output;
