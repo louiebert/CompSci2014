@@ -24,7 +24,7 @@ float greedyLCS(string rv1, string rv2);
 
 int main() {
   vector<string> reviews;
-  vector< vector<float> > resultSVs;
+  vector< vector<string> > moreReviews;
   ifstream in;
   ofstream out;
   string filename;
@@ -61,81 +61,113 @@ int main() {
 
   if (selection == 's') {
     cout << "Please type in the file name to examine: ";
+    cin.ignore(500, '\n');
     getline(cin, filename, '\n');
-
     in.open(filename);
     while (in >> review) {
       reviews.push_back(review);
     }
     in.close();
+    moreReviews.push_back(reviews);
   } else {
     string dir = ".";
     getdir(dir, files);
 
+    for (int i = 0; i < 10; ++i) {
+      vector<string> tempFiles = vector<string>();
+      moreReviews.push_back(tempFiles);
+    }
+
     for (unsigned int i = 0; i < files.size(); ++i) {
       if (files[i].size() > 4 && files[i].substr(files[i].size() - 4, 4) == ".txt") {
         in.open(files[i]);
-        in >> review;
-        reviews.push_back(review);
+        getline(in, review, '\n');
+        if (review.length() < 200) {
+          moreReviews[0].push_back(review);
+        } else if (review.length() >= 200 && review.length() < 400) {
+          moreReviews[1].push_back(review);
+        } else if (review.length() >= 400 && review.length() < 600) {
+          moreReviews[2].push_back(review);
+        } else if (review.length() >= 600 && review.length() < 800) {
+          moreReviews[3].push_back(review);
+        } else if (review.length() >= 800 && review.length() < 1000) {
+          moreReviews[4].push_back(review);
+        } else if (review.length() >= 1000 && review.length() < 1200) {
+          moreReviews[5].push_back(review);
+        } else if (review.length() >= 1200 && review.length() < 1400) {
+          moreReviews[6].push_back(review);
+        } else if (review.length() >= 1400 && review.length() < 1600) {
+          moreReviews[7].push_back(review);
+        } else if (review.length() >= 1600 && review.length() < 1800) {
+          moreReviews[8].push_back(review);
+        } else if (review.length() >= 1800) {
+          moreReviews[9].push_back(review);
+        }
         in.close();
       }
     }
   }
   cout << endl;
 
-  int zeroes = 0, ones = 0, twos = 0, threes = 0, fours = 0, fives = 0, sixes = 0, sevens = 0, eights = 0, nines = 0, tens = 0;
+  for (int l = 0; l < moreReviews.size(); ++l) {
+    int zeroes = 0, ones = 0, twos = 0, threes = 0, fours = 0, fives = 0, sixes = 0, sevens = 0, eights = 0, nines = 0, tens = 0;
+    vector< vector<float> > resultSVs;
 
-  Clock::time_point t0 = Clock::now();
-  for (int i = 0; i < reviews.size(); ++i) {
-    for (int j = i+1; j < reviews.size(); ++j) {
-      float sv = greedyLCS(reviews[i], reviews[j]);
-      vector<float> tempRes;
-      tempRes.push_back(sv);
-      tempRes.push_back(i);
-      tempRes.push_back(j);
-      if (sv >= 0 && sv < 0.1)
-        zeroes++;
-      if (sv >= 0.1 && sv < 0.2)
-        ones++;
-      if (sv >= 0.2 && sv < 0.3)
-        twos++;
-      if (sv >= 0.3 && sv < 0.4)
-        threes++;
-      if (sv >= 0.4 && sv < 0.5)
-        fours++;
-      if (sv >= 0.5 && sv < 0.6)
-        fives++;
-      if (sv >= 0.6 && sv < 0.7)
-        sixes++;
-      if (sv >= 0.7 && sv < 0.8)
-        sevens++;
-      if (sv >= 0.8 && sv < 0.9)
-        eights++;
-      if (sv >= 0.9 && sv < 1.0)
-        nines++;
-      if (sv >= 1.0)
-        tens++;
+    Clock::time_point t0 = Clock::now();
+    for (int i = 0; i < moreReviews[l].size(); ++i) {
+      for (int j = i+1; j < moreReviews[l].size(); ++j) {
+        float sv = greedyLCS(moreReviews[l][i], moreReviews[l][j]);
+        vector<float> tempRes;
+        tempRes.push_back(sv);
+        tempRes.push_back(i);
+        tempRes.push_back(j);
+        if (sv >= 0 && sv < 0.1)
+          zeroes++;
+        if (sv >= 0.1 && sv < 0.2)
+          ones++;
+        if (sv >= 0.2 && sv < 0.3)
+          twos++;
+        if (sv >= 0.3 && sv < 0.4)
+          threes++;
+        if (sv >= 0.4 && sv < 0.5)
+          fours++;
+        if (sv >= 0.5 && sv < 0.6)
+          fives++;
+        if (sv >= 0.6 && sv < 0.7)
+          sixes++;
+        if (sv >= 0.7 && sv < 0.8)
+          sevens++;
+        if (sv >= 0.8 && sv < 0.9)
+          eights++;
+        if (sv >= 0.9 && sv < 1.0)
+          nines++;
+        if (sv >= 1.0)
+          tens++;
 
-      if (sv > 0.7)
-        resultSVs.push_back(tempRes);
+        if (sv > 0.7)
+          resultSVs.push_back(tempRes);
+      }
     }
+    Clock::time_point t1 = Clock::now();
+    milliseconds ms = std::chrono::duration_cast<milliseconds>(t1-t0);
+    if (moreReviews.size() > 1)
+      cout << "Computation for the " << 200*l << "-" << 200*(l+1) << " range took " << ms.count() << " milliseconds" << endl;
+    else
+      cout << "Computation took " << ms.count() << " milliseconds" << endl;
+    cout << "SV Scores:" << endl;
+    cout << "\t0.0: " << zeroes << endl;
+    cout << "\t0.1: " << ones << endl;
+    cout << "\t0.2: " << twos << endl;
+    cout << "\t0.3: " << threes << endl;
+    cout << "\t0.4: " << fours << endl;
+    cout << "\t0.5: " << fives << endl;
+    cout << "\t0.6: " << sixes << endl;
+    cout << "\t0.7: " << sevens << endl;
+    cout << "\t0.8: " << eights << endl;
+    cout << "\t0.9: " << nines << endl;
+    cout << "\t1.0: " << tens << endl;
+    cout << "There were " << resultSVs.size() << " pairs over a 0.7 score" << endl;
   }
-  Clock::time_point t1 = Clock::now();
-  milliseconds ms = std::chrono::duration_cast<milliseconds>(t1-t0);
-  cout << "Computation took " << ms.count() << " milliseconds" << endl;
-  cout << "SV Scores:" << endl;
-  cout << "\t0.0: " << zeroes << endl;
-  cout << "\t0.1: " << ones << endl;
-  cout << "\t0.2: " << twos << endl;
-  cout << "\t0.3: " << threes << endl;
-  cout << "\t0.4: " << fours << endl;
-  cout << "\t0.5: " << fives << endl;
-  cout << "\t0.6: " << sixes << endl;
-  cout << "\t0.7: " << sevens << endl;
-  cout << "\t0.8: " << eights << endl;
-  cout << "\t0.9: " << nines << endl;
-  cout << "\t1.0: " << tens << endl;
-  cout << "There were " << resultSVs.size() << " pairs over a 0.7 score" << endl;
 
   return 0;
 }
